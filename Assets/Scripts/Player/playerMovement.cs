@@ -8,11 +8,18 @@ public class playerMovement : MonoBehaviour
     private string rightKey = "d";
     private string upKey = "w";
     private string downKey = "s";
+    private string dashKey = "left shift";
+
     public Rigidbody2D player;
-    public float maxSpeed = 5;
-    public float acceleration = 5;
+
+    public float maxSpeed = 7;
+    public float acceleration = 30;
+    public float dashDuration = 5;
+    public float dashSpeed = 10;
     private float xspeed = 0;
     private float yspeed = 0;
+
+    private bool isDahing = false;
     void Start()
     {
 
@@ -20,8 +27,15 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        if(!isDahing)
+        {
+            Movement();
+        }
+        if(Input.GetKeyDown(dashKey))
+        {
+            dash();
+        }
         MovementDirection();
-        Movement();
     }
 
     void Movement()
@@ -29,7 +43,6 @@ public class playerMovement : MonoBehaviour
             player.velocity = new Vector2(yspeed, player.velocity.y);
             player.velocity = new Vector2(xspeed, player.velocity.x);
     }
-
     
     void MovementDirection()
     {
@@ -127,6 +140,20 @@ public class playerMovement : MonoBehaviour
                     xspeed = 0;
                 }
             }
+        }
+    }
+
+    void dash()
+    {
+        isDahing = true;
+        if(Input.GetKey(rightKey))
+        {
+            for(int i = 0; i < dashDuration; i++)
+            {
+                xspeed = dashSpeed;
+            }
+            xspeed = 0;
+            isDahing = false;
         }
     }
 }
