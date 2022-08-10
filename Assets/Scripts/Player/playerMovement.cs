@@ -13,8 +13,6 @@ public class playerMovement : MonoBehaviour
     public float acceleration = 5;
     private float xspeed = 0;
     private float yspeed = 0;
-    private float directionY = 0;
-    private float directionX = 0;
     void Start()
     {
 
@@ -23,15 +21,20 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         MovementDirection();
-        player.velocity = new Vector2(directionY * yspeed, player.velocity.y);
-        player.velocity = new Vector2(directionX * xspeed, player.velocity.x);
+        Movement();
     }
 
+    void Movement()
+    {
+            player.velocity = new Vector2(yspeed, player.velocity.y);
+            player.velocity = new Vector2(xspeed, player.velocity.x);
+    }
+
+    
     void MovementDirection()
     {
         if (Input.GetKey(upKey) | Input.GetKey(downKey))
         {
-            directionY = 1;
             if (Input.GetKey(upKey) & Input.GetKey(downKey))
             {
                 if (yspeed > 0)
@@ -63,16 +66,23 @@ public class playerMovement : MonoBehaviour
             if (yspeed > 0)
             {
                 yspeed -= acceleration * Time.deltaTime;
+                if (yspeed < 0)
+                {
+                    yspeed = 0;
+                }
             }
             if (yspeed < 0)
             {
                 yspeed += acceleration * Time.deltaTime;
+                if (yspeed > 0)
+                {
+                    yspeed = 0;
+                }
             }
         }
 
         if (Input.GetKey(leftKey) | Input.GetKey(rightKey))
         {
-            directionX = 1;
             if (Input.GetKey(leftKey) & Input.GetKey(rightKey))
             {
                 if (xspeed > 0)
@@ -104,10 +114,18 @@ public class playerMovement : MonoBehaviour
             if (xspeed > 0)
             {
                 xspeed -= acceleration * Time.deltaTime;
+                if (xspeed < 0)
+                {
+                    xspeed = 0;
+                }
             }
             if (xspeed < 0)
             {
                 xspeed += acceleration * Time.deltaTime;
+                if (xspeed > 0)
+                {
+                    xspeed = 0;
+                }
             }
         }
     }
