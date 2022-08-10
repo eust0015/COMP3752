@@ -158,6 +158,7 @@ MonoBehaviour:
   maxSpeed: 7
   acceleration: 30
   dashDuration: 5
+  dashSpeed: 100
 --- !u!4 &327291424
 Transform:
   m_ObjectHideFlags: 0
