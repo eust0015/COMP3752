@@ -27,11 +27,8 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        if(!isDahing)
-        {
-            Movement();
-        }
-        if(Input.GetKeyDown(dashKey))
+        Movement();
+        if(Input.GetKey(dashKey) & !isDahing)
         {
             dash();
         }
@@ -46,7 +43,7 @@ public class playerMovement : MonoBehaviour
     
     void MovementDirection()
     {
-        if (Input.GetKey(upKey) | Input.GetKey(downKey))
+        if (Input.GetKey(upKey) | Input.GetKey(downKey) & Mathf.Abs(xspeed) <= maxSpeed)
         {
             if (Input.GetKey(upKey) & Input.GetKey(downKey))
             {
@@ -94,7 +91,7 @@ public class playerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(leftKey) | Input.GetKey(rightKey))
+        if (Input.GetKey(leftKey) | Input.GetKey(rightKey) & Mathf.Abs(xspeed) <= maxSpeed)
         {
             if (Input.GetKey(leftKey) & Input.GetKey(rightKey))
             {
@@ -145,15 +142,25 @@ public class playerMovement : MonoBehaviour
 
     void dash()
     {
-        isDahing = true;
-        if(Input.GetKey(rightKey))
+        if (Input.GetKey(rightKey))
         {
-            for(int i = 0; i < dashDuration; i++)
-            {
-                xspeed = dashSpeed;
-            }
-            xspeed = 0;
-            isDahing = false;
+            isDahing = true;
+            xspeed = dashSpeed;
+        }
+        if (Input.GetKey(leftKey))
+        {
+            isDahing = true;
+            xspeed = -dashSpeed;
+        }
+        if (Input.GetKey(upKey))
+        {
+            isDahing = true;
+            yspeed = dashSpeed;
+        }
+        if (Input.GetKey(downKey))
+        {
+            isDahing = true;
+            yspeed = -dashSpeed;
         }
     }
 }
