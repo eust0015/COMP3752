@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 327291425}
-  maxSpeed: 7
+  maxSpeed: 5
   acceleration: 30
-  dashDuration: 5
-  dashSpeed: 20
+  dashCooldown: 5
+  dashSpeed: 17
 --- !u!4 &327291424
 Transform:
   m_ObjectHideFlags: 0
