@@ -14,23 +14,25 @@ public class playerMovement : MonoBehaviour
 
     public float maxSpeed = 7;
     public float acceleration = 30;
-    public float dashDuration = 5;
+    public float dashCooldown = 5;
     public float dashSpeed = 10;
     private float xspeed = 0;
     private float yspeed = 0;
+    private float dashTimer;
 
     private bool isDahing = false;
     void Start()
     {
-
+        dashTimer = dashCooldown;
     }
 
     void Update()
     {
         Movement();
+        DashCooldown();
         if(Input.GetKey(dashKey) & !isDahing)
         {
-            dash();
+            Dash();
         }
         MovementDirection();
     }
@@ -43,7 +45,7 @@ public class playerMovement : MonoBehaviour
     
     void MovementDirection()
     {
-        if (Input.GetKey(upKey) | Input.GetKey(downKey) & Mathf.Abs(xspeed) <= maxSpeed)
+        if (Input.GetKey(upKey) | Input.GetKey(downKey) & Mathf.Abs(yspeed) <= maxSpeed)
         {
             if (Input.GetKey(upKey) & Input.GetKey(downKey))
             {
@@ -140,7 +142,7 @@ public class playerMovement : MonoBehaviour
         }
     }
 
-    void dash()
+    void Dash()
     {
         if (Input.GetKey(rightKey))
         {
@@ -161,6 +163,19 @@ public class playerMovement : MonoBehaviour
         {
             isDahing = true;
             yspeed = -dashSpeed;
+        }
+    }
+
+    void DashCooldown()
+    {
+        if(isDahing)
+        {
+            dashTimer -= Time.deltaTime;
+        }
+        if (dashTimer <= 0)
+        {
+            isDahing = false;
+            dashTimer = dashCooldown;
         }
     }
 }
