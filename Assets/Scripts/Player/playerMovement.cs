@@ -47,7 +47,6 @@ public class playerMovement : MonoBehaviour
     {
         if (Input.GetKey(upKey) | Input.GetKey(downKey) & Mathf.Abs(yspeed) <= maxSpeed)
         {
-            Debug.Log(Mathf.Abs(yspeed));
             if (Input.GetKey(upKey) & Input.GetKey(downKey))
             {
                 if (yspeed > 0)
@@ -96,7 +95,6 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKey(leftKey) | Input.GetKey(rightKey) & Mathf.Abs(xspeed) <= maxSpeed)
         {
-            Debug.Log(Mathf.Abs(xspeed));
             if (Input.GetKey(leftKey) & Input.GetKey(rightKey))
             {
                 if (xspeed > 0)
