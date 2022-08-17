@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCSpawn : MonoBehaviour
 {
-    public GameObject spawnLocation;
+    private GameObject spawnLocation;
     public GameObject npcPrefab;
     public float spawnChance;
     void Start()
@@ -21,7 +21,8 @@ public class NPCSpawn : MonoBehaviour
     {
         if(Random.Range(0f,100f) >= 100 - spawnChance)
         {
-            Instantiate(npcPrefab, new Vector2(spawnLocation.transform.position.x, spawnLocation.transform.position.y), Quaternion.identity);
+            spawnLocation = GameObject.FindGameObjectsWithTag("NPCSpawn")[Random.Range(0, GameObject.FindGameObjectsWithTag("NPCSpawn").Length)];
+            Instantiate(npcPrefab, new Vector3(spawnLocation.transform.position.x, spawnLocation.transform.position.y, -1), Quaternion.identity);
         }
     }
 }

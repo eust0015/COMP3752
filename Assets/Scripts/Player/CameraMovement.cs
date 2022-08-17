@@ -16,6 +16,6 @@ public class CameraMovement : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         location = player.transform;
         transform.position = new Vector3(location.position.x,location.position.y, -10);
-        Debug.Log(location.position.x + "," + location.position.y);
+        //Debug.Log(location.position.x + "," + location.position.y);
     }
 }
