@@ -386,3 +386,22 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5651505119eee9140aa300f8ab160cc4, type: 3}
+--- !u!1 &2731049510704643920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2731049510397101921, guid: 5651505119eee9140aa300f8ab160cc4, type: 3}
+  m_PrefabInstance: {fileID: 2731049510704643919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2731049510704643921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731049510704643920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352d9a5635bbc9e4cb5814db142e87d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingYard: {fileID: 2731049510704643920}
+  mapSize: 2
