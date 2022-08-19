@@ -58,5 +58,14 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+<<<<<<< HEAD
 UserSettings/EditorUserSettings.asset
 *.dwlt
+=======
+UserSettings/
+.idea/
+UserSettings/EditorUserSettings.asset
+.idea/.idea.COMP3752/.idea/workspace.xml
+.idea/.idea.COMP3752/.idea/workspace.xml
+UserSettings/EditorUserSettings.asset
+>>>>>>> 5706a57ab183b7060cd43972a8eeeb6015182f60
