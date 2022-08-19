@@ -7,7 +7,7 @@ public class Yard : MonoBehaviour
     public float xPosition;
     public float yPosition;
     public float pathDistance;
-    void Start(int mapSize)
+    /*void Start(int mapSize)
     {
         if(mapSize > 0)
         {
@@ -18,5 +18,5 @@ public class Yard : MonoBehaviour
     void Update()
     {
         
-    }
+    }*/
 }
