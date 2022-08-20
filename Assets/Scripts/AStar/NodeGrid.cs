@@ -19,8 +19,10 @@ public class NodeGrid : MonoBehaviour
 
     private float nodeDiameter;
     private int gridSizeX, gridSizeY;
+
+    public int maxSize => gridSizeX * gridSizeY;
     
-    void Start()
+    void Awake()
     {
         nodeDiameter = nodeRadius * 2;
         gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
@@ -85,8 +87,7 @@ public class NodeGrid : MonoBehaviour
 
         return grid[x, y];
     }
-
-    public List<Node> path;
+    
     void OnDrawGizmos()
     {
         //gidmo
@@ -103,11 +104,6 @@ public class NodeGrid : MonoBehaviour
                     if (playerNode == n)
                     {
                         Gizmos.color = new Color(0, 1, 0, 0.3f);
-                    }
-
-                    if (path != null)
-                    {
-                        if(path.Contains(n)){Gizmos.color = Color.black;}
                     }
                     Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - 0.1f));
                 }

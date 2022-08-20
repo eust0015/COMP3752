@@ -336,11 +336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.05311382
+      value: -7.74
       objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7795038
+      value: 7.87
       objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -387,6 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011729952}
   - component: {fileID: 1011729951}
+  - component: {fileID: 1011729953}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -461,6 +462,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1011729953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011729950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c66190be92aaa49be58848d192b536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1403295656}
+  speed: 1
+  distanceToTarget: 0
 --- !u!1 &1185194134
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +783,7 @@ GameObject:
   - component: {fileID: 1818042642}
   - component: {fileID: 1818042641}
   - component: {fileID: 1818042643}
+  - component: {fileID: 1818042644}
   m_Layer: 0
   m_Name: A*
   m_TagString: Untagged
@@ -791,7 +808,7 @@ MonoBehaviour:
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 64
-  gridWorldSize: {x: 20, y: 20}
+  gridWorldSize: {x: 50, y: 50}
   nodeRadius: 0.5
 --- !u!4 &1818042642
 Transform:
@@ -820,8 +837,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4cdd1ae498c0a45b1f2c891803b3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeker: {fileID: 1011729952}
-  target: {fileID: 1403295656}
+--- !u!114 &1818042644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818042640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea70c92c41dbfd44bfc7f2a8652f4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1958126187
 GameObject:
   m_ObjectHideFlags: 0
