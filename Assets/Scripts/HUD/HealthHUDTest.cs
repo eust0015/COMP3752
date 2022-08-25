@@ -18,6 +18,8 @@ namespace HUD
         {
             if (Input.GetMouseButtonDown(0))
                 health.DecreaseValue(1);
+            else if (Input.GetMouseButtonDown(1))
+                health.IncreaseValue(1);
         }
     }
 }

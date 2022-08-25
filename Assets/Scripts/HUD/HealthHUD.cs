@@ -8,6 +8,7 @@ namespace HUD
     public class HealthHUD : MonoBehaviour
     {
         [SerializeField] private Health health;
+        [SerializeField] private Slider slider;
 
         public Health Health
         {
@@ -19,7 +20,6 @@ namespace HUD
                 SubscribeToEvents();
             }
         }
-        [SerializeField] private Slider slider;
 
         private void OnEnable()
         {

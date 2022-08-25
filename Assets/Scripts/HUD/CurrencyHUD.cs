@@ -1,14 +1,59 @@
 ﻿using Statistics;
+using TMPro;
 using UnityEngine;
 
 namespace HUD
 {
     public class CurrencyHUD : MonoBehaviour
     {
-        private Currency currency;
+        [SerializeField] private Currency currency;
+        [SerializeField] public TMP_Text text;
+        
+        
+        public Currency Currency
+        {
+            get => currency;
+            private set
+            {
+                UnsubscribeFromEvents();
+                currency = value;
+                SubscribeToEvents();
+            }
+        }
 
-        public Currency Currency { get; }
+        private void OnEnable()
+        {
+            UpdateDisplay();
+            SubscribeToEvents();
+        }
+        
+        private void OnDisable()
+        {
+            UnsubscribeFromEvents();
+        }
 
+        private void SubscribeToEvents()
+        {
+            if (Currency == null)
+                return;
+            
+            Currency.OnValueChanged += UpdateDisplay;
+            Currency.OnMaxValueChanged += UpdateDisplay;
+        }
+
+        private void UnsubscribeFromEvents()
+        {
+            if (Currency == null)
+                return;
+            
+            Currency.OnValueChanged -= UpdateDisplay;
+            Currency.OnMaxValueChanged -= UpdateDisplay;
+        }
+        
+        public void UpdateDisplay()
+        {
+            text.text = "$" + Currency.Value.ToString();
+        }
 
     }
 }
