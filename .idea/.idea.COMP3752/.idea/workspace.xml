@@ -57,15 +57,32 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScenes/beeHive.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScenes/beeHive.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shop.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shop.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shop.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shop.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/Heap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/Heap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/Node.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/NodeGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/NodeGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/PathRequestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/PathRequestManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/Pathfinding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AStar/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AStar/Unit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/Yard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/Yard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/Yard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/Yard.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/YardGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/YardGeneration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/YardGeneration.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackyardGeneration/YardGeneration.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyHUD.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyHUD.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUD.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUD.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUDTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUDTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUDTest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/HealthHUDTest.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Potion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Potion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Potion.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Potion.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/NPCSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/NPCSpawn.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/NPCSpawn.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/NPCSpawn.cs.meta" afterDir="false" />
@@ -76,11 +93,22 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/playerMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/playerMovement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/playerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/playerSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/playerSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/playerSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics/Currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics/Currency.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics/Currency.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics/Currency.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics/Health.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics/Statistic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Statistics/Statistic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Statistics/Statistic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/sceneManagement.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/sceneManagement.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/closeGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/closeGame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/closeGame.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/closeGame.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/sceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/sceneLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/sceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/sceneManagement/sceneLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Heart.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Heart.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
@@ -164,6 +192,7 @@
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
@@ -184,7 +213,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AStar/Path.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AStar/PathRequestManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviours/BehaviourMelee.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2DbxeTKEDnzzKphEcWJe1sggSAy" />
   <component name="ProjectViewState">
@@ -216,10 +247,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17840">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17840" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -236,6 +267,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660981687413</updated>
       <workItem from="1660981723350" duration="6484000" />
+      <workItem from="1661432790320" duration="9527000" />
     </task>
     <servers />
   </component>
@@ -255,5 +287,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
