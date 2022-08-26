@@ -6,7 +6,7 @@ namespace HUD
 {
     public class CurrencyHUDTest : MonoBehaviour
     {
-        private Currency currency;
+        [SerializeField] private Currency currency;
         private void OnEnable()
         {
             currency = transform.GetComponent<CurrencyHUD>().Currency;

@@ -6,7 +6,7 @@ namespace HUD
 {
     public class HealthHUDTest : MonoBehaviour
     {
-        private Health health;
+        [SerializeField] private Health health;
         private void OnEnable()
         {
             health = transform.GetComponent<HealthHUD>().Health;
