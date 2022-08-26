@@ -11,6 +11,8 @@ namespace UI
         [SerializeField] private List<Item> items;
         private void OnEnable()
         {
+        //Test
+        
             Potion potion1 = new Potion
             {
                 Name = "Item1Name",
