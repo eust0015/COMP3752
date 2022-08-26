@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace HUD
 {
+    [Serializable]
     public class HealthHUD : MonoBehaviour
     {
         [SerializeField] private Health health;

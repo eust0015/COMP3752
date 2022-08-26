@@ -9,10 +9,10 @@ namespace Items
         protected string name;
         protected int price;
         
-        public virtual string Description { get; }
-        public virtual Sprite Icon { get; }
-        public virtual string Name { get; }
-        public virtual int Price { get; }
+        public virtual string Description { get; set; }
+        public virtual Sprite Icon { get; set; }
+        public virtual string Name { get; set; }
+        public virtual int Price { get; set; }
         public abstract void Buy();
         public abstract void Sell();
         public abstract void Use();

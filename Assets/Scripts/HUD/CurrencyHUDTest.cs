@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace HUD
 {
+    [Serializable]
     public class CurrencyHUDTest : MonoBehaviour
     {
         [SerializeField] private Currency currency;

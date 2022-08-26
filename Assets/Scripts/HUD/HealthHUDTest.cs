@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace HUD
 {
+    [Serializable]
     public class HealthHUDTest : MonoBehaviour
     {
         [SerializeField] private Health health;

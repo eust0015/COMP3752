@@ -1,9 +1,11 @@
-﻿using Statistics;
+﻿using System;
+using Statistics;
 using TMPro;
 using UnityEngine;
 
 namespace HUD
 {
+    [Serializable]
     public class CurrencyHUD : MonoBehaviour
     {
         [SerializeField] private Currency currency;
