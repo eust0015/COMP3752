@@ -2,27 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BehaviourMelee : MonoBehaviour
+public class BehaviourMelee : Behaviour
 {
-    private Unit u;
-    private bool tracking;
-    [SerializeField] private float maxDistance = 5f;
-    void Start()
-    {
-        u = GetComponent<Unit>();
-        tracking = false;
-        StartCoroutine(Condition());
-    }
 
-    IEnumerator Condition()
+    protected override IEnumerator Condition()
     {
         while (true)
         {
             if (!tracking && u.targetDistance > maxDistance)
             {
                 print("tracking");
-                u.StartPath();
                 tracking = true;
+                u.StartPath();
+                yield return null;
+
             }
 
             if (u.targetDistance < maxDistance)
@@ -30,9 +23,10 @@ public class BehaviourMelee : MonoBehaviour
                 print("not tracking");
                 u.StopPath();
                 tracking = false;
+                yield return null;
             }
 
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

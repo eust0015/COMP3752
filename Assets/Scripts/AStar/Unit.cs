@@ -2,13 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
     private const float minPathUpdateTime = .2f;
-    private const float pathUpdateMoveThreshold = .3f;
-    
+    [SerializeField]
+    private float pathUpdateMoveThreshold = .3f;
+
+    public bool upd = true;
+
     public Transform target;
     public float speed = 1;
     public float turnSpeed = 3f;
@@ -17,14 +21,17 @@ public class Unit : MonoBehaviour
     public Transform spriteTransform;
     private Path path;
 
-    private void Start()
-    {
-        spriteTransform = transform.GetChild(0);
-        StartCoroutine(UpdatePath());
-    }
-
     public float targetDistance => Vector2.Distance(transform.position, target.position);
-    public bool lineOfSight => Physics2D.Linecast(transform.position, target.position, target.gameObject.layer);
+
+    public bool lineOfSight
+    {
+        get
+        {
+            RaycastHit2D hit;
+            hit = Physics2D.Raycast(transform.position, target.position - transform.position);
+            return hit.collider.gameObject.CompareTag("Player");
+        }
+    }
 
     public void OnPathFound(Vector2[] waypoints, bool pathSuccessful)
     {
@@ -50,8 +57,9 @@ public class Unit : MonoBehaviour
         
         while (true)
         {
+            print("updating");
             yield return new WaitForSeconds(minPathUpdateTime);
-            if ((target.position - targetPosOld).sqrMagnitude > sqMoveThreshold)
+            if ((target.position - targetPosOld).sqrMagnitude > sqMoveThreshold && upd)
             {
                 PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
                 targetPosOld = target.position;
@@ -82,7 +90,7 @@ public class Unit : MonoBehaviour
             {
                 Quaternion targetRotation = Quaternion.LookRotation(path.lookPoints[pathIndex] - new Vector2(transform.position.x, transform.position.y));
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
-                spriteTransform.localEulerAngles = new Vector3(0, 90, 0);
+                //spriteTransform.localEulerAngles = new Vector3(0, 90, 0);
                 transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
             }
             yield return null;
@@ -92,6 +100,7 @@ public class Unit : MonoBehaviour
     public void StopPath()
     {
         StopCoroutine(UpdatePath());
+        upd = false;
         StopCoroutine("FollowPath");
         path = null;
     }
@@ -99,6 +108,7 @@ public class Unit : MonoBehaviour
     public void StartPath()
     {
         StartCoroutine(UpdatePath());
+        upd = true;
     }
 
     private void OnDrawGizmos()
