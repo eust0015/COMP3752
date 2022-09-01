@@ -1,12 +1,14 @@
 ﻿using System;
+using HUD;
 using Items;
+using Statistics;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI
 {
+    [Serializable]
     public class ShopItemUI :MonoBehaviour
     {
         [SerializeField] private Item item;
@@ -29,5 +31,26 @@ namespace UI
             price.text = "$" + Item.Price;
             icon.sprite = Item.Icon;
         }
+        
+        public void Buy()
+        {
+            Currency currency = FindObjectOfType<CurrencyHUD>().Currency;
+
+            if (currency == null)
+                return;
+
+            if (Item.Price > currency.Value)
+            {
+                InsufficientFundsMessageUI message = FindObjectOfType<InsufficientFundsMessageUI>();
+                message.Display();
+                return;
+            }
+            
+            currency.DecreaseValue(Item.Price);
+            
+            InventoryUI inventory = FindObjectOfType<InventoryUI>();
+            inventory.AddItem(Item);
+        }
+        
     }
 }

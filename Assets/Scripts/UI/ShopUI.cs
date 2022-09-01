@@ -49,6 +49,7 @@ namespace UI
         {
             ShopItemUI shopItem = Instantiate(ShopItemPrefab, Container);
             shopItem.Initialise(item);
+            ShopItemsList.Add(shopItem);
         }
 
         public void Clear()
