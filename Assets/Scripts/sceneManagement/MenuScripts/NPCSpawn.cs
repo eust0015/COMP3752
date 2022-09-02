@@ -11,14 +11,9 @@ public class NPCSpawn : MonoBehaviour
     {
         NPCSpawnChance();
     }
-
-    void Update()
+        void NPCSpawnChance()
     {
-        
-    }
-
-    void NPCSpawnChance()
-    {
+        //generates a number to decide if the npc will spawn. If it does, it gets a list of all avaliable spawn logations and chooses a random one
         if(Random.Range(0f,100f) >= 100 - spawnChance)
         {
             spawnLocation = GameObject.FindGameObjectsWithTag("NPCSpawn")[Random.Range(0, GameObject.FindGameObjectsWithTag("NPCSpawn").Length)];
