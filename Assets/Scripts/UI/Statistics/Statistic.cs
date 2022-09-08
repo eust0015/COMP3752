@@ -1,5 +1,4 @@
 ﻿using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Statistics
@@ -62,8 +61,6 @@ namespace Statistics
             Value = Value - amount < 0 ? 0 : Value - amount;
             OnValueDecreased?.Invoke();
         }
-        
-
         
     }
 }
