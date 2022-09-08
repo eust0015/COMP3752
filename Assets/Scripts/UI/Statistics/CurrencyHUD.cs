@@ -54,7 +54,7 @@ namespace HUD
         
         public void UpdateDisplay()
         {
-            text.text = "$" + Currency.Value.ToString();
+            text.text = Currency.Value.ToString();
         }
 
     }

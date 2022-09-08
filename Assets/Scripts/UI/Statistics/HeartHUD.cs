@@ -15,7 +15,7 @@ namespace UI.HUD
 
         public delegate void Destroyed(HeartHUD thisObject);
         public event Destroyed OnDestroyed;
-        public Health Health
+        [SerializeField] public Health Health
         {
             get => health;
             private set
@@ -26,8 +26,8 @@ namespace UI.HUD
             }
         }
         
-        public int HalfHeart { get; private set; }
-        public Animator HeartAnimator { get; private set; }
+        [SerializeField] public int HalfHeart { get; private set; }
+        [SerializeField] public Animator HeartAnimator { get; private set; }
         
         public void Initialise(Health setHealth, int setHalfHeart)
         {
@@ -67,11 +67,11 @@ namespace UI.HUD
         public void UpdateDisplay()
         {
             if (Health.Value > HalfHeart)
-                HeartAnimator.SetInteger(Heart, 2);
+                heartAnimator.SetInteger(Heart, 2);
             else if (Health.Value < HalfHeart)
-                HeartAnimator.SetInteger(Heart, 0);
+                heartAnimator.SetInteger(Heart, 0);
             else
-                HeartAnimator.SetInteger(Heart, 1);
+                heartAnimator.SetInteger(Heart, 1);
         }
 
         public void MaxHealthDecreased()

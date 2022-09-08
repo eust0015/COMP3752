@@ -77,7 +77,7 @@ namespace UI
         public void RemoveItemFromList(InventoryItemUI itemUI)
         {
             itemUI.OnDestroyed -= RemoveItemFromList;
-            inventoryItemsList.Remove(itemUI);
+            InventoryItemsList.Remove(itemUI);
         }
         
     }

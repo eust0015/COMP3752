@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using Player;
 using Statistics;
+using UI.HUD;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace UI.HUD
+namespace UI.Statistics
 {
     [Serializable]
     public class HealthHUD : MonoBehaviour
@@ -15,7 +15,7 @@ namespace UI.HUD
         [SerializeField] private HeartHUD heartPrefab;
         [SerializeField] private List<HeartHUD> heartList;
 
-        public Health Health
+        [SerializeField] public Health Health
         {
             get => health;
             private set
@@ -26,14 +26,14 @@ namespace UI.HUD
             }
         }
 
-        public Transform Container { get; private set; }
-        public HeartHUD HeartPrefab { get; private set; }
-        private List<HeartHUD> HeartList { get; set; }
+        [SerializeField] public Transform Container { get; private set; }
+        [SerializeField] public HeartHUD HeartPrefab { get; private set; }
+        [SerializeField] private List<HeartHUD> HeartList { get; set; }
 
         private void OnEnable()
         {
             PlayerHealth playerHealth = GetComponent<PlayerHealth>();
-
+        
             if (playerHealth != null)
                 Health = playerHealth.Health;
             else if (Health != null)
@@ -75,23 +75,23 @@ namespace UI.HUD
 
             for (int i = HeartList.Count + 1; i < Health.MaxValue + 1; i+=2)
             {
-                
+                AddHeart(i);
             }
         }
 
         public void AddHeart(int halfHeart)
         {
 
-            HeartHUD heart = Instantiate(HeartPrefab, Container);
+            HeartHUD heart = Instantiate(heartPrefab, container);
             heart.Initialise(Health, halfHeart);
-            heartList.Add(heart);
+            HeartList.Add(heart);
             heart.OnDestroyed += RemoveItemFromList;
         }
         
         public void RemoveItemFromList(HeartHUD itemUI)
         {
             itemUI.OnDestroyed -= RemoveItemFromList;
-            heartList.Remove(itemUI);
+            HeartList.Remove(itemUI);
         }
         
     }

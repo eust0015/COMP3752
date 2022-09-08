@@ -44,22 +44,13 @@ namespace UI
                 Price = 4,
                 Quantity = 1
             };
-            
-            Potion potion5 = new Potion
-            {
-                Name = "Item5Name",
-                Description = "Item5Description",
-                Price = 5,
-                Quantity = 1
-            };
-            
+
             items = new List<Item>
             {
                 potion1,
                 potion2,
                 potion3,
                 potion4,
-                potion5
             };
 
             ShopUI shop = transform.GetComponent<ShopUI>();
