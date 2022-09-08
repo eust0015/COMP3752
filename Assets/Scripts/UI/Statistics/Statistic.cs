@@ -14,21 +14,21 @@ namespace Statistics
         [SerializeField] protected string name;
         [SerializeField] protected int value;
 
-        public delegate void MaxValueChanged();
-        public delegate void ValueChanged();
-        public event ValueChanged OnValueChanged;
-        public event MaxValueChanged OnMaxValueChanged;
+        public delegate void MaxValueIncreased();
+        public delegate void MaxValueDecreased();
+        public delegate void ValueIncreased();
+        public delegate void ValueDecreased();
+        public event ValueIncreased OnValueIncreased;
+        public event ValueDecreased OnValueDecreased;
+        public event MaxValueIncreased OnMaxValueIncreased;
+        public event MaxValueDecreased OnMaxValueDecreased;
         
         public virtual string Description { get; }
         public virtual Sprite Icon { get; }
         public virtual int MaxValue
         {
             get => maxValue;
-            private set
-            {
-                maxValue = value;
-                OnMaxValueChanged?.Invoke();
-            }
+            protected set => maxValue = value;
         }
         
         public virtual string Name { get; }
@@ -36,31 +36,31 @@ namespace Statistics
         public virtual int Value
         {
             get => value;
-            private set
-            {
-                this.value = value;
-                OnValueChanged?.Invoke();
-            }
+            protected set => this.value = value;
         }
 
         public virtual void IncreaseMaxValue(int amount)
         {
             MaxValue = (long)MaxValue + amount > maxValueLimit ? MaxValue : MaxValue + amount;
+            OnMaxValueIncreased?.Invoke();
         }
 
         public virtual void DecreaseMaxValue(int amount)
         {
             MaxValue = MaxValue - amount < 0 ? 0 : MaxValue - amount;
+            OnMaxValueDecreased?.Invoke();
         }
         
         public virtual void IncreaseValue(int amount)
         {
             Value = (long)Value + amount > MaxValue ? MaxValue : Value + amount;
+            OnValueIncreased?.Invoke();
         }
         
         public virtual void DecreaseValue(int amount)
         {
             Value = Value - amount < 0 ? 0 : Value - amount;
+            OnValueDecreased?.Invoke();
         }
         
 

@@ -39,8 +39,8 @@ namespace HUD
             if (Currency == null)
                 return;
             
-            Currency.OnValueChanged += UpdateDisplay;
-            Currency.OnMaxValueChanged += UpdateDisplay;
+            Currency.OnValueIncreased += UpdateDisplay;
+            Currency.OnMaxValueIncreased += UpdateDisplay;
         }
 
         private void UnsubscribeFromEvents()
@@ -48,8 +48,8 @@ namespace HUD
             if (Currency == null)
                 return;
             
-            Currency.OnValueChanged -= UpdateDisplay;
-            Currency.OnMaxValueChanged -= UpdateDisplay;
+            Currency.OnValueIncreased -= UpdateDisplay;
+            Currency.OnMaxValueIncreased -= UpdateDisplay;
         }
         
         public void UpdateDisplay()
