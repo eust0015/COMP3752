@@ -3,7 +3,7 @@ using Statistics;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace HUD
+namespace UI.HUD
 {
     [Serializable]
     public class HealthHUD : MonoBehaviour
@@ -38,8 +38,10 @@ namespace HUD
             if (Health == null)
                 return;
             
-            Health.OnValueChanged += UpdateDisplay;
-            Health.OnMaxValueChanged += UpdateDisplay;
+            Health.OnValueIncreased += UpdateDisplay;
+            Health.OnValueDecreased += UpdateDisplay;
+            Health.OnMaxValueIncreased += UpdateDisplay;
+            Health.OnMaxValueDecreased += UpdateDisplay;
         }
 
         private void UnsubscribeFromEvents()
@@ -47,8 +49,10 @@ namespace HUD
             if (Health == null)
                 return;
             
-            Health.OnValueChanged -= UpdateDisplay;
-            Health.OnMaxValueChanged -= UpdateDisplay;
+            Health.OnValueIncreased -= UpdateDisplay;
+            Health.OnValueDecreased -= UpdateDisplay;
+            Health.OnMaxValueIncreased -= UpdateDisplay;
+            Health.OnMaxValueDecreased -= UpdateDisplay;
         }
         
         public void UpdateDisplay()
