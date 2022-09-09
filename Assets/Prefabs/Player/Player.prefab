@@ -252,7 +252,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playbackSpeed: 1
   playbackSpeedRun: 2
-  heightVariance: 6
-  heightVarianceRun: 9
+  heightVariance: 9
+  heightVarianceRun: 6
   bobSpeed: 3
-  bobRunMultiplier: 1.5

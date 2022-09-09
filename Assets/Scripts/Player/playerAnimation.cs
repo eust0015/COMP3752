@@ -16,7 +16,8 @@ public class playerAnimation : MonoBehaviour
     [SerializeField] private float heightVarianceRun; 
     private float speed = 0.5f;
     [SerializeField] private float bobSpeed;
-    [SerializeField] private float bobRunMultiplier;
+
+    private float currentHeightVariance;
 
     private RectTransform _t;
 
@@ -25,7 +26,8 @@ public class playerAnimation : MonoBehaviour
         _t = GetComponent<RectTransform>();
         _a = GetComponent<Animator>();
         _m = transform.parent.GetComponent<playerMovement>();
-
+        currentHeightVariance = heightVariance;
+        
         StartCoroutine(HeightBob());
     }
 
@@ -38,9 +40,11 @@ public class playerAnimation : MonoBehaviour
     {
         if (_m.momentum == Vector2.zero)
         {
-            _a.speed = playbackSpeed; 
+            _a.speed = playbackSpeed;
+            currentHeightVariance = Mathf.Lerp(currentHeightVariance, heightVariance, 2f * Time.deltaTime);
             return;
         }
+        currentHeightVariance = Mathf.Lerp(currentHeightVariance, heightVarianceRun, 2f * Time.deltaTime);
         _a.speed = playbackSpeedRun;
     }
 
@@ -55,10 +59,6 @@ public class playerAnimation : MonoBehaviour
 
     private float SinWavePos(float x)
     {
-        if (_m.momentum == Vector2.zero)
-        {
-            return (Mathf.Sin(x) / heightVariance);
-        }
-        return (Mathf.Sin(x * bobRunMultiplier) / heightVarianceRun);
+        return (Mathf.Sin(x * 1) / currentHeightVariance);
     }
 }
