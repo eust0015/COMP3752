@@ -21,8 +21,14 @@ public class playerMovement : MonoBehaviour
     private float dashTimer;
 
     private bool isDahing = false;
+
+    public Vector2 momentum => new Vector2(xspeed, yspeed);
+
+    private SpriteRenderer _s;
+
     void Start()
     {
+        _s = transform.GetChild(0).GetComponent<SpriteRenderer>();
         dashTimer = dashCooldown;
     }
 
@@ -123,6 +129,7 @@ public class playerMovement : MonoBehaviour
             {
                 if (xspeed > -maxSpeed)
                 {
+                    _s.flipX = true;
                     xspeed -= acceleration * Time.deltaTime;
                 }
             }
@@ -131,6 +138,7 @@ public class playerMovement : MonoBehaviour
             {
                 if (xspeed < maxSpeed)
                 {
+                    _s.flipX = false;
                     xspeed += acceleration * Time.deltaTime;
                 }
             }
