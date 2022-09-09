@@ -353,14 +353,6 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3919533944194953787, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: heightVariance
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3919533944194953787, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: heightVarianceRun
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897810, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_Name
       value: Player
