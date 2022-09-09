@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Yard : MonoBehaviour
 {
-    public float xPosition;
-    public float yPosition;
-    public float pathDistance;
-    /*void Start(int mapSize)
+    public GameObject startingRoom;
+    private GameObject currentRoom;
+    private GameObject[] exits;
+    void Awake()
     {
-        if(mapSize > 0)
-        {
-
-        }
+        Instantiate(startingRoom, new Vector3(0,0,0), Quaternion.identity);
+        currentRoom = startingRoom;
     }
 
     void Update()
     {
         
-    }*/
+    }
+
+    void LoadNewRoom()
+    {
+        
+    }
 }

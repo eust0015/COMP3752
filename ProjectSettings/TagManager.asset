@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPCSpawn
+  - EnemySpawnPoint
+  - ExitN
+  - ExitS
+  - ExitE
+  - ExitW
   layers:
   - Default
   - TransparentFX
