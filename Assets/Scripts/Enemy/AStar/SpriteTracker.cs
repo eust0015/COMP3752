@@ -15,6 +15,5 @@ public class SpriteTracker : MonoBehaviour
     void FixedUpdate()
     {
         sprite.position = new Vector3(pos.position.x, pos.position.y);
-        transform.position = new Vector3(pos.position.x, pos.position.y);
     }
 }

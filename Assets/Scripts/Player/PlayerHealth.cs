@@ -9,6 +9,10 @@ namespace Player
     {
         [SerializeField] private Health health;
 
-        public Health Health { get; set; }
+        public Health Health
+        {
+            get => health;
+            set => health = value;
+        }
     }
 }
