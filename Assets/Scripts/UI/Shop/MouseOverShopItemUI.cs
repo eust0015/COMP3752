@@ -3,13 +3,13 @@ using Items;
 using UI.Items;
 using UnityEngine;
 
-namespace UI
+namespace UI.Shop
 {
     [Serializable]
-    public class MouseOverInventoryItemUI : MonoBehaviour
+    public class MouseOverShopItemUI : MonoBehaviour
     {
-        [SerializeField] private InventoryItemDetailedUI mouseOverPrefab;
-        [SerializeField] private InventoryItemDetailedUI activeMouseOver;
+        [SerializeField] private ShopItemDetailedUI mouseOverPrefab;
+        [SerializeField] private ShopItemDetailedUI activeMouseOver;
         protected virtual void OnEnable()
         {
             Hide();
@@ -21,7 +21,6 @@ namespace UI
             activeMouseOver.Initialise(item);
         }
         
-
         public virtual void Hide()
         {
             if (activeMouseOver == null)

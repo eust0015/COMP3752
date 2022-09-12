@@ -1,10 +1,8 @@
 ﻿using System;
 using Statistics;
-using UI.HUD;
-using UI.Statistics;
 using UnityEngine;
 
-namespace HUD
+namespace UI.Statistics
 {
     [Serializable]
     public class HealthHUDTest : MonoBehaviour

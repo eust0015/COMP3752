@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Items;
+using UI.Inventory;
+using UI.Items;
 using Unity.VisualScripting;
 using UnityEngine;
 

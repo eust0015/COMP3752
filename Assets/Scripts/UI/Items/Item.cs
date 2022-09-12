@@ -1,14 +1,16 @@
+using System;
 using UnityEngine;
 
-namespace Items
+namespace UI.Items
 {
+    [Serializable]
     public abstract class Item
     {
-        protected string description;
-        protected Sprite icon;
-        protected string name;
-        protected int price;
-        protected int quantity;
+        [SerializeField] protected string description;
+        [SerializeField] protected Sprite icon;
+        [SerializeField] protected string name;
+        [SerializeField] protected int price;
+        [SerializeField] protected int quantity;
         
         public delegate void QuantityChanged();
         public event QuantityChanged OnQuantityChanged;

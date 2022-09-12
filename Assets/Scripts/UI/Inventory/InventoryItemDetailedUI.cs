@@ -3,6 +3,7 @@ using HUD;
 using Items;
 using Statistics;
 using TMPro;
+using UI.Items;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -34,6 +35,7 @@ namespace UI
             UpdateDescription();
             UpdateQuantity();
             UpdateSprite();
+            SubscribeToEvents();
         }
 
         private void SubscribeToEvents()
@@ -59,6 +61,7 @@ namespace UI
 
         private void OnDestroy()
         {
+            UnsubscribeFromEvents();
             OnDestroyed?.Invoke(this);
         }
     }

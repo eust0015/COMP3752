@@ -1,20 +1,16 @@
 ﻿using System;
-using HUD;
-using Items;
-using Statistics;
 using TMPro;
-using Unity.VisualScripting;
+using UI.Items;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Inventory
 {
     [Serializable]
-    public class InventoryItemUI :MonoBehaviour, IPointerEnterHandler, IPointerExitHandler 
+    public class InventoryItemUI :MonoBehaviour//, IPointerEnterHandler, IPointerExitHandler 
     {
         [SerializeField] private Item item;
-        [SerializeField] private TMP_Text itemName;
         [SerializeField] private TMP_Text quantity;
         [SerializeField] private Image icon;
 
@@ -30,7 +26,6 @@ namespace UI
         {
             Item = setItem;
             SubscribeToEvents();
-            UpdateName();
             UpdateQuantity();
             UpdateSprite();
             HideDetailedDescription();
@@ -52,7 +47,6 @@ namespace UI
             Item.OnQuantityChanged -= UpdateQuantity;
         }
         
-        public void UpdateName() => itemName.text = Item.Name;
         public void UpdateQuantity() => quantity.text = Item.Quantity.ToString();
         public void UpdateSprite() => icon.sprite = Item.Icon;
         
@@ -79,15 +73,15 @@ namespace UI
             mouseOver.Hide();
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            ShowDetailedDescription();
-        }
-
-        public void OnPointerExit(PointerEventData eventData)
-        {
-            HideDetailedDescription();
-        }
+        // public void OnPointerEnter(PointerEventData eventData)
+        // {
+        //     ShowDetailedDescription();
+        // }
+        //
+        // public void OnPointerExit(PointerEventData eventData)
+        // {
+        //     HideDetailedDescription();
+        // }
 
         private void OnDestroy()
         {
