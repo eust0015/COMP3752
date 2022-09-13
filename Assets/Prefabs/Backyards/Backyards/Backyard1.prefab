@@ -1124,7 +1124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7608067095711877317
 Transform:
   m_ObjectHideFlags: 0
@@ -1155,6 +1155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19aa31ae60cda4745bec72b93022bc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomAbove: {fileID: 0}
+  roomBelow: {fileID: 0}
+  roomLeft: {fileID: 0}
+  roomRight: {fileID: 0}
 --- !u!1 &7608067096241021316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
@@ -1385,6 +1393,10 @@ PrefabInstance:
     - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1450,6 +1462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
@@ -1513,6 +1529,10 @@ PrefabInstance:
     - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1578,6 +1598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
@@ -1641,6 +1665,10 @@ PrefabInstance:
     - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1706,6 +1734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
@@ -1769,6 +1801,10 @@ PrefabInstance:
     - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893659008575456863, guid: 22e9a135a0680744fbf9f6921ee142a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

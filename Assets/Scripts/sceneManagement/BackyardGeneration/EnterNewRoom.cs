@@ -8,6 +8,6 @@ public class EnterNewRoom : MonoBehaviour
     {
         GameObject backyardManager = GameObject.FindGameObjectsWithTag("GameController")[0];
         backyardManager.GetComponent<YardManager>().LoadNewRoom(gameObject.name);
-        //Debug.Log(gameObject.name);
+        Debug.Log(gameObject.name);
     }
 }

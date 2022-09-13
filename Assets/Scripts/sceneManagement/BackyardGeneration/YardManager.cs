@@ -10,8 +10,9 @@ public class YardManager : MonoBehaviour
     private GameObject[] exits;
     void Awake()
     {
-        Instantiate(startingRoom, new Vector3(0,0,0), Quaternion.identity);
+        startingRoom.SetActive(true);
         currentRoom = startingRoom;
+        Instantiate(currentRoom, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void LoadNewRoom(string roomLocation)
@@ -36,11 +37,11 @@ public class YardManager : MonoBehaviour
         }
         if(currentRoom.GetComponent<Yard>().getRoom(roomLocation) == null)
         {
+            currentRoom.SetActive(false);
             GameObject newRoom = roomPrefabs[Random.Range(0, roomPrefabs.Count)];
             currentRoom.GetComponent<Yard>().setRoom(roomLocation, newRoom);
             Instantiate(newRoom, new Vector3(0, 0, 0), Quaternion.identity);
             newRoom.GetComponent<Yard>().setRoom(previousRoom, currentRoom);
-            currentRoom.SetActive(false);
             currentRoom = newRoom;
         }
         else
