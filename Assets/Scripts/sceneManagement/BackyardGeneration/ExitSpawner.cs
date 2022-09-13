@@ -7,11 +7,12 @@ public class ExitSpawner : MonoBehaviour
     private GameObject Exit;
     private GameObject[] ExitsArray;
     public int spawnChance = 100;
+    public string lastRoom = "Below";
     void Awake()
     {
         Exit = gameObject;
         ExitsArray = new GameObject[4];
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < ExitsArray.Length; i++)
         {
             ExitsArray[i] = Exit.transform.GetChild(i).gameObject;
         }
@@ -26,14 +27,29 @@ public class ExitSpawner : MonoBehaviour
             if (spawnChance >= Random.Range(0, 100))
             {
                 ExitsArray[i].SetActive(true);
-                Debug.Log("view " + ExitsArray[i]);
             }
         }
+        FindLastRoom();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void FindLastRoom()
     {
-        
+        switch(lastRoom)
+        {
+            case "Above":
+                ExitsArray[1].SetActive(true);
+                break;
+            case "Below":
+                ExitsArray[2].SetActive(true);
+                break;
+            case "Right":
+                ExitsArray[3].SetActive(true);
+                break;
+            case "Left":
+                ExitsArray[4].SetActive(true);
+                break;
+
+        }
     }
 }
