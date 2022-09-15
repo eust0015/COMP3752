@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Statistics
+namespace UI.Statistics
 {
     [Serializable]
     public class Health : Statistic

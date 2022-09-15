@@ -1,18 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
-using Items;
+using TMPro;
 using UI.Items;
 using UnityEngine;
 
-namespace UI
+namespace UI.Shop
 {
     [Serializable]
     public class ShopUITest : MonoBehaviour
     {
+        [SerializeField] private Transform canvas;
+        [SerializeField] private ShopUI shopPrefab;
+        [SerializeField] private ShopUI activeShop;
+        [SerializeField] private TMP_Text buttonText;
         [SerializeField] private List<Item> items;
-        private void OnEnable()
+        
+        public Transform Canvas
         {
-        //Test
+            get => canvas;
+            private set => canvas = value;
+        }
+
+        public ShopUI ShopPrefab
+        {
+            get => shopPrefab;
+            private set => shopPrefab = value;
+        }
+
+        public ShopUI ActiveShop
+        {
+            get => activeShop;
+            private set => activeShop = value;
+        }
+
+        public TMP_Text ButtonText
+        {
+            get => buttonText;
+            private set => buttonText = value;
+        }
+
+        public List<Item> Items
+        {
+            get => items;
+            private set => items = value;
+        }
+
+        public void OnClick()
+        {
+            if (ActiveShop == null)
+                Display();
+            else
+                Hide();
+        }
+        
+        public void Display()
+        {
+            if (ActiveShop != null)
+                return;
         
             Potion potion1 = new Potion
             {
@@ -37,25 +81,27 @@ namespace UI
                 Price = 3,
                 Quantity = 1
             };
-            
-            Potion potion4 = new Potion
-            {
-                Name = "Item4Name",
-                Description = "Item4Description",
-                Price = 4,
-                Quantity = 1
-            };
 
-            items = new List<Item>
+            Items = new List<Item>
             {
                 potion1,
                 potion2,
                 potion3,
-                potion4,
             };
+            
+            ActiveShop = Instantiate(ShopPrefab, Canvas);
+            ActiveShop.Display(items);
+            ButtonText.text = "Hide";
+        }
 
-            ShopUI shop = transform.GetComponent<ShopUI>();
-            shop.Display(items);
+        public void Hide()
+        {
+            if (ActiveShop == null)
+                return;
+            
+            Destroy(ActiveShop.gameObject);
+            ActiveShop = null;
+            ButtonText.text = "Show";
         }
     }
 }

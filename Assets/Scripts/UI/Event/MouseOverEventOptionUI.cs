@@ -1,39 +1,37 @@
 ﻿using System;
-using UI.Items;
 using UnityEngine;
 
-namespace UI.Inventory
+namespace UI.Event
 {
     [Serializable]
-    public class MouseOverInventoryItemUI : MonoBehaviour
+    public class MouseOverEventOptionUI : MonoBehaviour
     {
-        [SerializeField] private InventoryItemDetailedUI mouseOverPrefab;
-        [SerializeField] private InventoryItemDetailedUI activeMouseOver;
+        [SerializeField] private EventOptionDetailedUI mouseOverPrefab;
+        [SerializeField] private EventOptionDetailedUI activeMouseOver;
 
-        public InventoryItemDetailedUI MouseOverPrefab
+        public EventOptionDetailedUI MouseOverPrefab
         {
             get => mouseOverPrefab;
             private set => mouseOverPrefab = value;
         }
 
-        public InventoryItemDetailedUI ActiveMouseOver
+        public EventOptionDetailedUI ActiveMouseOver
         {
             get => activeMouseOver;
             private set => activeMouseOver = value;
         }
-
+        
         protected virtual void OnEnable()
         {
             Hide();
         }
 
-        public virtual void Display(Item item)
+        public virtual void Display(EventOption option)
         {
             activeMouseOver = Instantiate(mouseOverPrefab, transform);
-            activeMouseOver.Initialise(item);
+            activeMouseOver.Initialise(option);
         }
         
-
         public virtual void Hide()
         {
             if (activeMouseOver == null)

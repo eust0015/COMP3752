@@ -2,40 +2,20 @@
 using System.Collections;
 using UnityEngine;
 
-namespace UI
+namespace UI.Messages
 {
     [Serializable]
-    public abstract class MessageUI : MonoBehaviour
+    public class MessageUI : MonoBehaviour
     {
-        [SerializeField] private GameObject messagePrefab;
-        [SerializeField] private GameObject activeMessage;
-        protected virtual void OnEnable()
-        {
-            Hide();
-        }
+        public void OnEnable() => StartCoroutine(HideCoroutine());
 
-        public virtual void Display()
-        {
-            activeMessage = Instantiate(messagePrefab, transform);
-
-            if (activeMessage == null)
-                return;
-            
-            StartCoroutine(HideCoroutine());
-        }
-
-        protected IEnumerator HideCoroutine()
+        private IEnumerator HideCoroutine()
         {
             yield return new WaitForSeconds(5);
             Hide();
         }
 
-        protected virtual void Hide()
-        {
-            if (activeMessage == null)
-                return;
-            
-            Destroy(activeMessage);
-        }
+        public void Hide() => Destroy(gameObject);
+        
     }
 }

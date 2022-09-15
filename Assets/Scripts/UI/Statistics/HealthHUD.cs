@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Player;
-using Statistics;
-using UI.HUD;
 using UnityEngine;
 
 namespace UI.Statistics
@@ -26,9 +24,23 @@ namespace UI.Statistics
             }
         }
 
-        [SerializeField] public Transform Container { get; private set; }
-        [SerializeField] public HeartHUD HeartPrefab { get; private set; }
-        [SerializeField] private List<HeartHUD> HeartList { get; set; }
+        public Transform Container
+        {
+            get => container;
+            private set => container = value;
+        }
+
+        public HeartHUD HeartPrefab
+        {
+            get => heartPrefab;
+            private set => heartPrefab = value;
+        }
+
+        public List<HeartHUD> HeartList
+        {
+            get => heartList;
+            private set => heartList = value;
+        }
 
         private void OnEnable()
         {

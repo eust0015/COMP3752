@@ -1,4 +1,4 @@
-﻿namespace Inventory
+﻿namespace UI.Inventory
 {
     public class Inventory
     {

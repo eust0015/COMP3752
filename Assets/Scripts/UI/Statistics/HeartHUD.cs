@@ -1,9 +1,7 @@
 ﻿using System;
-using Player;
-using Statistics;
 using UnityEngine;
 
-namespace UI.HUD
+namespace UI.Statistics
 {
     [Serializable]
     public class HeartHUD : MonoBehaviour
@@ -25,10 +23,19 @@ namespace UI.HUD
                 SubscribeToEvents();
             }
         }
-        
-        [SerializeField] public int HalfHeart { get; private set; }
-        [SerializeField] public Animator HeartAnimator { get; private set; }
-        
+
+        public int HalfHeart
+        {
+            get => halfHeart;
+            private set => halfHeart = value;
+        }
+
+        public Animator HeartAnimator
+        {
+            get => heartAnimator;
+            private set => heartAnimator = value;
+        }
+
         public void Initialise(Health setHealth, int setHalfHeart)
         {
 

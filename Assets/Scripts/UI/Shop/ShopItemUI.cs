@@ -1,10 +1,10 @@
 ﻿using System;
-using HUD;
-using Statistics;
 using TMPro;
+using UI.Inventory;
 using UI.Items;
+using UI.Messages;
+using UI.Statistics;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace UI.Shop
@@ -13,9 +13,12 @@ namespace UI.Shop
     public class ShopItemUI :MonoBehaviour
     {
         [SerializeField] private Item item;
-        [SerializeField] private MouseOverShopItemUI mouseOverUI;
         [SerializeField] private TMP_Text price;
         [SerializeField] private Image icon;
+        [SerializeField] private Transform mouseOverContainer;
+        [SerializeField] private ShopItemDetailedUI mouseOverPrefab;
+        [SerializeField] private ShopItemDetailedUI activeMouseOver;
+        [SerializeField] private GameObject messagePrefab;
         
         public Item Item
         {
@@ -23,18 +26,48 @@ namespace UI.Shop
             private set => item = value;
         }
 
-        public MouseOverShopItemUI MouseOverUI
+        public TMP_Text Price
         {
-            get => mouseOverUI;
-            private set => mouseOverUI = value;
+            get => price;
+            private set => price = value;
+        }
+
+        public Image Icon
+        {
+            get => icon;
+            private set => icon = value;
+        }
+
+        public Transform MouseOverContainer
+        {
+            get => mouseOverContainer;
+            private set => mouseOverContainer = value;
         }
         
-        public void Initialise(Item setItem)
+        public ShopItemDetailedUI MouseOverPrefab
+        {
+            get => mouseOverPrefab;
+            private set => mouseOverPrefab = value;
+        }
+
+        public ShopItemDetailedUI ActiveMouseOver
+        {
+            get => activeMouseOver;
+            private set => activeMouseOver = value;
+        }
+        
+        public GameObject MessagePrefab
+        {
+            get => messagePrefab;
+            private set => messagePrefab = value;
+        }
+        
+        public void Initialise(Item setItem, Transform setMouseOverContainer)
         {
             Item = setItem;
-            price.text = Item.Price.ToString();
-            icon.sprite = Item.Icon;
-            MouseOverUI = FindObjectOfType<MouseOverShopItemUI>();
+            UpdatePrice();
+            UpdateSprite();
+            MouseOverContainer = setMouseOverContainer;
         }
         
         public void Buy()
@@ -46,8 +79,7 @@ namespace UI.Shop
 
             if (Item.Price > currency.Value)
             {
-                InsufficientFundsMessageUI message = FindObjectOfType<InsufficientFundsMessageUI>();
-                message.Display();
+                DisplayInsufficientFundsMessage();
                 return;
             }
             
@@ -57,7 +89,25 @@ namespace UI.Shop
             inventory.AddItem(Item);
         }
         
-        public void ShowDetailedDescription() => MouseOverUI.Display(Item);
-        public void HideDetailedDescription() => MouseOverUI.Hide();
+        public void UpdatePrice() => price.text = Item.Price.ToString();
+        public void UpdateSprite() => icon.sprite = Item.Icon;
+
+        public void ShowDetailedDescription()
+        {
+            activeMouseOver = Instantiate(mouseOverPrefab, MouseOverContainer);
+            activeMouseOver.Initialise(item);
+        }
+
+        public void HideDetailedDescription()
+        {
+            if (activeMouseOver == null)
+                return;
+            
+            Destroy(activeMouseOver.gameObject);
+            activeMouseOver = null;    
+        }
+        
+        public virtual void DisplayInsufficientFundsMessage() => Instantiate(messagePrefab, transform);
+
     }
 }
