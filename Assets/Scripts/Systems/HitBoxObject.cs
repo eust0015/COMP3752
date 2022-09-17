@@ -13,6 +13,7 @@ public class HitBoxObject : MonoBehaviour
     
     public float timer;
     public int damage;
+    public bool showHitbox = false;
 
     private void Update()
     {
@@ -36,5 +37,12 @@ public class HitBoxObject : MonoBehaviour
             Debug.Log(otherHealth);
             owner.RequestAttack(otherHealth, damage);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        
+        Gizmos.DrawWireCube(transform.position, transform.localScale);
+        if (showHitbox) Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
     }
 }

@@ -12,8 +12,14 @@ public class Behaviour : MonoBehaviour
     protected float maxDistance = 5f;
     protected bool tracking;
 
+    protected bool atkCon;
+    protected float atkCD;
+
+    protected AttackController _a;
+
     private void Awake()
     {
+        _a = GetComponent<AttackController>();
         u = GetComponent<Unit>();
         tracking = false;
         StartCoroutine(Condition());
@@ -33,5 +39,10 @@ public class Behaviour : MonoBehaviour
     {
         Destroy( this);
         yield return null;
+    }
+
+    protected virtual IEnumerator Attack()
+    {
+        if(_a == null) yield break;
     }
 }
