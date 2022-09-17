@@ -1,5 +1,4 @@
 ﻿using System;
-using Statistics;
 using UnityEngine;
 
 namespace UI.Statistics
@@ -8,6 +7,13 @@ namespace UI.Statistics
     public class HealthHUDTest : MonoBehaviour
     {
         [SerializeField] private Health health;
+
+        public Health Health
+        {
+            get => health;
+            private set => health = value;
+        }
+
         private void OnEnable()
         {
             health = transform.GetComponent<HealthHUD>().Health;

@@ -1,5 +1,4 @@
 ﻿using System;
-using Items;
 using UI.Items;
 using UnityEngine;
 
@@ -10,6 +9,19 @@ namespace UI.Shop
     {
         [SerializeField] private ShopItemDetailedUI mouseOverPrefab;
         [SerializeField] private ShopItemDetailedUI activeMouseOver;
+
+        public ShopItemDetailedUI MouseOverPrefab
+        {
+            get => mouseOverPrefab;
+            private set => mouseOverPrefab = value;
+        }
+
+        public ShopItemDetailedUI ActiveMouseOver
+        {
+            get => activeMouseOver;
+            private set => activeMouseOver = value;
+        }
+
         protected virtual void OnEnable()
         {
             Hide();

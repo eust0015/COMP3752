@@ -1,5 +1,4 @@
 ﻿using System;
-using Items;
 using TMPro;
 using UI.Items;
 using UnityEngine;
@@ -22,6 +21,30 @@ namespace UI.Shop
         {
             get => item;
             private set => item = value;
+        }
+
+        public TMP_Text ItemName
+        {
+            get => itemName;
+            private set => itemName = value;
+        }
+
+        public TMP_Text Description
+        {
+            get => description;
+            private set => description = value;
+        }
+
+        public TMP_Text Price
+        {
+            get => price;
+            private set => price = value;
+        }
+
+        public Image Icon
+        {
+            get => icon;
+            private set => icon = value;
         }
 
         public void Initialise(Item setItem)

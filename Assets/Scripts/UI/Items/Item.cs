@@ -14,10 +14,31 @@ namespace UI.Items
         
         public delegate void QuantityChanged();
         public event QuantityChanged OnQuantityChanged;
-        public virtual string Description { get; set; }
-        public virtual Sprite Icon { get; set; }
-        public virtual string Name { get; set; }
-        public virtual int Price { get; set; }
+
+        public string Description
+        {
+            get => description;
+            set => description = value;
+        }
+
+        public Sprite Icon
+        {
+            get => icon;
+            set => icon = value;
+        }
+
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+
+        public int Price
+        {
+            get => price;
+            set => price = value;
+        }
+
         public virtual int Quantity
         {
             get => quantity;

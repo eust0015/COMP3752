@@ -1,31 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using Items;
+using TMPro;
 using UI.Items;
-using UI.Shop;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace UI
+namespace UI.Shop
 {
     [Serializable]
     public class ShopUI : MonoBehaviour
     {
-
-        [SerializeField] private Transform container;
+        [SerializeField] private TMP_Text description;
+        [SerializeField] private Image picture;
+        [SerializeField] private TMP_Text title;
+        [SerializeField] private Transform itemContainer;
+        [SerializeField] private Transform itemDetailedContainer;
         [SerializeField] private ShopItemUI shopItemPrefab;
         [SerializeField] private List<ShopItemUI> shopItemsList;
 
-        public Transform Container
+        public TMP_Text Description
         {
-            get => container;
-            private set => container = value;
+            get => description;
+            private set => description = value;
+        }
+
+        public Image Picture
+        {
+            get => picture;
+            private set => picture = value;
+        }
+
+        public TMP_Text Title
+        {
+            get => title;
+            private set => title = value;
+        }
+
+        public Transform ItemContainer
+        {
+            get => itemContainer;
+            private set => itemContainer = value;
+        }
+
+        public Transform ItemDetailedContainer
+        {
+            get => itemDetailedContainer;
+            private set => itemDetailedContainer = value;
         }
 
         public ShopItemUI ShopItemPrefab
         {
             get => shopItemPrefab;
+            private set => shopItemPrefab = value;
         }
-
+        
         public List<ShopItemUI> ShopItemsList
         {
             get
@@ -49,8 +77,8 @@ namespace UI
         
         private void AddItem(Item item)
         {
-            ShopItemUI shopItem = Instantiate(ShopItemPrefab, Container);
-            shopItem.Initialise(item);
+            ShopItemUI shopItem = Instantiate(ShopItemPrefab, ItemContainer);
+            shopItem.Initialise(item, ItemDetailedContainer);
             ShopItemsList.Add(shopItem);
         }
 

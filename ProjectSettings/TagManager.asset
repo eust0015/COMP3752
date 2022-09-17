@@ -6,10 +6,7 @@ TagManager:
   tags:
   - NPCSpawn
   - EnemySpawnPoint
-  - ExitN
-  - ExitS
-  - ExitE
-  - ExitW
+  - Backyard
   layers:
   - Default
   - TransparentFX

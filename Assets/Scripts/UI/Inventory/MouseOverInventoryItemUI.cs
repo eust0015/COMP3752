@@ -1,15 +1,27 @@
 ﻿using System;
-using Items;
 using UI.Items;
 using UnityEngine;
 
-namespace UI
+namespace UI.Inventory
 {
     [Serializable]
     public class MouseOverInventoryItemUI : MonoBehaviour
     {
         [SerializeField] private InventoryItemDetailedUI mouseOverPrefab;
         [SerializeField] private InventoryItemDetailedUI activeMouseOver;
+
+        public InventoryItemDetailedUI MouseOverPrefab
+        {
+            get => mouseOverPrefab;
+            private set => mouseOverPrefab = value;
+        }
+
+        public InventoryItemDetailedUI ActiveMouseOver
+        {
+            get => activeMouseOver;
+            private set => activeMouseOver = value;
+        }
+
         protected virtual void OnEnable()
         {
             Hide();

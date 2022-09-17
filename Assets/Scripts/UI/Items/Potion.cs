@@ -1,7 +1,4 @@
-﻿using UI.Items;
-using UnityEditor;
-
-namespace Items
+﻿namespace UI.Items
 {
     public class Potion : Item
     {

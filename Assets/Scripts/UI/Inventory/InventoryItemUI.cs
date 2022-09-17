@@ -2,13 +2,12 @@
 using TMPro;
 using UI.Items;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace UI.Inventory
 {
     [Serializable]
-    public class InventoryItemUI :MonoBehaviour//, IPointerEnterHandler, IPointerExitHandler 
+    public class InventoryItemUI : MonoBehaviour 
     {
         [SerializeField] private Item item;
         [SerializeField] private TMP_Text quantity;
@@ -20,6 +19,18 @@ namespace UI.Inventory
         {
             get => item;
             private set => item = value;
+        }
+
+        public TMP_Text Quantity
+        {
+            get => quantity;
+            private set => quantity = value;
+        }
+
+        public Image Icon
+        {
+            get => icon;
+            private set => icon = value;
         }
 
         public void Initialise(Item setItem)
@@ -72,16 +83,6 @@ namespace UI.Inventory
             MouseOverInventoryItemUI mouseOver = FindObjectOfType<MouseOverInventoryItemUI>();
             mouseOver.Hide();
         }
-
-        // public void OnPointerEnter(PointerEventData eventData)
-        // {
-        //     ShowDetailedDescription();
-        // }
-        //
-        // public void OnPointerExit(PointerEventData eventData)
-        // {
-        //     HideDetailedDescription();
-        // }
 
         private void OnDestroy()
         {

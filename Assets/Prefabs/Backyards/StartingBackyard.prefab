@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea8d5ce22830094791df134f08bee04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Exit: {fileID: 1158340465606739370}
-  spawnChance: 100
+  spawnChance: 50
+  lastRoom: 1
 --- !u!1 &2260236848884961817
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,8 +61,9 @@ GameObject:
   - component: {fileID: 8456401555064043611}
   - component: {fileID: 9205875125587856093}
   - component: {fileID: 5751249249069369081}
+  - component: {fileID: 5553448826488576351}
   m_Layer: 0
-  m_Name: ExitW
+  m_Name: Left
   m_TagString: ExitW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,6 +162,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5553448826488576351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2260236848884961817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b4a4a7ab0b22641be65c9afd487835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5193638420207570518
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,8 +185,9 @@ GameObject:
   - component: {fileID: 149091351599812596}
   - component: {fileID: 1144478013900691108}
   - component: {fileID: 1169545449593073087}
+  - component: {fileID: 7294670842665756235}
   m_Layer: 0
-  m_Name: ExitS
+  m_Name: Below
   m_TagString: ExitS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +286,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7294670842665756235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193638420207570518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b4a4a7ab0b22641be65c9afd487835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5198203908958407902
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,8 +309,9 @@ GameObject:
   - component: {fileID: 3877667602047406797}
   - component: {fileID: 8949358296947152656}
   - component: {fileID: 2679573825739270560}
+  - component: {fileID: 6485934407748365693}
   m_Layer: 0
-  m_Name: ExitE
+  m_Name: Right
   m_TagString: ExitE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,6 +410,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6485934407748365693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198203908958407902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b4a4a7ab0b22641be65c9afd487835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5509005952262015603
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5595293fc8ef6e8489e0a6d4181a2d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1391037338614340426, guid: d4bdc4601bc774247b7a2d432f1e915f, type: 3}
+  enemyPrefab: {fileID: 5039016738593648306, guid: df05229f22c023644b395dedf1c91bbe, type: 3}
   spawnChance: 35
   locationName: EnemySpawnPoint
 --- !u!1 &7608067094356361198
@@ -1000,13 +1039,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7608067095711877317}
+  - component: {fileID: 8628512448195983677}
   m_Layer: 0
   m_Name: StartingBackyard
-  m_TagString: Untagged
+  m_TagString: Backyard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7608067095711877317
 Transform:
   m_ObjectHideFlags: 0
@@ -1026,6 +1066,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8628512448195983677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608067095711877318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19aa31ae60cda4745bec72b93022bc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomAbove: {fileID: 0}
+  roomBelow: {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
+  roomLeft: {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
+  roomRight: {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
 --- !u!1 &7608067096241021316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,8 +1204,9 @@ GameObject:
   - component: {fileID: 8093157849002930385}
   - component: {fileID: 2472701739549353425}
   - component: {fileID: 4128051796457842787}
+  - component: {fileID: 2733204436014197545}
   m_Layer: 0
-  m_Name: ExitN
+  m_Name: Above
   m_TagString: ExitN
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,6 +1305,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2733204436014197545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8813137043288368949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b4a4a7ab0b22641be65c9afd487835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &296852460191919634
 PrefabInstance:
   m_ObjectHideFlags: 0

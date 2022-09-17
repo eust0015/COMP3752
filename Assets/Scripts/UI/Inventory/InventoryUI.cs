@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Items;
-using UI.Inventory;
 using UI.Items;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace UI
+namespace UI.Inventory
 {
     [Serializable]
     public class InventoryUI : MonoBehaviour
@@ -26,6 +23,7 @@ namespace UI
         public InventoryItemUI InventoryItemPrefab
         {
             get => inventoryItemPrefab;
+            private set => inventoryItemPrefab = value;
         }
 
         public List<InventoryItemUI> InventoryItemsList

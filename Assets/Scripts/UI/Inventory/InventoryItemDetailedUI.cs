@@ -1,15 +1,10 @@
 ﻿using System;
-using HUD;
-using Items;
-using Statistics;
 using TMPro;
 using UI.Items;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Inventory
 {
     [Serializable]
     public class InventoryItemDetailedUI :MonoBehaviour 
@@ -26,6 +21,30 @@ namespace UI
         {
             get => item;
             private set => item = value;
+        }
+
+        public TMP_Text ItemName
+        {
+            get => itemName;
+            private set => itemName = value;
+        }
+
+        public TMP_Text Description
+        {
+            get => description;
+            private set => description = value;
+        }
+
+        public TMP_Text Quantity
+        {
+            get => quantity;
+            private set => quantity = value;
+        }
+
+        public Image Icon
+        {
+            get => icon;
+            private set => icon = value;
         }
 
         public void Initialise(Item setItem)

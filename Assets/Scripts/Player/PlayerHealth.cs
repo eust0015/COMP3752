@@ -1,5 +1,5 @@
 ﻿using System;
-using Statistics;
+using UI.Statistics;
 using UnityEngine;
 
 namespace Player
