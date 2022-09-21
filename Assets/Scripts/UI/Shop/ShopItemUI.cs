@@ -2,7 +2,6 @@
 using TMPro;
 using UI.Inventory;
 using UI.Items;
-using UI.Messages;
 using UI.Statistics;
 using UnityEngine;
 using UnityEngine.UI;

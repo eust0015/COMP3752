@@ -14,7 +14,7 @@ namespace UI.Shop
         [SerializeField] private ShopUI activeShop;
         [SerializeField] private TMP_Text buttonText;
         [SerializeField] private List<Item> items;
-        
+
         public Transform Canvas
         {
             get => canvas;
@@ -103,5 +103,6 @@ namespace UI.Shop
             ActiveShop = null;
             ButtonText.text = "Show";
         }
+        
     }
 }

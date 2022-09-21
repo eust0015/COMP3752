@@ -16,6 +16,9 @@ namespace UI.Event
         [SerializeField] private EventOptionUI optionPrefab;
         [SerializeField] private List<EventOptionUI> eventOptionsList;
 
+        public delegate void Destroyed(EventUI thisObject);
+        public event Destroyed OnDestroyed;
+        
         public TMP_Text Description
         {
             get => description;
@@ -57,6 +60,12 @@ namespace UI.Event
             private set => eventOptionsList = value;
         }
         
+        private void OnEnable()
+        {
+            PauseGame();
+            transform.SetAsFirstSibling();
+        }
+        
         public void Display(List<EventOption> options)
         {
             Clear();
@@ -81,6 +90,27 @@ namespace UI.Event
                 Destroy(menuOption.gameObject);
             }
             EventOptionsList.Clear();
+        }
+        
+        private void PauseGame()
+        {
+            Time.timeScale = 0;
+        }
+        private void ResumeGame()
+        {
+            Time.timeScale = 1;
+        }
+        
+        public void Close()
+        { 
+            Clear();
+            ResumeGame();
+            Destroy(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            OnDestroyed?.Invoke(this);
         }
     }
 }

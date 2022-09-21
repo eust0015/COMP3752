@@ -18,6 +18,9 @@ namespace UI.Shop
         [SerializeField] private ShopItemUI shopItemPrefab;
         [SerializeField] private List<ShopItemUI> shopItemsList;
 
+        public delegate void Destroyed(ShopUI thisObject);
+        public event Destroyed OnDestroyed;
+        
         public TMP_Text Description
         {
             get => description;
@@ -65,6 +68,12 @@ namespace UI.Shop
             private set => shopItemsList = value;
         }
 
+        private void OnEnable()
+        {
+            PauseGame();
+            transform.SetAsFirstSibling();
+        }
+
         public void Display(List<Item> items)
         {
             Clear();
@@ -89,6 +98,27 @@ namespace UI.Shop
                 Destroy(menuItem.gameObject);
             }
             ShopItemsList.Clear();
+        }
+
+        private void PauseGame()
+        {
+            Time.timeScale = 0;
+        }
+        private void ResumeGame()
+        {
+            Time.timeScale = 1;
+        }
+        
+        public void Close()
+        { 
+            Clear();
+            ResumeGame();
+            Destroy(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            OnDestroyed?.Invoke(this);
         }
         
     }
