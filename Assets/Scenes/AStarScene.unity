@@ -625,6 +625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805ffc3ee856fe94b88ceca6439f1abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackBasedOnTag: 1
+  tagToAttack: Player
   showHitboxes: 1
   hBox: {fileID: 2052932164}
 --- !u!114 &1207483477
@@ -805,6 +807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805ffc3ee856fe94b88ceca6439f1abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackBasedOnTag: 0
+  tagToAttack: 
   showHitboxes: 0
   hBox: {fileID: 7992289949517164352, guid: 66e1d13987cc6154c97ee10bc36f6434, type: 3}
 --- !u!1001 &1416059404

@@ -30,7 +30,7 @@ public class AttackController : MonoBehaviour
         if (attackBasedOnTag)
         {
             hit.basedOnTag = true;
-            hit.tag = tagToAttack;
+            hit._tag = tagToAttack;
         }
         
         hit.timer = _h.duration;
