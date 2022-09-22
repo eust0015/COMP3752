@@ -9,6 +9,9 @@ public class AttackController : MonoBehaviour
     private int baseAtk;
     private int currentAtk;
 
+    [SerializeField] public bool attackBasedOnTag;
+    [SerializeField] public string tagToAttack;
+
     [SerializeField]
     private bool showHitboxes;
 
@@ -20,7 +23,16 @@ public class AttackController : MonoBehaviour
         box.transform.position = new Vector3(_h.relativePos.x, _h.relativePos.y, 0) + transform.position;
         box.transform.localScale = new Vector3(_h.dimX, _h.dimY, 1);
 
+
+
         var hit = box.GetComponent<HitBoxObject>();
+        
+        if (attackBasedOnTag)
+        {
+            hit.basedOnTag = true;
+            hit.tag = tagToAttack;
+        }
+        
         hit.timer = _h.duration;
         hit.damage = _h.damage;
         hit.owner = this;
