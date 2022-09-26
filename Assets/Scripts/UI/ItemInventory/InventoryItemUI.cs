@@ -1,10 +1,11 @@
 ﻿using System;
 using TMPro;
+using UI.Inventory;
 using UI.Items;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Inventory
+namespace UI.ItemInventory
 {
     [Serializable]
     public class InventoryItemUI : MonoBehaviour 
@@ -12,6 +13,9 @@ namespace UI.Inventory
         [SerializeField] private Item item;
         [SerializeField] private TMP_Text quantity;
         [SerializeField] private Image icon;
+        [SerializeField] private Transform mouseOverContainer;
+        [SerializeField] private InventoryItemDetailedUI mouseOverPrefab;
+        [SerializeField] private InventoryItemDetailedUI activeMouseOver;
 
         public delegate void Destroyed(InventoryItemUI thisObject);
         public event Destroyed OnDestroyed;
@@ -31,6 +35,24 @@ namespace UI.Inventory
         {
             get => icon;
             private set => icon = value;
+        }
+
+        public Transform MouseOverContainer
+        {
+            get => mouseOverContainer;
+            private set => mouseOverContainer = value;
+        }
+
+        public InventoryItemDetailedUI MouseOverPrefab
+        {
+            get => mouseOverPrefab;
+            private set => mouseOverPrefab = value;
+        }
+
+        public InventoryItemDetailedUI ActiveMouseOver
+        {
+            get => activeMouseOver;
+            private set => activeMouseOver = value;
         }
 
         public void Initialise(Item setItem)
@@ -74,14 +96,17 @@ namespace UI.Inventory
 
         public void ShowDetailedDescription()
         {
-            MouseOverInventoryItemUI mouseOver = FindObjectOfType<MouseOverInventoryItemUI>();
-            mouseOver.Display(Item);
+            activeMouseOver = Instantiate(mouseOverPrefab, MouseOverContainer);
+            activeMouseOver.Initialise(Item);
         }
 
         public void HideDetailedDescription()
         {
-            MouseOverInventoryItemUI mouseOver = FindObjectOfType<MouseOverInventoryItemUI>();
-            mouseOver.Hide();
+            if (activeMouseOver == null)
+                return;
+            
+            Destroy(activeMouseOver.gameObject);
+            activeMouseOver = null;    
         }
 
         private void OnDestroy()

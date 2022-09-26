@@ -1,6 +1,6 @@
 ﻿using System;
 using TMPro;
-using UI.Inventory;
+using UI.ItemInventory;
 using UI.Items;
 using UI.Statistics;
 using UnityEngine;
@@ -84,8 +84,8 @@ namespace UI.Shop
             
             currency.DecreaseValue(Item.Price);
             
-            InventoryUI inventory = FindObjectOfType<InventoryUI>();
-            inventory.AddItem(Item);
+            ItemInventoryUI itemInventory = FindObjectOfType<ItemInventoryUI>();
+            itemInventory.AddItem(Item);
         }
         
         public void UpdatePrice() => price.text = Item.Price.ToString();
@@ -94,7 +94,7 @@ namespace UI.Shop
         public void ShowDetailedDescription()
         {
             activeMouseOver = Instantiate(mouseOverPrefab, MouseOverContainer);
-            activeMouseOver.Initialise(item);
+            activeMouseOver.Initialise(Item);
         }
 
         public void HideDetailedDescription()

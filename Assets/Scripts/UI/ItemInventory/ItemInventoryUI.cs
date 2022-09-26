@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UI.Inventory;
 using UI.Items;
 using UnityEngine;
 
-namespace UI.Inventory
+namespace UI.ItemInventory
 {
     [Serializable]
-    public class InventoryUI : MonoBehaviour
+    public class ItemInventoryUI : MonoBehaviour
     {
 
-        [SerializeField] private Transform container;
+        [SerializeField] private Transform itemContainer;
         [SerializeField] private InventoryItemUI inventoryItemPrefab;
         [SerializeField] private List<InventoryItemUI> inventoryItemsList;
 
-        public Transform Container
+        public Transform ItemContainer
         {
-            get => container;
-            private set => container = value;
+            get => itemContainer;
+            private set => itemContainer = value;
         }
 
         public InventoryItemUI InventoryItemPrefab
@@ -58,7 +59,7 @@ namespace UI.Inventory
             }
             else // If the item was not found in the list
             {
-                inventoryItem = Instantiate(InventoryItemPrefab, Container);
+                inventoryItem = Instantiate(InventoryItemPrefab, ItemContainer);
                 inventoryItem.Initialise(item);
                 InventoryItemsList.Add(inventoryItem);
                 inventoryItem.OnDestroyed += RemoveItemFromList;
