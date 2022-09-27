@@ -1078,10 +1078,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19aa31ae60cda4745bec72b93022bc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomAbove: {fileID: 0}
-  roomBelow: {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
-  roomLeft: {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
-  roomRight: {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
+  roomAbove: 0
+  roomBelow: 0
+  roomLeft: 0
+  roomRight: 2
+  roomNo: 0
 --- !u!1 &7608067096241021316
 GameObject:
   m_ObjectHideFlags: 0

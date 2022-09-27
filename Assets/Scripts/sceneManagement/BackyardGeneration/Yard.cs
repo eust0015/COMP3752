@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class Yard : MonoBehaviour
 {
-    public GameObject roomAbove = null;
-    public GameObject roomBelow = null;
-    public GameObject roomLeft = null;
-    public GameObject roomRight = null;
+    public int roomAbove;
+    public int roomBelow;
+    public int roomLeft;
+    public int roomRight;
+    public int roomNo;
 
-    public GameObject getRoom(string location)
+    public void setRoomNo(int no)
+    {
+        roomNo = no;
+    }
+
+    public int getRoomNo()
+    {
+        return roomNo;
+    }
+
+    public int getRoom(string location)
     {
         switch(location)
         {
@@ -23,11 +34,11 @@ public class Yard : MonoBehaviour
                 return roomRight;
             default:
                 Debug.LogError("Looking for details of invalid location");
-                return null;
+                return 0;
 
         }
     }
-    public void setRoom(string location, GameObject room)
+    public void setRoom(string location, int room)
     {
         switch (location)
         {
