@@ -30,6 +30,7 @@ public class playerMovement : MonoBehaviour
     {
         _s = transform.GetChild(0).GetComponent<SpriteRenderer>();
         dashTimer = dashCooldown;
+        Application.targetFrameRate = 60;
     }
 
     void Update()
