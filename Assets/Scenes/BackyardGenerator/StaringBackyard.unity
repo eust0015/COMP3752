@@ -257,4 +257,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingRoom: {fileID: 7608067095711877318, guid: 5651505119eee9140aa300f8ab160cc4, type: 3}
   roomPrefabs:
+  - {fileID: 7608067095711877318, guid: 5651505119eee9140aa300f8ab160cc4, type: 3}
   - {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
