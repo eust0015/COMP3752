@@ -662,6 +662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1391037338614340426, guid: d4bdc4601bc774247b7a2d432f1e915f, type: 3}
+  shop: {fileID: 4935087666265531143, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
+  eventnpc: {fileID: 5572392598514794744, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
   spawnChance: 35
   locationName: EnemySpawnPoint
 --- !u!1 &7608067094702422842
@@ -1159,6 +1161,8 @@ MonoBehaviour:
   roomBelow: 0
   roomLeft: 0
   roomRight: 0
+  xValue: 0
+  yValue: 0
 --- !u!1 &7608067096241021316
 GameObject:
   m_ObjectHideFlags: 0

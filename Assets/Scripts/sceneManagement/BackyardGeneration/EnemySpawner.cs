@@ -6,6 +6,8 @@ public class EnemySpawner : MonoBehaviour
 {
     private GameObject[] spawnLocations;
     public GameObject enemyPrefab;
+    public GameObject shop;
+    public GameObject eventnpc;
     public float spawnChance;
     public string locationName = "NPCSpawn";
     void Start()
@@ -20,6 +22,14 @@ public class EnemySpawner : MonoBehaviour
             if (spawnChance >= Random.Range(0, 100))
             {
                 Instantiate(enemyPrefab, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
+            }
+            else if(spawnChance >= Random.Range(0, 100))
+            {
+                Instantiate(eventnpc, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
+            }
+            else if (spawnChance >= Random.Range(0, 100))
+            {
+                Instantiate(shop, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
             }
         }
         
