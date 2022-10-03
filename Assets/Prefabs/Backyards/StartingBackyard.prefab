@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea8d5ce22830094791df134f08bee04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 50
-  lastRoom: 1
+  spawnChance: 100
+  lastRoom: Below
 --- !u!1 &2260236848884961817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,8 +1081,7 @@ MonoBehaviour:
   roomAbove: 0
   roomBelow: 0
   roomLeft: 0
-  roomRight: 2
-  roomNo: 0
+  roomRight: 0
 --- !u!1 &7608067096241021316
 GameObject:
   m_ObjectHideFlags: 0

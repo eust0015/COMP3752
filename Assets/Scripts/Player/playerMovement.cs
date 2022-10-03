@@ -205,4 +205,27 @@ public class playerMovement : MonoBehaviour
             dashTimer = dashCooldown;
         }
     }
+
+    public void TeleportPlayer(string direction)
+    {
+        switch (direction)
+        {
+            case "Above":
+                gameObject.transform.position = new Vector3(0, (gameObject.transform.position.y-2)*-1, -5);
+                break;
+            case "Below":
+                gameObject.transform.position = new Vector3(0, (gameObject.transform.position.y+2)*-1, -5);
+                break;
+            case "Left":
+                gameObject.transform.position = new Vector3((gameObject.transform.position.x+1)*-1, 0, -5);
+                break;
+            case "Right":
+                gameObject.transform.position = new Vector3((gameObject.transform.position.x-1)*-1, 0, -5);
+                break;
+            default:
+                break;
+        }
+        xspeed = 0;
+        yspeed = 0;
+    }
 }

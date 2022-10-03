@@ -18,7 +18,7 @@ public class NPCSpawn : MonoBehaviour
         if(Random.Range(0f,100f) >= 100 - spawnChance)
         {
             spawnLocation = GameObject.FindGameObjectsWithTag(locationName)[Random.Range(0, GameObject.FindGameObjectsWithTag(locationName).Length)];
-            Instantiate(npcPrefab, new Vector3(spawnLocation.transform.position.x, spawnLocation.transform.position.y, -1), Quaternion.identity);
+            Instantiate(npcPrefab, new Vector3(spawnLocation.transform.position.x, spawnLocation.transform.position.y, -1), Quaternion.identity, transform);
         }
     }
 }

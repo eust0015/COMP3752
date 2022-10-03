@@ -5,18 +5,23 @@ using UnityEngine;
 public class YardManager : MonoBehaviour
 {
     public List<GameObject> roomPrefabs;
-    private List<GameObject> createdRooms = new List<GameObject>();
+    public List<GameObject> createdRooms = new List<GameObject>();
     private int currentRoom = 0;
     private GameObject newRoom;
     private GameObject[] exits;
     void Awake()
     {
-        for(int i = 0; i < roomPrefabs.Count; i++)
+        currentRoom = 0;
+        for (int i = 0; i < roomPrefabs.Count; i++)
         {
             roomPrefabs[i].SetActive(true);
+            roomPrefabs[i].GetComponent<Yard>().setRoom("Above", -1);
+            roomPrefabs[i].GetComponent<Yard>().setRoom("Below", -1);
+            roomPrefabs[i].GetComponent<Yard>().setRoom("Left", -1);
+            roomPrefabs[i].GetComponent<Yard>().setRoom("Right", -1);
         }
-        createdRooms.Add(roomPrefabs[0]);
-        Instantiate(createdRooms[0], new Vector3(0, 0, 0), Quaternion.identity);
+        
+        createdRooms.Add(Instantiate(roomPrefabs[0], new Vector3(0, 0, 0), Quaternion.identity));
     }
 
     public void LoadNewRoom(string roomLocation)
@@ -39,20 +44,22 @@ public class YardManager : MonoBehaviour
             default:
                 break;
         }
-        if(createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == 0)
+
+        GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<playerMovement>().TeleportPlayer(roomLocation);
+
+        if (createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -1)
         {
             createdRooms[currentRoom].SetActive(false);
-            createdRooms.Add(roomPrefabs[Random.Range(1, roomPrefabs.Count-1)]);
-            Instantiate(createdRooms[createdRooms.Count-1], new Vector3(0, 0, 0), Quaternion.identity);
-            createdRooms[currentRoom].GetComponent<Yard>().setRoom(roomLocation, createdRooms.Count);
+            createdRooms.Add(Instantiate(roomPrefabs[Random.Range(1, roomPrefabs.Count - 1)], new Vector3(0, 0, 0), Quaternion.identity));
+            createdRooms[currentRoom].GetComponent<Yard>().setRoom(roomLocation, createdRooms.Count-1);
             createdRooms[createdRooms.Count-1].GetComponent<Yard>().setRoom(previousRoom, currentRoom);
-            currentRoom += 1;
-            Instantiate(createdRooms[currentRoom], new Vector3(0, 0, 0), Quaternion.identity);
+            currentRoom = createdRooms.Count-1;
         }
         else
         {
-            /*Debug.Log("Testing2");
-            currentRoom = currentRoom.GetComponent<Yard>().getRoom(roomLocation);*/
+            createdRooms[createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation)].SetActive(true);
+            createdRooms[currentRoom].SetActive(false);
+            currentRoom = createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation);
         }
         //GameObject.FindGameObjectWithTag("Backyard").GetComponentInChildren<ExitSpawner>().lastRoom = previousRoom;
 
