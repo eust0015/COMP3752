@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (spawnChance >= Random.Range(0, 100))
             {
-                Instantiate(enemyPrefab, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity);
+                Instantiate(enemyPrefab, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
             }
         }
         

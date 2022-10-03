@@ -6,12 +6,12 @@ public class NPCSelector : MonoBehaviour
 {
     public List<UnityEngine.Sprite> spritelist;
     public int frames = 12;
-    private int selectedSprite;
+    public int selectedSprite;
     private int varNum = 0;
     private int currentFrame;
     void Start()
     {
-        selectedSprite = Random.Range(0, spritelist.Count/4)-1;
+        selectedSprite = Random.Range(0, (spritelist.Count/4)-1);
         gameObject.GetComponent<SpriteRenderer>().sprite = spritelist[selectedSprite];
         currentFrame = frames;
     }

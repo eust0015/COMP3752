@@ -8,17 +8,6 @@ public class Yard : MonoBehaviour
     public int roomBelow;
     public int roomLeft;
     public int roomRight;
-    public int roomNo;
-
-    public void setRoomNo(int no)
-    {
-        roomNo = no;
-    }
-
-    public int getRoomNo()
-    {
-        return roomNo;
-    }
 
     public int getRoom(string location)
     {
