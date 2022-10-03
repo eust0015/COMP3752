@@ -8,6 +8,37 @@ public class Yard : MonoBehaviour
     public int roomBelow;
     public int roomLeft;
     public int roomRight;
+    public int xValue;
+    public int yValue;
+
+    public int getCoords(string axis)
+    {
+        switch (axis)
+        {
+            case "x":
+                return xValue;
+            case "y":
+                return yValue;
+            default:
+                Debug.LogError("Looking for details of invalid location");
+                return 0;
+        }
+    }
+    public void setCoords(string axis, int value)
+    {
+        switch (axis)
+        {
+            case "x":
+                xValue = value;
+                break;
+            case "y":
+                yValue = value;
+                break;
+            default:
+                Debug.LogError("Looking for details of invalid location");
+                break;
+        }
+    }
 
     public int getRoom(string location)
     {
