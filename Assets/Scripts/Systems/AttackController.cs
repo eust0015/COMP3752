@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UI.Statistics;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class AttackController : MonoBehaviour
@@ -16,6 +17,7 @@ public class AttackController : MonoBehaviour
     private bool showHitboxes;
 
     [SerializeField] private GameObject hBox;
+    [SerializeField] private GameObject projectile;
 
     public void RequestHitbox(Hitbox _h)
     {
@@ -38,6 +40,28 @@ public class AttackController : MonoBehaviour
         hit.owner = this;
         hit.showHitbox = showHitboxes;
 
+    }
+
+    public void RequestProjectile(Projectile _p)
+    {
+        var proj = Instantiate(projectile);
+        proj.transform.position = transform.position;
+        proj.transform.eulerAngles = transform.eulerAngles;
+        ProjectileObject obj = projectile.GetComponent<ProjectileObject>();
+        obj.speed = _p.speed;
+        obj.damage = _p.damage;
+        obj.timer = _p.duration;
+        obj.pierce = _p.pierce;
+        obj.pierceCount = _p.pierceCount;
+        proj.GetComponent<SpriteRenderer>().sprite = _p.sprite;
+        proj.transform.rotation = transform.rotation;
+        obj.owner = this;
+
+        if (attackBasedOnTag)
+        {
+            obj.basedOnTag = true;
+            obj._tag = tagToAttack;
+        }
     }
 
     public void RequestAttack(Health h, int damage)

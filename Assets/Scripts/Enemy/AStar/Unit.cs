@@ -1,9 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class Unit : MonoBehaviour
 {
@@ -71,8 +75,7 @@ public class Unit : MonoBehaviour
     {
         bool followingPath = true;
         int pathIndex = 0;
-        transform.LookAt(path.lookPoints[0]);
-        
+
         while (followingPath)
         {
             Vector2 pos2D = new Vector2(transform.position.x, transform.position.y);
@@ -88,10 +91,10 @@ public class Unit : MonoBehaviour
 
             if (followingPath)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(path.lookPoints[pathIndex] - new Vector2(transform.position.x, transform.position.y));
-                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
-                //spriteTransform.localEulerAngles = new Vector3(0, 90, 0);
-                transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
+                var theta = getAngleFromVectors(path.lookPoints[pathIndex]);
+                float z = Mathf.Lerp(transform.localEulerAngles.z, transform.localEulerAngles.z + (theta - 90), turnSpeed * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, 0,z);
+                transform.Translate (Vector3.up * Time.deltaTime * speed, Space.Self);
             }
             yield return null;
         }
@@ -114,5 +117,16 @@ public class Unit : MonoBehaviour
     private void OnDrawGizmos()
     {
         path?.DrawWithGizmos();
+    }
+
+    private float getAngleFromVectors(Vector2 lookPoint)
+    {
+        Vector2 rotation = (lookPoint - new Vector2(transform.position.x, transform.position.y) ).normalized;
+        Vector2 current = new Vector2(Mathf.Cos(transform.eulerAngles.z * Mathf.Deg2Rad),
+            Mathf.Sin(transform.eulerAngles.z * Mathf.Deg2Rad));
+        float dot = (rotation.x * current.x) + (rotation.y * current.y);
+        float mag = Mathf.Sqrt((rotation.x * rotation.x) + (rotation.y * rotation.y)) * Mathf.Sqrt((current.x * current.x) + (current.y * current.y));
+        float theta = math.degrees(Mathf.Acos(dot / mag));
+        return theta;
     }
 }

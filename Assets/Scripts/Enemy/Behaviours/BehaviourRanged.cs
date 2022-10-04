@@ -9,6 +9,14 @@ public class BehaviourRanged : Behaviour
     [SerializeField]
     private float minimumMovementTime = 0f;
 
+    [SerializeField] private float shotDelay;
+    private float curDelay;
+    [SerializeField] private float chargeTime;
+
+    [SerializeField] private float projSpeed;
+    public Sprite _s;
+    
+
     private float moveTime;
     private void FixedUpdate()
     {
@@ -19,7 +27,8 @@ public class BehaviourRanged : Behaviour
             transform.rotation = targetRotation;
         }
         if(los) moveTime -= Time.deltaTime;
-        
+        curDelay -= Time.deltaTime;
+
     }
 
     protected override IEnumerator Condition()
@@ -40,11 +49,21 @@ public class BehaviourRanged : Behaviour
             {
                 print("not tracking");
                 u.StopPath();
+                if (curDelay <= 0) StartCoroutine(Attack());
                 tracking = false;
                 yield return null;
             }
 
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    protected override IEnumerator Attack()
+    {
+        if (_a == null) yield break;
+
+        yield return new WaitForSeconds(chargeTime);
+        _a.RequestProjectile(new Projectile(2f, _s, 3, 4));
+        curDelay = shotDelay;
     }
 }
