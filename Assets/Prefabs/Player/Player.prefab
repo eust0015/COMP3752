@@ -135,6 +135,7 @@ MonoBehaviour:
   tagToAttack: 
   showHitboxes: 0
   hBox: {fileID: 7992289949517164352, guid: 66e1d13987cc6154c97ee10bc36f6434, type: 3}
+  projectile: {fileID: 0}
 --- !u!1 &4786622989138646327
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +218,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -972727417, guid: 21c1d8f644d2a484b8e48c19628c9553, type: 3}
-  m_Color: {r: 0.8773585, g: 0.81014967, b: 0.59097546, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
