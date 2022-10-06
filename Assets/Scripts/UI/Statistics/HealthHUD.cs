@@ -44,7 +44,7 @@ namespace UI.Statistics
 
         private void OnEnable()
         {
-            PlayerHealth playerHealth = GetComponent<PlayerHealth>();
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
         
             if (playerHealth != null)
                 Health = playerHealth.Health;

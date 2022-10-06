@@ -24,7 +24,7 @@ namespace UI.Event
             relicInventory.AddRelic(Relic);
             
             PlayerHealth health = Object.FindObjectOfType<PlayerHealth>();
-            health.Health.DecreaseValue(health.Health.Value - 1);
+            health.Health.DecreaseValue(health.Health.Value - 2);
             health.Health.IncreaseMaxValue(4);
         }
     }
