@@ -17994,6 +17994,7 @@ GameObject:
   - component: {fileID: 855569995}
   - component: {fileID: 855569997}
   - component: {fileID: 855569996}
+  - component: {fileID: 855569998}
   m_Layer: 0
   m_Name: Bottom_Boundary
   m_TagString: Untagged
@@ -19419,6 +19420,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &855569998
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855569994}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 44, y: -12.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 45.6}
+  m_EdgeRadius: 0
 --- !u!1 &876149027
 GameObject:
   m_ObjectHideFlags: 0
@@ -19514,6 +19541,7 @@ GameObject:
   - component: {fileID: 900294574}
   - component: {fileID: 900294576}
   - component: {fileID: 900294575}
+  - component: {fileID: 900294577}
   m_Layer: 0
   m_Name: Left_Boundary
   m_TagString: Untagged
@@ -20403,6 +20431,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &900294577
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900294573}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -14, y: -9}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1, y: 37.6}
+  m_EdgeRadius: 0
 --- !u!1 &1271436011
 GameObject:
   m_ObjectHideFlags: 0
@@ -20414,6 +20468,7 @@ GameObject:
   - component: {fileID: 1271436012}
   - component: {fileID: 1271436014}
   - component: {fileID: 1271436013}
+  - component: {fileID: 1271436015}
   m_Layer: 0
   m_Name: Top_Boundary
   m_TagString: Untagged
@@ -21839,6 +21894,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1271436015
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271436011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 15.09, y: 8.02}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 60, y: 2.2}
+  m_EdgeRadius: 0
 --- !u!1 &1979618237
 GameObject:
   m_ObjectHideFlags: 0
@@ -25830,6 +25911,7 @@ GameObject:
   - component: {fileID: 2110551175}
   - component: {fileID: 2110551177}
   - component: {fileID: 2110551176}
+  - component: {fileID: 2110551178}
   m_Layer: 0
   m_Name: Right_Boundary
   m_TagString: Untagged
@@ -26591,3 +26673,29 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &2110551178
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110551174}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 16.1, y: -23.9}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 63.6, y: 1.81}
+  m_EdgeRadius: 0
