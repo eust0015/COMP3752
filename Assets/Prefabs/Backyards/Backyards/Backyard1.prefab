@@ -1157,10 +1157,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19aa31ae60cda4745bec72b93022bc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomAbove: 0
-  roomBelow: 0
-  roomLeft: 0
-  roomRight: 0
+  roomAbove: -1
+  roomBelow: -1
+  roomLeft: -1
+  roomRight: -1
   xValue: 0
   yValue: 0
 --- !u!1 &7608067096241021316
