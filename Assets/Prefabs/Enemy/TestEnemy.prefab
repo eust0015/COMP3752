@@ -88,8 +88,8 @@ MonoBehaviour:
   attackBasedOnTag: 1
   tagToAttack: Player
   showHitboxes: 1
-  hBox: {fileID: 0}
-  projectile: {fileID: 0}
+  hBox: {fileID: 7992289949517164352, guid: 66e1d13987cc6154c97ee10bc36f6434, type: 3}
+  projectile: {fileID: 1302253642308228335, guid: 669d151854f89a3408b91b08c94ca8ae, type: 3}
 --- !u!50 &1876198942802491250
 Rigidbody2D:
   serializedVersion: 4
@@ -177,7 +177,7 @@ Transform:
   - {fileID: 6447969448079136256}
   - {fileID: 6447969448678764576}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6447969448539174929
 MonoBehaviour:
