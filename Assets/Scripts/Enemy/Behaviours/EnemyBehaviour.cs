@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Enemy;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Behaviour : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour
 {
     protected Unit u;
     [SerializeField]
@@ -23,6 +24,8 @@ public class Behaviour : MonoBehaviour
         u = GetComponent<Unit>();
         tracking = false;
         StartCoroutine(Condition());
+
+        GetComponent<EnemyHealth>().Health.OnValueZero += Death;
     }
 
     protected virtual IEnumerator Condition()
@@ -35,9 +38,25 @@ public class Behaviour : MonoBehaviour
         }
     }
 
+    protected virtual void Death()
+    {
+        StartCoroutine(OnDeath());
+    }
+    
     protected virtual IEnumerator OnDeath()
     {
         Destroy( this);
+        yield return null;
+    }
+
+    protected virtual void Hit()
+    {
+        StartCoroutine(OnHit());
+    }
+
+    protected virtual IEnumerator OnHit()
+    {
+        
         yield return null;
     }
 

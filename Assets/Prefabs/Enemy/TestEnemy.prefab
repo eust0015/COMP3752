@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 6447969448079136258}
   - component: {fileID: 6447969448079136260}
   - component: {fileID: 6447969448079136261}
+  - component: {fileID: 1876198942802491250}
+  - component: {fileID: 6301786682390323749}
+  - component: {fileID: 6061171272221919084}
   m_Layer: 0
   m_Name: EnemyPos
   m_TagString: Untagged
@@ -86,6 +89,62 @@ MonoBehaviour:
   tagToAttack: Player
   showHitboxes: 1
   hBox: {fileID: 0}
+  projectile: {fileID: 0}
+--- !u!50 &1876198942802491250
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447969448079136257}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &6301786682390323749
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447969448079136257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &6061171272221919084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447969448079136257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4660dc3423824c5c910e7eb9ae68a842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    description: 
+    icon: {fileID: 0}
+    maxValue: 10
+    name: 
+    value: 10
 --- !u!1 &6447969448539175022
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02ffbbc7d990194b88778762a728142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keepRotation: 0
 --- !u!1 &6447969448678764577
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,9 +202,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6447969448678764576}
   - component: {fileID: 6447969448678764579}
-  - component: {fileID: 6447969448678764578}
-  - component: {fileID: 6447969448678764581}
-  - component: {fileID: 6447969448678764580}
   m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Untagged
@@ -219,58 +276,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6447969448678764578
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6447969448678764577}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &6447969448678764581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6447969448678764577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4660dc3423824c5c910e7eb9ae68a842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health:
-    description: 
-    icon: {fileID: 0}
-    maxValue: 10
-    name: 
-    value: 10
---- !u!50 &6447969448678764580
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6447969448678764577}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

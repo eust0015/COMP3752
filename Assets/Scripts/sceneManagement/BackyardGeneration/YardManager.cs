@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class YardManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class YardManager : MonoBehaviour
             roomPrefabs[i].GetComponent<Yard>().setRoom("Left", -1);
             roomPrefabs[i].GetComponent<Yard>().setRoom("Right", -1);
         }
+        roomPrefabs[0].GetComponent<Yard>().setRoom("Above", -2);
         
         createdRooms.Add(Instantiate(roomPrefabs[0], new Vector3(0, 0, 0), Quaternion.identity));
     }
@@ -80,6 +82,10 @@ public class YardManager : MonoBehaviour
                 createdRooms[currentRoom].SetActive(false);
                 currentRoom = createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation);
             }
+        }
+        else if(createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -2)
+        {
+            SceneManager.LoadScene("beeHive");
         }
         else
         {
