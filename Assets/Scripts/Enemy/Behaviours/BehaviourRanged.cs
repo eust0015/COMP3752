@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using static Unity.Mathematics.math;
 
 public class BehaviourRanged : Behaviour
 {
@@ -23,8 +25,10 @@ public class BehaviourRanged : Behaviour
         los = u.lineOfSight;
         if (!tracking)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(new Vector2(u.target.position.x, u.target.position.y) - new Vector2(transform.position.x, transform.position.y));
-            transform.rotation = targetRotation;
+            Debug.Log(u.target.position);
+            var theta = getAngleFromVectors(new Vector2(u.target.position.x, u.target.position.y));
+            Debug.Log(theta - 90);
+            transform.localEulerAngles += new Vector3(0, 0, theta - 90);
         }
         if(los) moveTime -= Time.deltaTime;
         curDelay -= Time.deltaTime;
@@ -65,5 +69,15 @@ public class BehaviourRanged : Behaviour
         yield return new WaitForSeconds(chargeTime);
         _a.RequestProjectile(new Projectile(2f, _s, 3, 4));
         curDelay = shotDelay;
+    }
+    private float getAngleFromVectors(Vector2 lookPoint)
+    {
+        Vector2 rotation = (lookPoint - new Vector2(transform.position.x, transform.position.y) ).normalized;
+        Vector2 current = new Vector2(Mathf.Cos(transform.eulerAngles.z * Mathf.Deg2Rad),
+            Mathf.Sin(transform.eulerAngles.z * Mathf.Deg2Rad));
+        float dot = (rotation.x * current.x) + (rotation.y * current.y);
+        float mag = Mathf.Sqrt((rotation.x * rotation.x) + (rotation.y * rotation.y)) * Mathf.Sqrt((current.x * current.x) + (current.y * current.y));
+        float theta = math.degrees(Mathf.Acos(dot / mag));
+        return theta;
     }
 }
