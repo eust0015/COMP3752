@@ -13,15 +13,13 @@ namespace UI.Shop
         [SerializeField] private ShopUI activeShop;
         [SerializeField] private List<Item> items;
         [SerializeField] private bool isInRange;
+        [SerializeField] private HeartPotion heartPotionTemplate;
+        [SerializeField] private FullHeartsPotion fullHeartsPotionTemplate;
+        [SerializeField] private BubbleBarrierPotion bubbleBarrierPotionTemplate;
         
         public GameObject UICanvas
         {
-            get
-            {
-                if (uICanvas == null)
-                    uICanvas = GameObject.Find("UICanvas");
-                return uICanvas;
-            }
+            get => (uICanvas == null ? GameObject.Find("UICanvas") : uICanvas);
             private set => uICanvas = value;
         }
 
@@ -49,6 +47,24 @@ namespace UI.Shop
             private set => isInRange = value;
         }
 
+        public HeartPotion HeartPotionTemplate
+        {
+            get => heartPotionTemplate;
+            private set => heartPotionTemplate = value;
+        }
+
+        public FullHeartsPotion FullHeartsPotionTemplate
+        {
+            get => fullHeartsPotionTemplate;
+            private set => fullHeartsPotionTemplate = value;
+        }
+
+        public BubbleBarrierPotion BubbleBarrierPotionTemplate
+        {
+            get => bubbleBarrierPotionTemplate;
+            private set => bubbleBarrierPotionTemplate = value;
+        }
+
         public void OnInteractKey()
         {
             Debug.Log("Registered");
@@ -69,36 +85,12 @@ namespace UI.Shop
         {
             if (ActiveShop != null)
                 return;
-        
-            HeartPotion potion1 = new HeartPotion
-            {
-                Name = "Item1Name",
-                Description = "Item1Description",
-                Price = 1,
-                Quantity = 1
-            };
-
-            HeartPotion potion2 = new HeartPotion
-            {
-                Name = "Item2Name",
-                Description = "Item2Description",
-                Price = 2,
-                Quantity = 1
-            };
-            
-            HeartPotion potion3 = new HeartPotion
-            {
-                Name = "Item3Name",
-                Description = "Item3Description",
-                Price = 3,
-                Quantity = 1
-            };
 
             Items = new List<Item>
             {
-                potion1,
-                potion2,
-                potion3,
+                HeartPotionTemplate,
+                FullHeartsPotionTemplate,
+                BubbleBarrierPotionTemplate,
             };
             
             ActiveShop = Instantiate(ShopPrefab, UICanvas.transform);

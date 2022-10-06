@@ -236,7 +236,7 @@ MonoBehaviour:
     icon: {fileID: 0}
     maxValue: 7777
     name: 
-    value: 0
+    value: 20
   text: {fileID: 2028902487886550663}
 --- !u!1 &2028902487570123773
 GameObject:

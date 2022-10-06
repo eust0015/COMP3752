@@ -11,7 +11,7 @@ namespace UI.Messages
 
         private IEnumerator HideCoroutine()
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSecondsRealtime(3);
             Hide();
         }
 

@@ -45,6 +45,8 @@ namespace UI.Statistics
             
             Currency.OnValueIncreased += UpdateDisplay;
             Currency.OnMaxValueIncreased += UpdateDisplay;
+            Currency.OnValueDecreased += UpdateDisplay;
+            Currency.OnMaxValueDecreased += UpdateDisplay;
         }
 
         private void UnsubscribeFromEvents()
@@ -54,6 +56,8 @@ namespace UI.Statistics
             
             Currency.OnValueIncreased -= UpdateDisplay;
             Currency.OnMaxValueIncreased -= UpdateDisplay;
+            Currency.OnValueDecreased -= UpdateDisplay;
+            Currency.OnMaxValueDecreased -= UpdateDisplay;
         }
         
         public void UpdateDisplay()
