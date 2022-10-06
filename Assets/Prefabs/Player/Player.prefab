@@ -55,7 +55,7 @@ MonoBehaviour:
   acceleration: 20
   dashCooldown: 5
   dashSpeed: 17
-  attackCooldown: 0
+  attackCooldown: 0.8
 --- !u!50 &4786622988022897837
 Rigidbody2D:
   serializedVersion: 4
@@ -116,11 +116,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    description: 
+    description: player hp
     icon: {fileID: 0}
-    maxValue: 0
-    name: 
-    value: 0
+    maxValue: 20
+    name: Health
+    value: 20
 --- !u!114 &2909609295068434685
 MonoBehaviour:
   m_ObjectHideFlags: 0

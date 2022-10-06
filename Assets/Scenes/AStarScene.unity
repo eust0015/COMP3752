@@ -1050,26 +1050,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1689545401202542032, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666430157955645974, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: health.name
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666430157955645974, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: health.value
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666430157955645974, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: health.maxValue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3666430157955645974, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: health.description
-      value: player hp
-      objectReference: {fileID: 0}
     - target: {fileID: 3919533944194953787, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: speed
       value: 0.5
@@ -1084,7 +1064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897811, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: attackCooldown
-      value: 2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_RootOrder
@@ -1129,18 +1109,6 @@ PrefabInstance:
     - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4786622989138646321, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4786622989138646321, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4786622989138646321, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -3832,10 +3800,34 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1403295656}
+    - target: {fileID: 7700804329082497306, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7700804329082497310, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
       propertyPath: hBox
       value: 
       objectReference: {fileID: 2052932164}
+    - target: {fileID: 7700804329548353336, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -131258277, guid: 68b49fbc0cae77041b3810f43ef9ed65, type: 3}
+    - target: {fileID: 7700804329548353336, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700804329548353336, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700804329548353336, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700804329548353338, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7700804329659893515, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3884,6 +3876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ranged Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7700804329659893621, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: be19ae6f72fb940418e1a6f75f4af096, type: 3}
@@ -3899,10 +3895,54 @@ PrefabInstance:
       propertyPath: hBox
       value: 
       objectReference: {fileID: 2052932164}
+    - target: {fileID: 4166044638909286796, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044638909286796, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044638909286796, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044638909286796, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044638909286796, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044638909286797, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4166044638909286798, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1403295656}
+    - target: {fileID: 4166044639383416749, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044639383416751, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1693722670, guid: 9bfdbe97dbcc16049a30a700e87d8d8e, type: 3}
+    - target: {fileID: 4166044639383416751, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044639383416751, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044639383416751, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4166044639527200668, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3950,6 +3990,10 @@ PrefabInstance:
     - target: {fileID: 4166044639527200738, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166044639527200738, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

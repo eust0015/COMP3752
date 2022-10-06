@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539175022, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_Name
-      value: Ranged Enemy
+      value: Ranged Enemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539175022, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_IsActive
@@ -127,3 +127,28 @@ MonoBehaviour:
   chargeTime: 0
   projSpeed: 4
   _s: {fileID: 1629845294, guid: 287f52360a3221448bd886b6d78407ff, type: 3}
+--- !u!1 &7700804329548353338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447969448678764577, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+  m_PrefabInstance: {fileID: 3721392419406921499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2647914987638365578
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700804329548353338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c47148481db9d5740a7d34db8ba7a3ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -24,8 +24,7 @@ public class SpriteTracker : MonoBehaviour
         }
         else
         {
-            if (pos.transform.eulerAngles.z <= 0) sprite.GetComponent<SpriteRenderer>().flipX = false;
-            else sprite.GetComponent<SpriteRenderer>().flipX = true;
+            sprite.GetComponent<SpriteRenderer>().flipX = pos.transform.rotation.z <= 0;
         }
     }
 }
