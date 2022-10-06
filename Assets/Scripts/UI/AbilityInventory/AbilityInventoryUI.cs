@@ -6,14 +6,17 @@ using UnityEngine;
 
 namespace UI.AbilityInventory
 {
-    [Serializable]
+    [System.Serializable]
     public class AbilityInventoryUI : MonoBehaviour
     {
 
         [SerializeField] private Transform abilityContainer;
         [SerializeField] private InventoryAbilityUI inventoryAbilityPrefab;
         [SerializeField] private List<InventoryAbilityUI> inventoryAbilitiesList;
-
+        [SerializeField] public MeleeAttackAbility meleeAttackTemplate;
+        [SerializeField] public DashAbility dashTemplate;
+        [SerializeField] public RangedAttackAbility rangedAttackTemplate;
+        
         public Transform AbilityContainer
         {
             get => abilityContainer;
@@ -35,6 +38,34 @@ namespace UI.AbilityInventory
                 return inventoryAbilitiesList;
             }
             private set => inventoryAbilitiesList = value;
+        }
+
+        public MeleeAttackAbility MeleeAttackTemplate
+        {
+            get => meleeAttackTemplate;
+            private set => meleeAttackTemplate = value;
+        }
+
+        public DashAbility DashTemplate
+        {
+            get => dashTemplate;
+            private set => dashTemplate = value;
+        }
+
+        public RangedAttackAbility RangedAttackTemplate
+        {
+            get => rangedAttackTemplate;
+            private set => rangedAttackTemplate = value;
+        }
+
+        public void OnEnable()
+        {
+            List<Ability> abilities = new List<Ability>
+            {
+                MeleeAttackTemplate,
+                DashTemplate
+            };
+            Display(abilities);
         }
 
         public void Display(List<Ability> abilities)

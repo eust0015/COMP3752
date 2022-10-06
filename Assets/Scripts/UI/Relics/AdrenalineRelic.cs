@@ -1,18 +1,19 @@
-﻿namespace UI.Items
+﻿namespace UI.Relics
 {
-    public class Potion : Item
+    [System.Serializable]
+    public class AdrenalineRelic : Relic
     {
-        public override void Use()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override void Buy()
         {
             throw new System.NotImplementedException();
         }
 
         public override void Sell()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Use()
         {
             throw new System.NotImplementedException();
         }

@@ -1,10 +1,9 @@
-﻿using System;
-using UI.Items;
+﻿using UI.Items;
 using UnityEngine;
 
 namespace UI.Abilities
 {
-    [Serializable]
+    [System.Serializable]
     public abstract class Ability : Item
     {
         [SerializeField] protected int level;

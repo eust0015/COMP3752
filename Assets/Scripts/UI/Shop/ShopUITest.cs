@@ -58,7 +58,7 @@ namespace UI.Shop
             if (ActiveShop != null)
                 return;
         
-            Potion potion1 = new Potion
+            HeartPotion potion1 = new HeartPotion
             {
                 Name = "Item1Name",
                 Description = "Item1Description",
@@ -66,7 +66,7 @@ namespace UI.Shop
                 Quantity = 1
             };
 
-            Potion potion2 = new Potion
+            HeartPotion potion2 = new HeartPotion
             {
                 Name = "Item2Name",
                 Description = "Item2Description",
@@ -74,7 +74,7 @@ namespace UI.Shop
                 Quantity = 1
             };
             
-            Potion potion3 = new Potion
+            HeartPotion potion3 = new HeartPotion
             {
                 Name = "Item3Name",
                 Description = "Item3Description",

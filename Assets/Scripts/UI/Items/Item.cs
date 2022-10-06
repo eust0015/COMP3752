@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 namespace UI.Items
 {
-    [Serializable]
+    [System.Serializable]
     public abstract class Item
     {
         [SerializeField] protected string description;
