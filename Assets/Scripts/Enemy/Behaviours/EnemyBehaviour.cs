@@ -17,11 +17,13 @@ public class EnemyBehaviour : MonoBehaviour
     protected float atkCD;
 
     protected AttackController _a;
+    private GameObject enemyObject;
 
     private void Awake()
     {
         _a = GetComponent<AttackController>();
         u = GetComponent<Unit>();
+        enemyObject = transform.parent.gameObject;
         tracking = false;
         StartCoroutine(Condition());
 
@@ -45,7 +47,7 @@ public class EnemyBehaviour : MonoBehaviour
     
     protected virtual IEnumerator OnDeath()
     {
-        Destroy( gameObject);
+        Destroy( enemyObject);
         yield return null;
     }
 

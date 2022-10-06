@@ -31,7 +31,7 @@ public class ProjectileObject : MonoBehaviour
         var _t = transform;
         rb2d.velocity = _t.up * speed;
         timer -= Time.deltaTime;
-        if (timer <= 0) Destroy(gameObject);
+        if (timer <= 0 || owner == null) Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -22,7 +23,8 @@ public class playerMovement : MonoBehaviour
     private float dashTimer;
 
     [SerializeField]
-    private float attackCooldown = 1f;
+    private float attackCooldown = 2f;
+    private float currentAttackCooldown = 0f;
     private Vector2 lastSpeed;
 
     private bool isDahing = false;
@@ -31,11 +33,15 @@ public class playerMovement : MonoBehaviour
 
     private SpriteRenderer _s;
     private AttackController _a;
+    private playerAnimation _anim;
+    private Transform slash;
 
     void Start()
     {
         _s = transform.GetChild(0).GetComponent<SpriteRenderer>();
         _a = GetComponent<AttackController>();
+        _anim = transform.GetChild(0).GetComponent<playerAnimation>();
+        slash = transform.GetChild(1);
         dashTimer = dashCooldown;
         Application.targetFrameRate = 60;
     }
@@ -53,7 +59,7 @@ public class playerMovement : MonoBehaviour
         MovementDirection();
         //moves the player in that direction
         Movement();
-        attackCooldown -= Time.deltaTime;
+        currentAttackCooldown -= Time.deltaTime;
         Attack();
     }
 
@@ -221,21 +227,46 @@ public class playerMovement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKey(attackKey))
+        if (Input.GetKey(attackKey) && lastSpeed != Vector2.zero)
         {
             Hitbox h;
-            if (lastSpeed.x != 0)
+            slash.localPosition = new Vector3(lastSpeed.x, lastSpeed.y, slash.localPosition.z);
+
+            switch (lastSpeed.y)
             {
-                h = new Hitbox(1f, 2f, 3f, 3, lastSpeed * 2);
+                case 1 :
+                    slash.GetComponent<SpriteRenderer>().flipX = true;
+                    slash.localEulerAngles = new Vector3(0, 0, -90);
+                    break;
+                case -1:
+                    slash.GetComponent<SpriteRenderer>().flipX = false;
+                    slash.localEulerAngles = new Vector3(0, 0, -90);
+                    break;
+                default:
+                    slash.localEulerAngles = new Vector3(0, 0, 0);
+                    break;
             }
-            else
+
+            switch (lastSpeed.x)
             {
-                h = new Hitbox(2f, 1, 3f, 3, lastSpeed * 2);
+                case 1:
+                    h = new Hitbox(1f, 2f, 0.2f, 3, lastSpeed);
+                    slash.GetComponent<SpriteRenderer>().flipX = false;
+                    break;
+                case -1:
+                    h = new Hitbox(1f, 2f, 0.2f, 3, lastSpeed);
+                    slash.GetComponent<SpriteRenderer>().flipX = true;
+                    break;
+                default:
+                    h = new Hitbox(2f, 1, 0.2f, 3, lastSpeed);
+                    break;
             }
-            
-            if (attackCooldown <= 0)
+
+            if (currentAttackCooldown <= 0)
             {
+                StartCoroutine(_anim.AttackAnim());
                 _a.RequestHitbox(h);
+                currentAttackCooldown = attackCooldown;
             }
             
             

@@ -20,12 +20,14 @@ public class playerAnimation : MonoBehaviour
     private float currentHeightVariance;
 
     private RectTransform _t;
+    private Animator _s;
 
     private void Start()
     {
         _t = GetComponent<RectTransform>();
         _a = GetComponent<Animator>();
         _m = transform.parent.GetComponent<playerMovement>();
+        _s = transform.parent.GetChild(1).GetComponent<Animator>();
         currentHeightVariance = heightVariance;
         
         StartCoroutine(HeightBob());
@@ -60,5 +62,15 @@ public class playerAnimation : MonoBehaviour
     private float SinWavePos(float x)
     {
         return (Mathf.Sin(x * 1) / currentHeightVariance);
+    }
+
+    public IEnumerator AttackAnim()
+    {
+        _a.Play("PlayerAttack");
+        _s.Play("Slash");
+        yield return new WaitForSeconds(.375f);
+        _s.Play("Empty");
+        yield return new WaitForSeconds(.625f);
+        _a.Play("Player");
     }
 }
