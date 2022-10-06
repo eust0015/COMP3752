@@ -59,19 +59,19 @@ namespace UI.Event
             if (ActiveEvent != null)
                 return;
         
-            EventOptionHealth option1 = new EventOptionHealth
+            EventOptionFillAllHearts option1 = new EventOptionFillAllHearts
             {
                 Title = "Health Option",
                 Description = "Restore health",
             };
 
-            EventOptionPollen option2 = new EventOptionPollen
+            EventOptionOneMaxHeartCapacity option2 = new EventOptionOneMaxHeartCapacity
             {
                 Title = "Pollen Option",
                 Description = "Receive Pollen",
             };
             
-            EventOptionRelic option3 = new EventOptionRelic
+            EventOptionTwoMaxHeartCapacity option3 = new EventOptionTwoMaxHeartCapacity
             {
                 Title = "Relic Option",
                 Description = "Receive a Relic",

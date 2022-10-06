@@ -1,6 +1,9 @@
-﻿namespace UI.Event
+﻿using System;
+
+namespace UI.Event
 {
-    public class EventOptionPollen : EventOption
+    [Serializable]
+    public class EventOptionTwoMaxHeartCapacity : EventOption
     {
         public override void Choose()
         {

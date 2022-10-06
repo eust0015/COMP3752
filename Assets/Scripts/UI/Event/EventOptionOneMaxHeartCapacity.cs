@@ -1,6 +1,9 @@
-﻿namespace UI.Event
+﻿using System;
+
+namespace UI.Event
 {
-    public class EventOptionRelic : EventOption
+    [Serializable]
+    public class EventOptionOneMaxHeartCapacity : EventOption
     {
         public override void Choose()
         {

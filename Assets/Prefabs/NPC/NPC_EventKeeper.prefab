@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5572392598514794749
 SpriteRenderer:
@@ -291,3 +291,16 @@ MonoBehaviour:
   eventPrefab: {fileID: 1488390483735712181, guid: 7a423e005b45f6a45bf96ed8df85d253, type: 3}
   activeEvent: {fileID: 0}
   isInRange: 0
+  option1:
+    description: Fill all empty hearts.
+    icon: {fileID: 0}
+    title: 
+  option2:
+    description: Receive 1 Max Heart Capacity relic.
+    icon: {fileID: 0}
+    title: 
+  option3:
+    description: Receive 2 Max Heart Capacity relics and empty all hearts except
+      for 1.
+    icon: {fileID: 0}
+    title: 

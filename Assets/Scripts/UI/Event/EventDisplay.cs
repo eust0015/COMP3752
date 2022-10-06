@@ -12,15 +12,12 @@ namespace UI.Event
         [SerializeField] private EventUI activeEvent;
         [SerializeField] private List<EventOption> eventOptions;
         [SerializeField] private bool isInRange;
-        
+        [SerializeField] private EventOptionFillAllHearts option1;
+        [SerializeField] private EventOptionOneMaxHeartCapacity option2;
+        [SerializeField] private EventOptionTwoMaxHeartCapacity option3;
         public GameObject UICanvas
         {
-            get
-            {
-                if (uICanvas == null)
-                    uICanvas = GameObject.Find("UICanvas");
-                return uICanvas;
-            }
+            get => (uICanvas == null ? GameObject.Find("UICanvas") : uICanvas);
             private set => uICanvas = value;
         }
 
@@ -40,6 +37,24 @@ namespace UI.Event
         {
             get => eventOptions;
             private set => eventOptions = value;
+        }
+
+        public EventOptionFillAllHearts Option1
+        {
+            get => option1;
+            private set => option1 = value;
+        }
+
+        public EventOptionOneMaxHeartCapacity Option2
+        {
+            get => option2;
+            private set => option2 = value;
+        }
+
+        public EventOptionTwoMaxHeartCapacity Option3
+        {
+            get => option3;
+            private set => option3 = value;
         }
 
         public bool IsInRange
@@ -68,30 +83,12 @@ namespace UI.Event
         {
             if (ActiveEvent != null)
                 return;
-        
-            EventOptionHealth option1 = new EventOptionHealth
-            {
-                Title = "Health Option",
-                Description = "Restore health",
-            };
-
-            EventOptionPollen option2 = new EventOptionPollen
-            {
-                Title = "Pollen Option",
-                Description = "Receive Pollen",
-            };
-            
-            EventOptionRelic option3 = new EventOptionRelic
-            {
-                Title = "Relic Option",
-                Description = "Receive a Relic",
-            };
 
             EventOptions = new List<EventOption>
             {
-                option1,
-                option2,
-                option3,
+                Option1,
+                Option2,
+                Option3,
             };
             
             ActiveEvent = Instantiate(EventPrefab, UICanvas.transform);

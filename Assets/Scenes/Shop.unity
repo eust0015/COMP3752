@@ -322,6 +322,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_ItemShopKeeper
       objectReference: {fileID: 0}
+    - target: {fileID: 4935087666265531151, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
+      propertyPath: fullHeartsPotionTemplate.price
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935087666265531151, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
+      propertyPath: bubbleBarrierPotionTemplate.price
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935087666265531151, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
+      propertyPath: fullHeartsPotionTemplate.quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935087666265531151, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
+      propertyPath: bubbleBarrierPotionTemplate.quantity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
