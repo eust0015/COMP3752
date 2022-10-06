@@ -25,9 +25,7 @@ public class BehaviourRanged : EnemyBehaviour
         los = u.lineOfSight;
         if (!tracking)
         {
-            Debug.Log(u.target.position);
             var theta = getAngleFromVectors(new Vector2(u.target.position.x, u.target.position.y));
-            Debug.Log(theta - 90);
             transform.localEulerAngles += new Vector3(0, 0, theta - 90);
         }
         if(los) moveTime -= Time.deltaTime;

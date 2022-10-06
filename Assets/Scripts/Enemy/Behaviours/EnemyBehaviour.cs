@@ -45,7 +45,7 @@ public class EnemyBehaviour : MonoBehaviour
     
     protected virtual IEnumerator OnDeath()
     {
-        Destroy( this);
+        Destroy( gameObject);
         yield return null;
     }
 

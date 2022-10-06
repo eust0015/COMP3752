@@ -37,6 +37,11 @@ public class Unit : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (target == null) target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     public void OnPathFound(Vector2[] waypoints, bool pathSuccessful)
     {
         if (pathSuccessful && waypoints.Length > 0)
@@ -61,7 +66,6 @@ public class Unit : MonoBehaviour
         
         while (true)
         {
-            print("updating");
             yield return new WaitForSeconds(minPathUpdateTime);
             if ((target.position - targetPosOld).sqrMagnitude > sqMoveThreshold && upd)
             {

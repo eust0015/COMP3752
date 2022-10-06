@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour
     private string upKey = "w";
     private string downKey = "s";
     private string dashKey = "left shift";
+    private string attackKey = "mouse 0";
 
     public Rigidbody2D player;
 
@@ -20,15 +21,21 @@ public class playerMovement : MonoBehaviour
     private float yspeed = 0;
     private float dashTimer;
 
+    [SerializeField]
+    private float attackCooldown = 1f;
+    private Vector2 lastSpeed;
+
     private bool isDahing = false;
 
     public Vector2 momentum => new Vector2(xspeed, yspeed);
 
     private SpriteRenderer _s;
+    private AttackController _a;
 
     void Start()
     {
         _s = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _a = GetComponent<AttackController>();
         dashTimer = dashCooldown;
         Application.targetFrameRate = 60;
     }
@@ -46,6 +53,8 @@ public class playerMovement : MonoBehaviour
         MovementDirection();
         //moves the player in that direction
         Movement();
+        attackCooldown -= Time.deltaTime;
+        Attack();
     }
 
     void Movement()
@@ -77,6 +86,7 @@ public class playerMovement : MonoBehaviour
             {
                 if (yspeed < maxSpeed)
                 {
+                    lastSpeed = Vector2.up;
                     yspeed += acceleration * Time.deltaTime;
                 }
             }
@@ -85,6 +95,7 @@ public class playerMovement : MonoBehaviour
             {
                 if (yspeed > -maxSpeed)
                 {
+                    lastSpeed = Vector2.down;
                     yspeed -= acceleration * Time.deltaTime;
                 }
             }
@@ -131,6 +142,7 @@ public class playerMovement : MonoBehaviour
                 if (xspeed > -maxSpeed)
                 {
                     _s.flipX = true;
+                    lastSpeed = Vector2.left;
                     xspeed -= acceleration * Time.deltaTime;
                 }
             }
@@ -140,6 +152,7 @@ public class playerMovement : MonoBehaviour
                 if (xspeed < maxSpeed)
                 {
                     _s.flipX = false;
+                    lastSpeed = Vector2.right;
                     xspeed += acceleration * Time.deltaTime;
                 }
             }
@@ -203,6 +216,29 @@ public class playerMovement : MonoBehaviour
         {
             isDahing = false;
             dashTimer = dashCooldown;
+        }
+    }
+
+    void Attack()
+    {
+        if (Input.GetKey(attackKey))
+        {
+            Hitbox h;
+            if (lastSpeed.x != 0)
+            {
+                h = new Hitbox(1f, 2f, 3f, 3, lastSpeed * 2);
+            }
+            else
+            {
+                h = new Hitbox(2f, 1, 3f, 3, lastSpeed * 2);
+            }
+            
+            if (attackCooldown <= 0)
+            {
+                _a.RequestHitbox(h);
+            }
+            
+            
         }
     }
 
