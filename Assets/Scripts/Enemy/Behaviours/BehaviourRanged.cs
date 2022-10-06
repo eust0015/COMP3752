@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using static Unity.Mathematics.math;
 
-public class BehaviourRanged : Behaviour
+public class BehaviourRanged : EnemyBehaviour
 {
     private bool los;
     [SerializeField]

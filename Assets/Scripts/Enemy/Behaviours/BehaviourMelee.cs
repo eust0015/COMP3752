@@ -5,7 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
 
-public class BehaviourMelee : Behaviour
+public class BehaviourMelee : EnemyBehaviour
 {
     [SerializeField] private float delay;
     private float curDelay = 0;

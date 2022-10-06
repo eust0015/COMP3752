@@ -6,7 +6,7 @@ using Enemy;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Behaviour : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour
 {
     protected Unit u;
     [SerializeField]
