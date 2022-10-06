@@ -1,4 +1,6 @@
 ﻿using System;
+using Player;
+using Object = UnityEngine.Object;
 
 namespace UI.Event
 {
@@ -7,7 +9,8 @@ namespace UI.Event
     {
         public override void Choose()
         {
-            throw new System.NotImplementedException();
+            PlayerHealth health = Object.FindObjectOfType<PlayerHealth>();
+            health.Health.IncreaseValue(999);
         }
     }
 }

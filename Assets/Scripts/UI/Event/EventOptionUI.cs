@@ -48,6 +48,8 @@ namespace UI.Event
         public void Choose()
         {
             Option.Choose();
+            EventUI theEvent = FindObjectOfType<EventUI>();
+            theEvent.Close();
         }
         
         public void UpdateTitle() => Title.text = Option.Title;

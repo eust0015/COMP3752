@@ -452,6 +452,38 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option2.relic.icon
+      value: 
+      objectReference: {fileID: 1668192429, guid: dd3cf935343807d47b73430a5addd922, type: 3}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option2.relic.name
+      value: Max Heart Capacity
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option3.relic.icon
+      value: 
+      objectReference: {fileID: 1668192429, guid: dd3cf935343807d47b73430a5addd922, type: 3}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option3.relic.name
+      value: Max Heart Capacity
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option2.relic.quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option3.relic.quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option2.relic.description
+      value: Increases maximum heart capacity by 1.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572392598514794741, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
+      propertyPath: option3.relic.description
+      value: Increases maximum heart capacity by 1.
+      objectReference: {fileID: 0}
     - target: {fileID: 5572392598514794744, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
       propertyPath: m_Name
       value: NPC_EventKeeper
