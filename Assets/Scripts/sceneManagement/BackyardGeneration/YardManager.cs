@@ -2,12 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity; //Yarny FMOD: using
 
 public class YardManager : MonoBehaviour
 {
     public List<GameObject> roomPrefabs;
     public List<GameObject> createdRooms = new List<GameObject>();
     private int currentRoom = 0;
+
+    //Yarny FMOD: Whatever you put in this block will show up as sound file browsing options under this script name in Unity
+    //You can use these variables in scripts. You can change the actual mp3/sound file (in dropdown unity browser) anytime you like.
+    // The choices for the actual sound files to bind to these variables depends what you have setup in the FMOD music app itself.
+    [SerializeField]
+    public FMODUnity.EventReference shootFMSound;
+    public FMODUnity.EventReference strikeFMSound;
+    public FMODUnity.EventReference gameOverFMSound;
+    public FMODUnity.EventReference royalSound;
+
+    //Yarny FMOD: Instances inc. Parameters. In START (Awake) the fmodEvent gets linked to your instance.
+    public FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent; //fmodEvent will be your music track & variables to control the music
+
+    //Yarny FMOD: This is where you set the range of variables that will affect the music
+
+    [SerializeField]
+    [Range(0f, 6F)]
+    public float playerHealthPR;
+
+    [SerializeField]
+    [Range(0f, 10F)]
+    public float currentNumberOfEnemies;
+
     void Awake()
     {
         currentRoom = 0;
@@ -20,38 +45,64 @@ public class YardManager : MonoBehaviour
             roomPrefabs[i].GetComponent<Yard>().setRoom("Right", -1);
         }
         roomPrefabs[0].GetComponent<Yard>().setRoom("Above", -2);
-        
+
         createdRooms.Add(Instantiate(roomPrefabs[0], new Vector3(0, 0, 0), Quaternion.identity));
+
+        //Yarny FMOD: Set an instance of the fmodEvent (the music event) and start it
+        playerHealthPR = 6.0f;
+        currentNumberOfEnemies = 0.0f;
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent); // This also works (like tutorial, older style)
+        instance.start();
+
+
+        //Yarny FMOD: Examples of how to set variables
+        // instance.setParameterByName("playerHealthPR", 2.0f); //This will set the underlying FMOD to the value chosen, but won't show un unity slider UI
+        // instance.setParameterByName("currentNumberOfEnemies", 3.0f);
+
+        //This binds them. I use it in my update script. You will see the UI slider change, and the underlying FMOD will change.
+        //instance.setParameterByName("playerHealthPR", playerHealthPR);
+        //instance.setParameterByName("currentNumberOfEnemies", currentNumberOfEnemies);
+
     }
 
     public void LoadNewRoom(string roomLocation)
     {
+        var RndB = new System.Random();
+        var StrB = RndB.Next(1, 10);
         string previousRoom = "Below";
-        switch(roomLocation)
+        switch (roomLocation)
         {
             case "Above":
                 previousRoom = "Below";
+                currentNumberOfEnemies = StrB; //Yarny FMOD: Variable changes depending on room
                 break;
             case "Below":
                 previousRoom = "Above";
+                currentNumberOfEnemies = StrB;
                 break;
             case "Left":
                 previousRoom = "Right";
+                currentNumberOfEnemies = StrB;
                 break;
             case "Right":
                 previousRoom = "Left";
+                currentNumberOfEnemies = StrB;
                 break;
             default:
                 break;
         }
+
+        //Yarny: FMOD - Apply those variable changes made above in room switch
+        instance.setParameterByName("playerHealthPR", playerHealthPR);
+        instance.setParameterByName("currentNumberOfEnemies", currentNumberOfEnemies);
 
         GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<playerMovement>().TeleportPlayer(roomLocation);
 
         if (createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -1)
         {
             createdRooms[currentRoom].SetActive(false);
-            
-            if(!RoomOverlap(roomLocation))
+
+            if (!RoomOverlap(roomLocation))
             {
                 createdRooms.Add(Instantiate(roomPrefabs[Random.Range(1, roomPrefabs.Count - 1)], new Vector3(0, 0, 0), Quaternion.identity));
                 createdRooms[currentRoom].GetComponent<Yard>().setRoom(roomLocation, createdRooms.Count - 1);
@@ -83,8 +134,11 @@ public class YardManager : MonoBehaviour
                 currentRoom = createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation);
             }
         }
-        else if(createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -2)
+        else if (createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -2)
         {
+            //Yarny: FMOD - Stop Main Music (It doubles up otherwise later) and play a royal one shot
+            instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); //Player is dead, stop music
+            RuntimeManager.PlayOneShot(royalSound, gameObject.transform.position);
             SceneManager.LoadScene("beeHive");
         }
         else
@@ -104,7 +158,7 @@ public class YardManager : MonoBehaviour
                 case "Above":
                     if (createdRooms[i].GetComponent<Yard>().getCoords("y") == createdRooms[currentRoom].GetComponent<Yard>().getCoords("y") + 1)
                     {
-                        if(createdRooms[i].GetComponent<Yard>().getCoords("x") == createdRooms[currentRoom].GetComponent<Yard>().getCoords("x"))
+                        if (createdRooms[i].GetComponent<Yard>().getCoords("x") == createdRooms[currentRoom].GetComponent<Yard>().getCoords("x"))
                         {
                             linkRooms(currentRoom, i, roomLocation);
                             return true;

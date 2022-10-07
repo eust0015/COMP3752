@@ -16,7 +16,7 @@ namespace UI.Shop
         [SerializeField] private HeartPotion heartPotionTemplate;
         [SerializeField] private FullHeartsPotion fullHeartsPotionTemplate;
         [SerializeField] private BubbleBarrierPotion bubbleBarrierPotionTemplate;
-        
+
         public GameObject UICanvas
         {
             get => (uICanvas == null ? GameObject.Find("UICanvas") : uICanvas);
@@ -68,9 +68,9 @@ namespace UI.Shop
         public void OnInteractKey()
         {
             Debug.Log("Registered");
-            if(!IsInRange)
+            if (!IsInRange)
                 return;
-                
+
             if (ActiveShop == null)
                 Display();
         }
@@ -80,7 +80,7 @@ namespace UI.Shop
             ActiveShop.OnDestroyed -= OnShopClosed;
             ActiveShop = null;
         }
-        
+
         public void Display()
         {
             if (ActiveShop != null)
@@ -92,7 +92,7 @@ namespace UI.Shop
                 FullHeartsPotionTemplate,
                 BubbleBarrierPotionTemplate,
             };
-            
+
             ActiveShop = Instantiate(ShopPrefab, UICanvas.transform);
             ActiveShop.Display(items);
             ActiveShop.OnDestroyed += OnShopClosed;
@@ -102,7 +102,7 @@ namespace UI.Shop
         {
             if (ActiveShop == null)
                 return;
-            
+
             Destroy(ActiveShop.gameObject);
             ActiveShop = null;
         }
