@@ -4,34 +4,36 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private GameObject[] spawnLocations;
     public GameObject enemyPrefab;
-    public GameObject shop;
-    public GameObject eventnpc;
     public float spawnChance;
-    public string locationName = "NPCSpawn";
+    public int spawnRadius = 5;
+    public int maxEnemies = 5;
     void Start()
     {
-        NPCSpawnChance();
-    }
-    void NPCSpawnChance()
-    {
-        spawnLocations = GameObject.FindGameObjectsWithTag(locationName);
-        for (int i = 0; i < spawnLocations.Length; i++)
+        for(int i = 0; i < maxEnemies; i++)
         {
-            if (spawnChance >= Random.Range(0, 100))
+            if(spawnChance >= Random.Range(0,100))
             {
-                Instantiate(enemyPrefab, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
-            }
-            else if(spawnChance >= Random.Range(0, 100))
-            {
-                Instantiate(eventnpc, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
-            }
-            else if (spawnChance >= Random.Range(0, 100))
-            {
-                Instantiate(shop, new Vector3(spawnLocations[i].transform.position.x, spawnLocations[i].transform.position.y, -1), Quaternion.identity, transform);
+                float xval = gameObject.transform.position.x + Random.Range(-spawnRadius, spawnRadius);
+                float yval = gameObject.transform.position.y + Random.Range(-spawnRadius, spawnRadius);
+                if(xval >= 28)
+                {
+                    xval = 27;
+                }
+                else if(xval <= -28)
+                {
+                    xval = -27;
+                }
+                if (yval >= 15)
+                {
+                    yval = 14;
+                }
+                else if (yval <= -15)
+                {
+                    yval = -14;
+                }
+                Instantiate(enemyPrefab, new Vector3(xval, yval, -1), Quaternion.identity, transform);
             }
         }
-        
     }
 }

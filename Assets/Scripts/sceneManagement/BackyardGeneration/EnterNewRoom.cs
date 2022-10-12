@@ -6,8 +6,11 @@ public class EnterNewRoom : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        GameObject backyardManager = GameObject.FindGameObjectsWithTag("GameController")[0];
-        backyardManager.GetComponent<YardManager>().LoadNewRoom(gameObject.name);
-        Debug.Log(gameObject.name);
+        if(other.gameObject.tag == "Player")
+        {
+            GameObject backyardManager = GameObject.FindGameObjectsWithTag("GameController")[0];
+            backyardManager.GetComponent<YardManager>().LoadNewRoom(gameObject.name);
+            Debug.Log(gameObject.name);
+        }
     }
 }

@@ -97,19 +97,21 @@ public class YardManager : MonoBehaviour
         instance.setParameterByName("currentNumberOfEnemies", currentNumberOfEnemies);
 
         GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<playerMovement>().TeleportPlayer(roomLocation);
-
+        //Enters this if statment if there is no room on the other side of the door
         if (createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -1)
         {
             createdRooms[currentRoom].SetActive(false);
-
+            //Checks if a room is going to be spawned on another room. If so, it links the room instead
             if (!RoomOverlap(roomLocation))
             {
-                createdRooms.Add(Instantiate(roomPrefabs[Random.Range(1, roomPrefabs.Count - 1)], new Vector3(0, 0, 0), Quaternion.identity));
+                //the creation of the new room
+                createdRooms.Add(Instantiate(roomPrefabs[Random.Range(1, roomPrefabs.Count)], new Vector3(0, 0, 0), Quaternion.identity));
                 createdRooms[currentRoom].GetComponent<Yard>().setRoom(roomLocation, createdRooms.Count - 1);
                 createdRooms[createdRooms.Count - 1].GetComponent<Yard>().setRoom(previousRoom, currentRoom);
                 createdRooms[createdRooms.Count - 1].GetComponent<Yard>().setCoords("x", createdRooms[currentRoom].GetComponent<Yard>().getCoords("x"));
                 createdRooms[createdRooms.Count - 1].GetComponent<Yard>().setCoords("y", createdRooms[currentRoom].GetComponent<Yard>().getCoords("y"));
-
+                createdRooms[createdRooms.Count - 1].GetComponentInChildren<ExitSpawner>().setLastRoom(previousRoom);
+                //writes the coordinates of the new room onto the new room
                 switch (roomLocation)
                 {
                     case "Above":
@@ -127,13 +129,16 @@ public class YardManager : MonoBehaviour
                 }
                 currentRoom = createdRooms.Count - 1;
             }
+            //The linking of the current room to the one next to it
             else
             {
                 createdRooms[createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation)].SetActive(true);
                 createdRooms[currentRoom].SetActive(false);
                 currentRoom = createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation);
+                createdRooms[currentRoom].GetComponentInChildren<ExitSpawner>().setLastRoom(previousRoom);
             }
         }
+        //Statement below loads the beehive when entered
         else if (createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -2)
         {
             //Yarny: FMOD - Stop Main Music (It doubles up otherwise later) and play a royal one shot
@@ -141,6 +146,7 @@ public class YardManager : MonoBehaviour
             RuntimeManager.PlayOneShot(royalSound, gameObject.transform.position);
             SceneManager.LoadScene("beeHive");
         }
+        //Unloads the old room and loads the new room
         else
         {
             createdRooms[createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation)].SetActive(true);

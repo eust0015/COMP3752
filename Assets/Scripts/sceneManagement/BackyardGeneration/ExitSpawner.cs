@@ -29,26 +29,28 @@ public class ExitSpawner : MonoBehaviour
                 ExitsArray[i].SetActive(true);
             }
         }
-        FindLastRoom();
+        ExitsArray[FindLastRoom()].SetActive(true);
+    }
+    public void setLastRoom(string prevRoom)
+    {
+        lastRoom = prevRoom;
+        ExitsArray[FindLastRoom()].SetActive(true);
     }
 
-
-    void FindLastRoom()
+    private int FindLastRoom()
     {
         switch(lastRoom)
         {
             case "Above":
-                ExitsArray[1].SetActive(true);
-                break;
+                return 0;
             case "Below":
-                ExitsArray[2].SetActive(true);
-                break;
+                return 1;
             case "Right":
-                ExitsArray[3].SetActive(true);
-                break;
+                return 2;
             case "Left":
-                ExitsArray[4].SetActive(true);
-                break;
+                return 3;
+            default:
+                return 0;
 
         }
     }
