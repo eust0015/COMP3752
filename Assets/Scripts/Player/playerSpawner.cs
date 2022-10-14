@@ -7,9 +7,11 @@ public class playerSpawner : MonoBehaviour
     //This script is used on an object to choose where to spawn the player
     
     public GameObject spawnLocation;
-    public GameObject playerPrefab;
+    public GameObject player;
     void Start()
     {
-        Instantiate(playerPrefab, new Vector3(spawnLocation.transform.position.x, spawnLocation.transform.position.y, -5), Quaternion.identity);
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        player.transform.position = spawnLocation.transform.position;
+        //Instantiate(playerPrefab, new Vector3(spawnLocation.transform.position.x, spawnLocation.transform.position.y, -5), Quaternion.identity);
     }
 }
