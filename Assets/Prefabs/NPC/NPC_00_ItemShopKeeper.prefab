@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4935087666265531149}
   - component: {fileID: 4935087666265531145}
   m_Layer: 0
-  m_Name: NPC_ItemShopKeeper
+  m_Name: NPC_00_ItemShopKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,13 +234,13 @@ MonoBehaviour:
     description: Fills all hearts.
     icon: {fileID: 21300000, guid: a58aafab54cd9754fad04ddc8680d4fa, type: 3}
     name: Full Hearts Potion
-    price: 0
+    price: 10
     quantity: 0
   bubbleBarrierPotionTemplate:
     description: Negates the next attack.
     icon: {fileID: 21300000, guid: aed5a5da73de80c4988dfb6c2011a687, type: 3}
     name: Bubble Barrier Potion
-    price: 0
+    price: 8
     quantity: 0
 --- !u!61 &4935087666265531150
 BoxCollider2D:
@@ -306,6 +306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7915a0ad7a54289983c198e315841b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePrefab: {fileID: 8134898586558402388, guid: 0c02c7a470577044b8df325e41f4f079, type: 3}
+  dialoguePrefab: {fileID: 3123396523863428566, guid: 45e2ede884868e448b9f07ca30681387, type: 3}
   activeDialogue: {fileID: 0}
   isInRange: 0
+  dialogueList:
+  - Open Shop.
+  dialogueIndex: 0

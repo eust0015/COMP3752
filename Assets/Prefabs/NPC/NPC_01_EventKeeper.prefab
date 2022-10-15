@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5572392598514794742}
   - component: {fileID: 5572392598514794741}
   m_Layer: 0
-  m_Name: NPC_EventKeeper
+  m_Name: NPC_01_EventKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,9 +272,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7915a0ad7a54289983c198e315841b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePrefab: {fileID: 1363705463121860827, guid: 336020c3511f49747bb334c89c937702, type: 3}
+  dialoguePrefab: {fileID: 3123396523863428566, guid: 45e2ede884868e448b9f07ca30681387, type: 3}
   activeDialogue: {fileID: 0}
   isInRange: 0
+  dialogueList:
+  - Open Event.
+  dialogueIndex: 0
 --- !u!114 &5572392598514794741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +302,20 @@ MonoBehaviour:
     description: Receive 1 Max Heart Capacity relic.
     icon: {fileID: 0}
     title: 
+    relic:
+      description: 
+      icon: {fileID: 0}
+      name: 
+      price: 0
+      quantity: 0
   option3:
     description: Receive 2 Max Heart Capacity relics and empty all hearts except
       for 1.
     icon: {fileID: 0}
     title: 
+    relic:
+      description: 
+      icon: {fileID: 0}
+      name: 
+      price: 0
+      quantity: 0

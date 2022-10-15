@@ -1,22 +1,25 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace UI.Dialogue
 {
     [Serializable]
     public class DialogueDisplay : MonoBehaviour
     {
-        [SerializeField] private Transform dialoguePrefab;
-        [SerializeField] private Transform activeDialogue;
+        [SerializeField] private DialogueUI dialoguePrefab;
+        [SerializeField] private DialogueUI activeDialogue;
         [SerializeField] private bool isInRange;
-
-        public Transform DialoguePrefab
+        [SerializeField][TextArea] private List<string> dialogueList;
+        [SerializeField] private int dialogueIndex;
+        
+        public DialogueUI DialoguePrefab
         {
             get => dialoguePrefab;
             private set => dialoguePrefab = value;
         }
 
-        public Transform ActiveDialogue
+        public DialogueUI ActiveDialogue
         {
             get => activeDialogue;
             private set => activeDialogue = value;
@@ -28,14 +31,40 @@ namespace UI.Dialogue
             private set => isInRange = value;
         }
 
+        public List<string> DialogueList
+        {
+            get => dialogueList;
+            private set => dialogueList = value;
+        }
+
+        public int DialogueIndex
+        {
+            get => dialogueIndex;
+            private set => dialogueIndex = value;
+        }
+
         public void Display()
         {
             if (ActiveDialogue != null)
                 return;
             
             ActiveDialogue = Instantiate(DialoguePrefab, transform);
+            ActiveDialogue.Initialise(DialogueList, DialogueIndex);
+            SubscribeToEvents(ActiveDialogue);
         }
 
+        public void SubscribeToEvents(DialogueUI dialogue)
+        {
+            dialogue.OnDestroyed += UnsubscribeToEvents;
+            dialogue.OnDialogueIndexChanged += OnDialogueIndexChanged;
+        }
+
+        public void UnsubscribeToEvents(DialogueUI dialogue)
+        {
+            dialogue.OnDestroyed -= UnsubscribeToEvents;
+            dialogue.OnDialogueIndexChanged -= OnDialogueIndexChanged;
+        }
+        
         public void Hide()
         {
             if (ActiveDialogue == null)
@@ -62,5 +91,7 @@ namespace UI.Dialogue
                 Hide();
             }
         }
+
+        private void OnDialogueIndexChanged(int index) => DialogueIndex = index;
     }
 }
