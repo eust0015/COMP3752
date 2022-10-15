@@ -195,6 +195,65 @@ PrefabInstance:
     - {fileID: 4261551437235369780, guid: 656c52fc3b493a748b469b478c5bb4c5, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 656c52fc3b493a748b469b478c5bb4c5, type: 3}
+--- !u!1001 &157664796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4786622988022897810, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
 --- !u!1001 &365566345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -430,4 +489,42 @@ MonoBehaviour:
   roomPrefabs:
   - {fileID: 7608067095711877318, guid: 5651505119eee9140aa300f8ab160cc4, type: 3}
   - {fileID: 7608067095711877318, guid: 4ccdea50ef79b304d94f81f9213622a9, type: 3}
+  - {fileID: 7608067095711877318, guid: 2a19c3d979b9bc140af120fc36a78a34, type: 3}
   createdRooms: []
+  shootFMSound:
+    Guid:
+      Data1: 1759835088
+      Data2: 1170905697
+      Data3: 443654304
+      Data4: -1861362928
+    Path: event:/laser4
+  strikeFMSound:
+    Guid:
+      Data1: -1148027265
+      Data2: 1159635375
+      Data3: 1210293143
+      Data4: -1473934014
+    Path: event:/metal-hit-cartoon-7118
+  gameOverFMSound:
+    Guid:
+      Data1: -1110245324
+      Data2: 1329011530
+      Data3: -1590781277
+      Data4: -551568963
+    Path: event:/dramatic-synth-echo-43970
+  royalSound:
+    Guid:
+      Data1: 163299243
+      Data2: 1085222867
+      Data3: 608416654
+      Data4: 1629757042
+    Path: event:/queenArrival
+  fmodEvent:
+    Guid:
+      Data1: -1621999005
+      Data2: 1119252274
+      Data3: -1238326393
+      Data4: -359845152
+    Path: event:/BeeMusic
+  playerHealthPR: 0
+  currentNumberOfEnemies: 0
