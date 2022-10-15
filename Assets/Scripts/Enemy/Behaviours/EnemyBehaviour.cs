@@ -19,7 +19,7 @@ public class EnemyBehaviour : MonoBehaviour
     protected AttackController _a;
     private GameObject enemyObject;
 
-    private void Awake()
+    private void Start()
     {
         _a = GetComponent<AttackController>();
         u = GetComponent<Unit>();

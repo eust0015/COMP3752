@@ -687,6 +687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hedge_0 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9070247563122573660, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
@@ -854,6 +858,10 @@ PrefabInstance:
     - target: {fileID: 9070247563122573660, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
       propertyPath: m_Name
       value: Hedge_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070247563122573660, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1232,6 +1240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hedge_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9070247563122573660, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
@@ -1399,6 +1411,10 @@ PrefabInstance:
     - target: {fileID: 9070247563122573660, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
       propertyPath: m_Name
       value: Hedge_0 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070247563122573660, guid: a1821f5d7cc144e408244666bcb564bf, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

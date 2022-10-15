@@ -79,9 +79,20 @@ public class Unit : MonoBehaviour
     {
         bool followingPath = true;
         int pathIndex = 0;
-
+        
+        
         while (followingPath)
         {
+            if (lineOfSight)
+            {
+                Debug.Log("los");
+                var theta = getAngleFromVectors(target.position);
+                transform.eulerAngles += new Vector3(0, 0, theta - 90);
+                transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);
+                yield return null;
+                continue;
+            }
+            
             Vector2 pos2D = new Vector2(transform.position.x, transform.position.y);
             while (path.turnBoundaries[pathIndex].HasCrossedLine((pos2D)))
             {
@@ -106,6 +117,7 @@ public class Unit : MonoBehaviour
 
     public void StopPath()
     {
+        if (!gameObject.activeSelf) return;
         StopCoroutine(UpdatePath());
         upd = false;
         StopCoroutine("FollowPath");
@@ -114,6 +126,7 @@ public class Unit : MonoBehaviour
 
     public void StartPath()
     {
+        if (!gameObject.activeSelf) return;
         StartCoroutine(UpdatePath());
         upd = true;
     }
