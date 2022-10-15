@@ -1062,10 +1062,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4786622988022897811, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
-      propertyPath: attackCooldown
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 4786622988022897836, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_RootOrder
       value: 2
