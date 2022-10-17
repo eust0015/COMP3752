@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     {
         if (current != null && current != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -20,45 +20,52 @@ public class GameManager : MonoBehaviour
     }
 
     public event Action onRoomStart;
-    protected virtual void RoomStart()
+    public virtual void RoomStart()
     {
+        Debug.Log("Invoked -> Room Start");
         onRoomStart?.Invoke();
     }
     
     public event Action onRoomEnd;
-    protected virtual void RoomEnd()
+    public virtual void RoomEnd()
     {
+        Debug.Log("Invoked -> Room End");
         onRoomEnd?.Invoke();
     }
     
     public event Action onRunStart;
-    protected virtual void RunStart()
+    public virtual void RunStart()
     {
+        Debug.Log("Invoked -> Run Start");
         onRunStart?.Invoke();
     }
     
     public event Action onRunEnd;
-    protected virtual void RunEnd()
+    public virtual void RunEnd()
     {
+        Debug.Log("Invoked -> Run End");
         onRunEnd?.Invoke();
     }
 
     public event Action onTimerPause;
-    protected virtual void OnOnTimerPause()
+    public virtual void OnOnTimerPause()
     {
+        Debug.Log("Invoked -> Timer Pause");
         onTimerPause?.Invoke();
     }
 
     public event Action onTimerPlay;
-    protected virtual void OnOnTimerPlay()
+    public virtual void OnOnTimerPlay()
     {
+        Debug.Log("Invoked -> Timer Play");
         onTimerPlay?.Invoke();
     }
     
     public event Action onTimerComplete;
 
-    protected virtual void TimerComplete()
+    public virtual void TimerComplete()
     {
+        Debug.Log("Invoked -> Timer Complete");
         onTimerComplete?.Invoke();
     }
 

@@ -7,16 +7,23 @@ public class Hitbox
 {
     public float dimX;
     public float dimY;
-    public float duration; 
-    public int damage;
     public Vector2 relativePos;
+    
+    public float activeFrames; 
+    public int damage;
+    public float knockback;
+    public float momentum;
 
-    public Hitbox(float _dimX, float _dimY, float _duration, int _damage, Vector2 _relativePos)
+
+    public Hitbox(float _dimX, float _dimY, float _activeFrames, int _damage, Vector2 _relativePos,
+        float _knockback = 0, float _momentum = 0)
     {
         dimX = _dimX;
         dimY = _dimY;
-        duration = _duration;
+        activeFrames = _activeFrames;
         damage = _damage;
         relativePos = _relativePos;
+        knockback = _knockback;
+        momentum = _momentum;
     }
 }
