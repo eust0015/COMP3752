@@ -40,6 +40,7 @@ public class Timer : MonoBehaviour
             {
                 TimerComplete();
                 displayTimer.text = "00:00";
+                pause = true;
             }
             else
             {

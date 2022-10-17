@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        
         if (current != null && current != this)
         {
             Destroy(this.gameObject);
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
         {
             current = this;
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     public event Action onRoomStart;
