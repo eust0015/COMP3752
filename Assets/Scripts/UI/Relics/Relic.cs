@@ -2,8 +2,22 @@
 
 namespace UI.Relics
 {
-    public abstract class Relic : Item
+    [System.Serializable]
+    public class Relic : Item
     {
-        
+        public override void Buy()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Sell()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Use()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

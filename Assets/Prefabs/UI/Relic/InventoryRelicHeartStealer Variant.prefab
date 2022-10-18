@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1250092084886207448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 395102696264653441, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_Name
+      value: InventoryRelicHeartStealer Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696264653442, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395102696387838011, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fd747c98c4db124194c17efd04cf298, type: 3}
+    - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: relic.icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fd747c98c4db124194c17efd04cf298, type: 3}
+    - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: relic.name
+      value: Heart Stealer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: relic.type
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: relic.price
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: relic.quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+      propertyPath: relic.description
+      value: 10% chance for enemies to drop a heart upon death.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}

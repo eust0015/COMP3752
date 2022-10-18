@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace UI.Dialogue
@@ -101,11 +102,14 @@ namespace UI.Dialogue
         private void UpdateDialogue()
         {
             DialogueText.SetText(DialogueList[DialogueIndex]);
-            DialogueText.ForceMeshUpdate();
-            Vector2 textSize = DialogueText.GetRenderedValues(false);
-            ResizeRectTransform(BackgroundTransform, textSize + BackgroundPadding);
-            ResizeRectTransform(ForegroundTransform, textSize + ForegroundPadding);
-            LayoutRebuilder.MarkLayoutForRebuild((RectTransform) this.transform);
+            
+            // DialogueText.ForceMeshUpdate();
+            // Vector2 textSize = DialogueText.GetRenderedValues(false);
+            // ResizeRectTransform(BackgroundTransform, textSize + BackgroundPadding);
+            // ResizeRectTransform(ForegroundTransform, textSize + ForegroundPadding);
+            // LayoutRebuilder.MarkLayoutForRebuild(ForegroundTransform);
+            // LayoutRebuilder.MarkLayoutForRebuild(BackgroundTransform);
+            // LayoutRebuilder.MarkLayoutForRebuild((RectTransform) this.transform);
         }
 
         private void ResizeRectTransform(RectTransform setTransform, Vector2 size)
@@ -115,10 +119,13 @@ namespace UI.Dialogue
             setTransform.ForceUpdateRectTransforms();
         }
 
-        public void DisplayNextDialogue()
+        public void DisplayNextDialogue(InputAction.CallbackContext context)
         {
+            if (!context.started) return;
+            
             NextDialogueIndex();
             UpdateDialogue();
+
         }
         
         private void OnDestroy()

@@ -9,42 +9,42 @@ namespace UI.AbilityInventory
     [Serializable]
     public class InventoryAbilityUI : MonoBehaviour 
     {
-        [SerializeField] private Ability ability;
-        [SerializeField] private Image icon;
-        [SerializeField] private Transform mouseOverContainer;
-        [SerializeField] private InventoryAbilityDetailedUI mouseOverPrefab;
-        [SerializeField] private InventoryAbilityDetailedUI activeMouseOver;
+        [SerializeField] protected Ability ability;
+        [SerializeField] protected Image icon;
+        [SerializeField] protected Transform mouseOverContainer;
+        [SerializeField] protected InventoryAbilityDetailedUI mouseOverPrefab;
+        [SerializeField] protected InventoryAbilityDetailedUI activeMouseOver;
 
         public delegate void Destroyed(InventoryAbilityUI thisObject);
         public event Destroyed OnDestroyed;
         public Ability Ability
         {
             get => ability;
-            private set => ability = value;
+            protected set => ability = value;
         }
 
         public Image Icon
         {
             get => icon;
-            private set => icon = value;
+            protected set => icon = value;
         }
 
         public Transform MouseOverContainer
         {
             get => mouseOverContainer;
-            private set => mouseOverContainer = value;
+            protected set => mouseOverContainer = value;
         }
 
         public InventoryAbilityDetailedUI MouseOverPrefab
         {
             get => mouseOverPrefab;
-            private set => mouseOverPrefab = value;
+            protected set => mouseOverPrefab = value;
         }
 
         public InventoryAbilityDetailedUI ActiveMouseOver
         {
             get => activeMouseOver;
-            private set => activeMouseOver = value;
+            protected set => activeMouseOver = value;
         }
 
         public void Initialise(Ability setAbility)
@@ -56,7 +56,7 @@ namespace UI.AbilityInventory
             HideDetailedDescription();
         }
 
-        private void SubscribeToEvents()
+        protected void SubscribeToEvents()
         {
             if (Ability == null)
                 return;
@@ -64,7 +64,7 @@ namespace UI.AbilityInventory
             Ability.OnLevelChanged += UpdateLevel;
         }
 
-        private void UnsubscribeFromEvents()
+        protected void UnsubscribeFromEvents()
         {
             if (Ability == null)
                 return;
@@ -76,7 +76,7 @@ namespace UI.AbilityInventory
 
         public void UpdateSprite() => icon.sprite = Ability.Icon;
         
-        public void Use()
+        public virtual void Use()
         {
             Ability.Use();
         }
@@ -96,7 +96,7 @@ namespace UI.AbilityInventory
             activeMouseOver = null;    
         }
 
-        private void OnDestroy()
+        protected void OnDestroy()
         {
             OnDestroyed?.Invoke(this);
             UnsubscribeFromEvents();

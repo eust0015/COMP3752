@@ -4,9 +4,9 @@ using UnityEngine;
 namespace UI.Event
 {
     [Serializable]
-    public abstract class EventOption
+    public class EventOption
     {
-        [SerializeField] protected string description;
+        [SerializeField][TextArea] protected string description;
         [SerializeField] protected Sprite icon;
         [SerializeField] protected string title;
 
@@ -28,6 +28,9 @@ namespace UI.Event
             set => title = value;
         }
 
-        public abstract void Choose();
+        public virtual void Choose()
+        {
+            
+        }
     }
 }

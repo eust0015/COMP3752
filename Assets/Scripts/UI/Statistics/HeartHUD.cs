@@ -13,7 +13,7 @@ namespace UI.Statistics
 
         public delegate void Destroyed(HeartHUD thisObject);
         public event Destroyed OnDestroyed;
-        [SerializeField] public Health Health
+        public Health Health
         {
             get => health;
             private set

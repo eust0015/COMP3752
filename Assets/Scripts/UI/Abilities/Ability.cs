@@ -4,7 +4,7 @@ using UnityEngine;
 namespace UI.Abilities
 {
     [System.Serializable]
-    public abstract class Ability : Item
+    public class Ability : Item
     {
         [SerializeField] protected int level;
         
@@ -19,6 +19,21 @@ namespace UI.Abilities
                 level = value;
                 OnLevelChanged?.Invoke();
             } 
+        }
+
+        public override void Buy()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Sell()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Use()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

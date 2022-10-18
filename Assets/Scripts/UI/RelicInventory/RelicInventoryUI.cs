@@ -49,22 +49,19 @@ namespace UI.RelicInventory
         
         public void AddRelic(Relic relic)
         {
-            InventoryRelicUI inventoryRelic = InventoryRelicsList.FirstOrDefault(p => p.Relic.GetType() == relic.GetType());
-            
-            // If the relic was found in the list
-            if (inventoryRelic != null)
-            {
-                inventoryRelic.Relic.Quantity += 1;
-            }
-            else // If the relic was not found in the list
-            {
-                inventoryRelic = Instantiate(InventoryRelicPrefab, RelicContainer);
-                inventoryRelic.Initialise(relic);
-                InventoryRelicsList.Add(inventoryRelic);
-                inventoryRelic.OnDestroyed += RemoveRelicFromList;
-            }
+            InventoryRelicUI inventoryRelic = Instantiate(InventoryRelicPrefab, RelicContainer);
+            inventoryRelic.Initialise(relic);
+            InventoryRelicsList.Add(inventoryRelic);
+            inventoryRelic.OnDestroyed += RemoveRelicFromList;
         }
 
+        public void AddInventoryRelicUI(InventoryRelicUI relic)
+        {
+            InventoryRelicUI inventoryRelic = Instantiate(relic, RelicContainer);
+            InventoryRelicsList.Add(inventoryRelic);
+            inventoryRelic.OnDestroyed += RemoveRelicFromList;
+        }
+        
         public void Clear()
         {
             foreach (InventoryRelicUI menuRelic in InventoryRelicsList)

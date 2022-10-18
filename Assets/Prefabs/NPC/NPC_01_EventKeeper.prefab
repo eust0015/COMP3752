@@ -291,8 +291,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uICanvas: {fileID: 0}
-  eventPrefab: {fileID: 1488390483735712181, guid: 7a423e005b45f6a45bf96ed8df85d253, type: 3}
+  eventPrefab: {fileID: 8487404186825611249, guid: 531eafac160825843b767e450af55521, type: 3}
   activeEvent: {fileID: 0}
+  eventOptions: []
   isInRange: 0
   option1:
     description: Fill all empty hearts.
@@ -302,20 +303,10 @@ MonoBehaviour:
     description: Receive 1 Max Heart Capacity relic.
     icon: {fileID: 0}
     title: 
-    relic:
-      description: 
-      icon: {fileID: 0}
-      name: 
-      price: 0
-      quantity: 0
+    relicUI: {fileID: 0}
   option3:
     description: Receive 2 Max Heart Capacity relics and empty all hearts except
       for 1.
     icon: {fileID: 0}
     title: 
-    relic:
-      description: 
-      icon: {fileID: 0}
-      name: 
-      price: 0
-      quantity: 0
+    relicUI: {fileID: 0}

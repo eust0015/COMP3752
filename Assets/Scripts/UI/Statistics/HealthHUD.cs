@@ -82,10 +82,10 @@ namespace UI.Statistics
             if (HeartList == null)
                 HeartList = new List<HeartHUD>();
 
-            if (Health.MaxValue < HeartList.Count * 2)
+            if (Health.MaxValue <= HeartList.Count * 2)
                 return;
 
-            for (int i = HeartList.Count + 1; i < Health.MaxValue + 1; i+=2)
+            for (int i = HeartList.Count * 2 + 1; i < Health.MaxValue + 1; i+=2)
             {
                 AddHeart(i);
             }

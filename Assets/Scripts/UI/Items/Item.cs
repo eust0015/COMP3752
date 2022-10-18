@@ -3,9 +3,10 @@ using UnityEngine;
 namespace UI.Items
 {
     [System.Serializable]
-    public abstract class Item
+    public class Item
     {
-        [SerializeField] protected string description;
+        [SerializeField] protected ItemType type;
+        [SerializeField][TextArea] protected string description;
         [SerializeField] protected Sprite icon;
         [SerializeField] protected string name;
         [SerializeField] protected int price;
@@ -13,6 +14,12 @@ namespace UI.Items
         
         public delegate void QuantityChanged();
         public event QuantityChanged OnQuantityChanged;
+
+        public ItemType Type
+        {
+            get => type;
+            protected set => type = value;
+        }
 
         public string Description
         {
@@ -47,9 +54,18 @@ namespace UI.Items
                 OnQuantityChanged?.Invoke();
             } 
         }
-        public abstract void Buy();
-        public abstract void Sell();
-        public abstract void Use();
+
+        public virtual void Buy()
+        {
+        }
+
+        public virtual void Sell()        
+        {
+        }
+        
+        public virtual void Use()
+        {
+        }
     }
 }
 

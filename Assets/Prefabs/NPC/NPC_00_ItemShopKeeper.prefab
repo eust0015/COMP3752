@@ -221,27 +221,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uICanvas: {fileID: 0}
-  shopPrefab: {fileID: 271845186447860680, guid: 9e47d639451e6904eb54b9baf06a7920, type: 3}
+  shopPrefab: {fileID: 4142714027370951508, guid: fe080582f5159b741943319de85023fa, type: 3}
   activeShop: {fileID: 0}
+  items: []
   isInRange: 0
-  heartPotionTemplate:
-    description: Fills 1 heart.
-    icon: {fileID: 21300000, guid: 752baf52c48828043a276525a6a84608, type: 3}
-    name: Heart Potion
-    price: 5
-    quantity: 1
-  fullHeartsPotionTemplate:
-    description: Fills all hearts.
-    icon: {fileID: 21300000, guid: a58aafab54cd9754fad04ddc8680d4fa, type: 3}
-    name: Full Hearts Potion
-    price: 10
-    quantity: 0
-  bubbleBarrierPotionTemplate:
-    description: Negates the next attack.
-    icon: {fileID: 21300000, guid: aed5a5da73de80c4988dfb6c2011a687, type: 3}
-    name: Bubble Barrier Potion
-    price: 8
-    quantity: 0
+  heartPotionUITemplate: {fileID: 0}
+  fullHeartsPotionUITemplate: {fileID: 0}
+  bubbleBarrierPotionUITemplate: {fileID: 0}
 --- !u!61 &4935087666265531150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -310,5 +296,10 @@ MonoBehaviour:
   activeDialogue: {fileID: 0}
   isInRange: 0
   dialogueList:
-  - Open Shop.
+  - '<color=orange>Barry</color>
+
+    Collecting pollen is kinda like
+
+    collecting
+    money, weird hey?'
   dialogueIndex: 0

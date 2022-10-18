@@ -38,19 +38,19 @@ namespace UI.ItemInventory
             private set => inventoryItemsList = value;
         }
 
-        public void Display(List<Item> items)
+        public void Display(List<InventoryItemUI> items)
         {
             Clear();
 
-            foreach (Item item in items)
+            foreach (InventoryItemUI item in items)
             {
                 AddItem(item);
             }
         }
-        
-        public void AddItem(Item item)
+
+        public void AddItem(InventoryItemUI item)
         {
-            InventoryItemUI inventoryItem = InventoryItemsList.FirstOrDefault(p => p.Item.GetType() == item.GetType());
+            InventoryItemUI inventoryItem = InventoryItemsList.FirstOrDefault(p => p.Item.Type == item.Item.Type);
             
             // If the item was found in the list
             if (inventoryItem != null)
@@ -59,8 +59,7 @@ namespace UI.ItemInventory
             }
             else // If the item was not found in the list
             {
-                inventoryItem = Instantiate(InventoryItemPrefab, ItemContainer);
-                inventoryItem.Initialise(item);
+                inventoryItem = Instantiate(item, ItemContainer);
                 InventoryItemsList.Add(inventoryItem);
                 inventoryItem.OnDestroyed += RemoveItemFromList;
             }
