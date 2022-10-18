@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5572392598514794742}
   - component: {fileID: 5572392598514794741}
   m_Layer: 0
-  m_Name: NPC_01_EventKeeper
+  m_Name: NPC_01_CaptainBlackBee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,11 @@ MonoBehaviour:
   activeDialogue: {fileID: 0}
   isInRange: 0
   dialogueList:
-  - Open Event.
+  - "<color=#F9ECB6>Captain BlackBee</color>\nTHE ONE BEE, THE ONE BEE IS REAL!\r"
+  - '<color=#F9ECB6>Captain BlackBee</color>
+
+    Can we get much higher?'
+  - "<color=#F9ECB6>Captain BlackBee</color>\nSo high!\r"
   dialogueIndex: 0
 --- !u!114 &5572392598514794741
 MonoBehaviour:
@@ -293,20 +297,4 @@ MonoBehaviour:
   uICanvas: {fileID: 0}
   eventPrefab: {fileID: 8487404186825611249, guid: 531eafac160825843b767e450af55521, type: 3}
   activeEvent: {fileID: 0}
-  eventOptions: []
   isInRange: 0
-  option1:
-    description: Fill all empty hearts.
-    icon: {fileID: 0}
-    title: 
-  option2:
-    description: Receive 1 Max Heart Capacity relic.
-    icon: {fileID: 0}
-    title: 
-    relicUI: {fileID: 0}
-  option3:
-    description: Receive 2 Max Heart Capacity relics and empty all hearts except
-      for 1.
-    icon: {fileID: 0}
-    title: 
-    relicUI: {fileID: 0}

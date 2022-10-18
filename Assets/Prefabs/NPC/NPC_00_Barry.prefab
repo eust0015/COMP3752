@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4935087666265531149}
   - component: {fileID: 4935087666265531145}
   m_Layer: 0
-  m_Name: NPC_00_ItemShopKeeper
+  m_Name: NPC_00_Barry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,10 +296,10 @@ MonoBehaviour:
   activeDialogue: {fileID: 0}
   isInRange: 0
   dialogueList:
-  - '<color=orange>Barry</color>
-
-    Collecting pollen is kinda like
-
-    collecting
-    money, weird hey?'
+  - "<color=#F9ECB6>Barry</color>\nCollecting pollen is kinda like \ncollecting money,
+    weird hey?\r"
+  - "<color=#F9ECB6>Barry</color>\nDodging is very helpful, \nespecially if it's
+    in the morning!\r"
+  - "<color=#F9ECB6>Barry</color>\nShops and events are important, \nremember that
+    yeah?\r"
   dialogueIndex: 0

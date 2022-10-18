@@ -190,6 +190,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5209862593020588481, guid: fa1eb71793eba3841a84a80b834a1bfe, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: "<color=#F9ECB6>Barry</color>\nCollecting pollen is kinda like\ncollecting
+        money, weird hey?\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 5209862593020588491, guid: fa1eb71793eba3841a84a80b834a1bfe, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -241,17 +246,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fa1eb71793eba3841a84a80b834a1bfe, type: 3}
---- !u!114 &1537567935 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8045125366378908461, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-  m_PrefabInstance: {fileID: 2028902488680279219}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6917749d752d484eb44f5943d3fda485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1804945801
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,17 +405,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
---- !u!114 &1904046677 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1001900893859930725, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-  m_PrefabInstance: {fileID: 2028902488680279219}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6917749d752d484eb44f5943d3fda485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2028902488680279219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -430,34 +413,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 389524467608365973, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 2028902487570123747, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 389524467608365973, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 389524467608365973, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 389524467608365973, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028902487376368335, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: inventoryAbilitiesList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2028902487376368335, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: inventoryAbilitiesList.Array.data[0]
-      value: 
-      objectReference: {fileID: 1537567935}
-    - target: {fileID: 2028902487376368335, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: inventoryAbilitiesList.Array.data[1]
-      value: 
-      objectReference: {fileID: 1904046677}
     - target: {fileID: 2028902488181754948, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -544,22 +503,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2028902488181754955, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432820753336861405, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432820753336861405, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432820753336861405, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7432820753336861405, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
