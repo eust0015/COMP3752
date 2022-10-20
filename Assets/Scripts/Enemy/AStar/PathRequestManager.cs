@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
 
 public class PathRequestManager : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class PathRequestManager : MonoBehaviour
         pathfinding = GetComponent<Pathfinding>();
     }
 
-    public static void RequestPath(Vector2 pathStart, Vector2 pathEnd, Action<Vector2[], bool> callback)
+    public static void RequestPath(Vector2 pathStart, Vector2 pathEnd, Action<Vector2[], bool> callback, GameObject owner)
     {
-        PathRequest newRequest = new PathRequest(pathStart, pathEnd, callback);
+        PathRequest newRequest = new PathRequest(pathStart, pathEnd, callback, owner);
         instance.pathRequestQueue.Enqueue(newRequest);
         instance.TryProcessNext();
     }
@@ -38,9 +39,14 @@ public class PathRequestManager : MonoBehaviour
 
     public void FinishedProcessingPath(Vector2[] path, bool success)
     {
-        currentPathRequest.callback(path, success);
+        if(currentPathRequest.owner != null) if(currentPathRequest.owner.gameObject.activeSelf) currentPathRequest.callback(path, success);
         isProcessingPath = false;
         TryProcessNext();
+    }
+
+    public void ClearQueue()
+    {
+        instance.pathRequestQueue.Clear();
     }
 
     struct PathRequest
@@ -48,12 +54,14 @@ public class PathRequestManager : MonoBehaviour
         public Vector2 pathStart;
         public Vector2 pathEnd;
         public Action<Vector2[], bool> callback;
+        public GameObject owner;
 
-        public PathRequest(Vector2 _start, Vector2 _end, Action<Vector2[], bool> _callback)
+        public PathRequest(Vector2 _start, Vector2 _end, Action<Vector2[], bool> _callback, GameObject _owner)
         {
             pathStart = _start;
             pathEnd = _end;
             callback = _callback;
+            owner = _owner;
         }
     }
 }

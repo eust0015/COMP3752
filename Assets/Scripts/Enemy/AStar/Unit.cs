@@ -27,6 +27,16 @@ public class Unit : MonoBehaviour
 
     public float targetDistance => Vector2.Distance(transform.position, target.position);
 
+    private void OnDisable()
+    {
+        StopPath();
+    }
+
+    private void OnEnable()
+    {
+        StartPath();
+    }
+
     public bool lineOfSight
     {
         get
@@ -44,10 +54,11 @@ public class Unit : MonoBehaviour
 
     public void OnPathFound(Vector2[] waypoints, bool pathSuccessful)
     {
+        if (!gameObject.activeSelf) return;
         if (pathSuccessful && waypoints.Length > 0)
         {
             path = new Path(waypoints, transform.position, turnDst);
-            
+            Debug.Log(gameObject.activeSelf);
             StopCoroutine("FollowPath");
             StartCoroutine("FollowPath");
         }
@@ -60,16 +71,17 @@ public class Unit : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
         }
         
-        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound, gameObject);
         float sqMoveThreshold = pathUpdateMoveThreshold * pathUpdateMoveThreshold;
         Vector3 targetPosOld = target.position;
         
         while (true)
         {
+            if(!gameObject.activeSelf) yield break;
             yield return new WaitForSeconds(minPathUpdateTime);
             if ((target.position - targetPosOld).sqrMagnitude > sqMoveThreshold && upd)
             {
-                PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+                PathRequestManager.RequestPath(transform.position, target.position, OnPathFound, gameObject);
                 targetPosOld = target.position;
             }
         }
