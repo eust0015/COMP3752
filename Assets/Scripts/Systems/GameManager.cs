@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UI.Items;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -71,6 +72,13 @@ public class GameManager : MonoBehaviour
         onTimerComplete?.Invoke();
     }
 
+    public event Action<PlayerItem> onItemObtained;
 
-    
+    public virtual void ItemObtained(PlayerItem it)
+    {
+        Debug.Log("Invoked -> Item Obtained - " + it.itemName);
+        onItemObtained?.Invoke(it);
+    }
+
+
 }
