@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    private string leftKey = "a";
-    private string rightKey = "d";
-    private string upKey = "w";
-    private string downKey = "s";
-    private string dashKey = "left shift";
-    private string attackKey = "mouse 0";
+    private string leftKey = "Left";
+    private string rightKey = "Right";
+    private string upKey = "Up";
+    private string downKey = "Down";
+    private string dashKey = "Fire3";
+    private string attackKey = "Fire1";
 
     public Rigidbody2D player;
 
@@ -51,7 +51,7 @@ public class playerMovement : MonoBehaviour
         //update the players dash cooldown
         DashCooldown();
         //checks if the player can dash. If they can, it checks if the player wants to dash
-        if(Input.GetKey(dashKey) & !isDahing)
+        if(Input.GetButton(dashKey) & !isDahing)
         {
             Dash();
         }
@@ -73,10 +73,10 @@ public class playerMovement : MonoBehaviour
     void MovementDirection()
     {
         //Checks if the player is moving up or down and checks if the player isn't at their max speed
-        if (Input.GetKey(upKey) | Input.GetKey(downKey) & Mathf.Abs(yspeed) <= maxSpeed)
+        if (Input.GetButton(upKey) | Input.GetButton(downKey) & Mathf.Abs(yspeed) <= maxSpeed)
         {
             //slows the player down, if they are holding up and down at the same time
-            if (Input.GetKey(upKey) & Input.GetKey(downKey))
+            if (Input.GetButton(upKey) & Input.GetButton(downKey))
             {
                 if (yspeed > 0)
                 {
@@ -88,7 +88,7 @@ public class playerMovement : MonoBehaviour
                 }
             }
             //speeds the player up in the up direction and makes sure they don't go over the max speed
-            else if (Input.GetKey(upKey))
+            else if (Input.GetButton(upKey))
             {
                 if (yspeed < maxSpeed)
                 {
@@ -97,7 +97,7 @@ public class playerMovement : MonoBehaviour
                 }
             }
             //speeds the player up in the down direction and makes sure they don't go over the max speed
-            else if (Input.GetKey(downKey))
+            else if (Input.GetButton(downKey))
             {
                 if (yspeed > -maxSpeed)
                 {
@@ -128,10 +128,10 @@ public class playerMovement : MonoBehaviour
         }
 
         //Checks if the player is moving left or right and checks if the player isn't at their max speed
-        if (Input.GetKey(leftKey) | Input.GetKey(rightKey) & Mathf.Abs(xspeed) <= maxSpeed)
+        if (Input.GetButton(leftKey) | Input.GetButton(rightKey) & Mathf.Abs(xspeed) <= maxSpeed)
         {
             //slows the player down, if they are holding left and right at the same time
-            if (Input.GetKey(leftKey) & Input.GetKey(rightKey))
+            if (Input.GetButton(leftKey) & Input.GetButton(rightKey))
             {
                 if (xspeed > 0)
                 {
@@ -143,7 +143,7 @@ public class playerMovement : MonoBehaviour
                 }
             }
             //speeds the player up in the left direction and makes sure they don't go over the max speed
-            else if (Input.GetKey(leftKey))
+            else if (Input.GetButton(leftKey))
             {
                 if (xspeed > -maxSpeed)
                 {
@@ -153,7 +153,7 @@ public class playerMovement : MonoBehaviour
                 }
             }
             //speeds the player up in the right direction and makes sure they don't go over the max speed
-            else if (Input.GetKey(rightKey))
+            else if (Input.GetButton(rightKey))
             {
                 if (xspeed < maxSpeed)
                 {
@@ -188,22 +188,22 @@ public class playerMovement : MonoBehaviour
     void Dash()
     {
         //Figures out what direction the player is facing and adds momentum to that direction and sets dashing to true
-        if (Input.GetKey(rightKey))
+        if (Input.GetButton(rightKey))
         {
             isDahing = true;
             xspeed = dashSpeed;
         }
-        if (Input.GetKey(leftKey))
+        if (Input.GetButton(leftKey))
         {
             isDahing = true;
             xspeed = -dashSpeed;
         }
-        if (Input.GetKey(upKey))
+        if (Input.GetButton(upKey))
         {
             isDahing = true;
             yspeed = dashSpeed;
         }
-        if (Input.GetKey(downKey))
+        if (Input.GetButton(downKey))
         {
             isDahing = true;
             yspeed = -dashSpeed;
@@ -227,7 +227,7 @@ public class playerMovement : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetKey(attackKey) && lastSpeed != Vector2.zero)
+        if (Input.GetButton(attackKey) && lastSpeed != Vector2.zero)
         {
             Hitbox h;
             slash.localPosition = new Vector3(lastSpeed.x, lastSpeed.y, slash.localPosition.z);
