@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7893659008575456862}
-  - component: {fileID: 2881971895515876360}
+  - component: {fileID: 7369923595463349313}
   m_Layer: 0
   m_Name: EnemySpawnPoint
   m_TagString: EnemySpawnPoint
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2881971895515876360
+--- !u!114 &7369923595463349313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4166044639527200738, guid: 9b25e016d0c63be46babde9c81280d88, type: 3}
-  spawnChance: 100
+  spawnChance: 40
   spawnRadius: 5
   maxEnemies: 5
