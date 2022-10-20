@@ -54,7 +54,6 @@ public class Unit : MonoBehaviour
 
     public void OnPathFound(Vector2[] waypoints, bool pathSuccessful)
     {
-        if (!gameObject.activeSelf) return;
         if (pathSuccessful && waypoints.Length > 0)
         {
             path = new Path(waypoints, transform.position, turnDst);
@@ -77,7 +76,6 @@ public class Unit : MonoBehaviour
         
         while (true)
         {
-            if(!gameObject.activeSelf) yield break;
             yield return new WaitForSeconds(minPathUpdateTime);
             if ((target.position - targetPosOld).sqrMagnitude > sqMoveThreshold && upd)
             {

@@ -9,7 +9,7 @@ public class PathRequestManager : MonoBehaviour
     private Queue<PathRequest> pathRequestQueue = new Queue<PathRequest>();
     private PathRequest currentPathRequest;
 
-    private static PathRequestManager instance;
+    public static PathRequestManager instance;
     private Pathfinding pathfinding;
 
     private bool isProcessingPath;
@@ -47,6 +47,7 @@ public class PathRequestManager : MonoBehaviour
     public void ClearQueue()
     {
         instance.pathRequestQueue.Clear();
+        currentPathRequest = new PathRequest();
     }
 
     struct PathRequest
