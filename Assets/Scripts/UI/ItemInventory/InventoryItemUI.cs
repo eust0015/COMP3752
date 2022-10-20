@@ -55,9 +55,8 @@ namespace UI.ItemInventory
             private set => activeMouseOver = value;
         }
 
-        public void Initialise(Item setItem)
+        public void Start()
         {
-            Item = setItem;
             SubscribeToEvents();
             UpdateQuantity();
             UpdateSprite();

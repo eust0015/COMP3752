@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UI.ItemInventory;
 using UI.Items;
 using UnityEngine;
 
@@ -13,9 +14,9 @@ namespace UI.Shop
         [SerializeField] private ShopUI activeShop;
         [SerializeField] private List<Item> items;
         [SerializeField] private bool isInRange;
-        [SerializeField] private HeartPotion heartPotionTemplate;
-        [SerializeField] private FullHeartsPotion fullHeartsPotionTemplate;
-        [SerializeField] private BubbleBarrierPotion bubbleBarrierPotionTemplate;
+        [SerializeField] private HeartPotionUI heartPotionUITemplate;
+        [SerializeField] private FullHeartsPotionUI fullHeartsPotionUITemplate;
+        [SerializeField] private BubbleBarrierPotionUI bubbleBarrierPotionUITemplate;
 
         public GameObject UICanvas
         {
@@ -47,22 +48,22 @@ namespace UI.Shop
             private set => isInRange = value;
         }
 
-        public HeartPotion HeartPotionTemplate
+        public HeartPotionUI HeartPotionUITemplate
         {
-            get => heartPotionTemplate;
-            private set => heartPotionTemplate = value;
+            get => heartPotionUITemplate;
+            private set => heartPotionUITemplate = value;
         }
 
-        public FullHeartsPotion FullHeartsPotionTemplate
+        public FullHeartsPotionUI FullHeartsPotionUITemplate
         {
-            get => fullHeartsPotionTemplate;
-            private set => fullHeartsPotionTemplate = value;
+            get => fullHeartsPotionUITemplate;
+            private set => fullHeartsPotionUITemplate = value;
         }
 
-        public BubbleBarrierPotion BubbleBarrierPotionTemplate
+        public BubbleBarrierPotionUI BubbleBarrierPotionUITemplate
         {
-            get => bubbleBarrierPotionTemplate;
-            private set => bubbleBarrierPotionTemplate = value;
+            get => bubbleBarrierPotionUITemplate;
+            private set => bubbleBarrierPotionUITemplate = value;
         }
 
         public void OnInteractKey()
@@ -86,12 +87,12 @@ namespace UI.Shop
             if (ActiveShop != null)
                 return;
 
-            Items = new List<Item>
-            {
-                HeartPotionTemplate,
-                FullHeartsPotionTemplate,
-                BubbleBarrierPotionTemplate,
-            };
+            // Items = new List<Item>
+            // {
+            //     InventoryItemUIHeartPotionTemplate,
+            //     InventoryItemUIFullHeartsPotionTemplate,
+            //     InventoryItemUIBubbleBarrierPotionTemplate,
+            // };
 
             ActiveShop = Instantiate(ShopPrefab, UICanvas.transform);
             ActiveShop.Display(items);

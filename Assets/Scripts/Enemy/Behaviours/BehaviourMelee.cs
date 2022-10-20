@@ -55,7 +55,7 @@ public class BehaviourMelee : EnemyBehaviour
         yield return new WaitForSeconds(delay);
         transform.DOMove(pos, travelTime, false);
         yield return new WaitForSeconds(travelTime / 1.5f);
-        _a.RequestHitbox(new Hitbox(1.5f, 1.5f, 0.2f, 2, n * 1.2f));
+        _a.RequestHitbox(new Hitbox(1.5f, 1.5f, 0.2f/60, 2, n * 1.2f));
         
         curDelay = delay;
         yield return new WaitForSeconds(recoverTime);

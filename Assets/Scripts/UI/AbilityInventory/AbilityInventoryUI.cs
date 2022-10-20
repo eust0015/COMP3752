@@ -13,10 +13,7 @@ namespace UI.AbilityInventory
         [SerializeField] private Transform abilityContainer;
         [SerializeField] private InventoryAbilityUI inventoryAbilityPrefab;
         [SerializeField] private List<InventoryAbilityUI> inventoryAbilitiesList;
-        [SerializeField] public MeleeAttackAbility meleeAttackTemplate;
-        [SerializeField] public DashAbility dashTemplate;
-        [SerializeField] public RangedAttackAbility rangedAttackTemplate;
-        
+
         public Transform AbilityContainer
         {
             get => abilityContainer;
@@ -40,60 +37,29 @@ namespace UI.AbilityInventory
             private set => inventoryAbilitiesList = value;
         }
 
-        public MeleeAttackAbility MeleeAttackTemplate
-        {
-            get => meleeAttackTemplate;
-            private set => meleeAttackTemplate = value;
-        }
-
-        public DashAbility DashTemplate
-        {
-            get => dashTemplate;
-            private set => dashTemplate = value;
-        }
-
-        public RangedAttackAbility RangedAttackTemplate
-        {
-            get => rangedAttackTemplate;
-            private set => rangedAttackTemplate = value;
-        }
-
         public void OnEnable()
         {
-            List<Ability> abilities = new List<Ability>
+            foreach (InventoryAbilityUI inventoryAbility in InventoryAbilitiesList)
             {
-                MeleeAttackTemplate,
-                DashTemplate
-            };
-            Display(abilities);
+                inventoryAbility.OnDestroyed += RemoveAbilityFromList;
+            }
         }
 
-        public void Display(List<Ability> abilities)
+        public void Display(List<InventoryAbilityUI> abilities)
         {
             Clear();
 
-            foreach (Ability ability in abilities)
+            foreach (InventoryAbilityUI ability in abilities)
             {
                 AddAbility(ability);
             }
         }
-        
-        public void AddAbility(Ability ability)
+
+        public void AddAbility(InventoryAbilityUI ability)
         {
-            InventoryAbilityUI inventoryAbility = InventoryAbilitiesList.FirstOrDefault(p => p.Ability.GetType() == ability.GetType());
-            
-            // If the ability was found in the list
-            if (inventoryAbility != null)
-            {
-                inventoryAbility.Ability.Quantity += 1;
-            }
-            else // If the ability was not found in the list
-            {
-                inventoryAbility = Instantiate(InventoryAbilityPrefab, AbilityContainer);
-                inventoryAbility.Initialise(ability);
-                InventoryAbilitiesList.Add(inventoryAbility);
-                inventoryAbility.OnDestroyed += RemoveAbilityFromList;
-            }
+            InventoryAbilityUI inventoryAbility = Instantiate(ability, AbilityContainer);
+            InventoryAbilitiesList.Add(inventoryAbility);
+            inventoryAbility.OnDestroyed += RemoveAbilityFromList;
         }
 
         public void Clear()
