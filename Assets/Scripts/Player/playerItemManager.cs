@@ -7,8 +7,9 @@ public class playerItemManager : MonoBehaviour
 {
     private void Awake()
     {
-        throw new NotImplementedException();
         GameManager.current.onItemObtained += AddItem;
+        throw new NotImplementedException();
+        
     }
 
     private void AddItem(PlayerItem it)
