@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Audio;
 using TMPro;
 using UI.Items;
 using UnityEngine;
@@ -72,6 +73,8 @@ namespace UI.Shop
         {
             PauseGame();
             transform.SetAsFirstSibling();
+            FMODMusicSource musicSource = GetComponent<FMODMusicSource>();
+            musicSource.PlayMusic();
         }
 
         public void Display(List<Item> items)

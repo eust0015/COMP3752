@@ -19,9 +19,9 @@ public class YardManager : MonoBehaviour
     public FMODUnity.EventReference gameOverFMSound;
     public FMODUnity.EventReference royalSound;
 
-    //Yarny FMOD: Instances inc. Parameters. In START (Awake) the fmodEvent gets linked to your instance.
+    //Yarny FMOD: Instances inc. Parameters. In START (Awake) the music gets linked to your instance.
     public FMOD.Studio.EventInstance instance;
-    public FMODUnity.EventReference fmodEvent; //fmodEvent will be your music track & variables to control the music
+    public FMODUnity.EventReference fmodEvent; //music will be your music track & variables to control the music
 
     //Yarny FMOD: This is where you set the range of variables that will affect the music
 
@@ -48,7 +48,7 @@ public class YardManager : MonoBehaviour
 
         createdRooms.Add(Instantiate(roomPrefabs[0], new Vector3(0, 0, 0), Quaternion.identity));
 
-        //Yarny FMOD: Set an instance of the fmodEvent (the music event) and start it
+        //Yarny FMOD: Set an instance of the music (the music event) and start it
         playerHealthPR = 6.0f;
         currentNumberOfEnemies = 0.0f;
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent); // This also works (like tutorial, older style)
