@@ -37,7 +37,6 @@ namespace UI.Event
 
         public void OnInteractKey()
         {
-            Debug.Log("Registered");
             if(!IsInRange)
                 return;
                 

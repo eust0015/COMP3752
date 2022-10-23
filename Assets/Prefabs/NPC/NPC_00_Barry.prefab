@@ -147,19 +147,7 @@ MonoBehaviour:
     m_ActionId: c4fb512e-33a0-485b-979c-778dfabde61a
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI.Shop.ShopDisplay, Assembly-CSharp
-        m_MethodName: OnInteractKey
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 1dbd4a4b-87cc-4ba2-a722-f4d4fcff1b2c
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:

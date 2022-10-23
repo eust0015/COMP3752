@@ -46,7 +46,6 @@ namespace UI.Shop
 
         public void OnInteractKey()
         {
-            Debug.Log("Registered");
             if (!IsInRange)
                 return;
 
