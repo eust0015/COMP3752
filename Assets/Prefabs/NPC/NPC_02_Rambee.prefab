@@ -70,15 +70,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Rambee</color>\nYou can leave the zone even \nif all
-        the enemies are not defeated, but who would do that coward!\r"
+      value: "<color=#F9ECB6>Rambee</color>\nYou can leave the zone even if \nall
+        the enemies are not defeated, \nbut who would do that coward!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: '<color=#F9ECB6>Rambee</color>Going into shop wont lose you time. That
-        means there is more time to fight!
-
-'
+      value: "<color=#F9ECB6>Rambee</color>\nGoing into shop wont lose you time.
+        \nThat means there is more time to fight!\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

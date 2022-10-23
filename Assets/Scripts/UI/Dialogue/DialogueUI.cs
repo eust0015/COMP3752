@@ -10,14 +10,10 @@ namespace UI.Dialogue
     {
         [SerializeField] private TMP_Text dialogueText;
         [SerializeField] private TMP_Text hotKeyText;
-        [SerializeField] private RectTransform backgroundTransform;
-        [SerializeField] private RectTransform foregroundTransform;
         [SerializeField][TextArea] private List<string> dialogueList;
         [SerializeField] private string hotKey;
         [SerializeField] private int dialogueIndex;
-        [SerializeField] private Vector2 backgroundPadding;
-        [SerializeField] private Vector2 foregroundPadding;
-        
+
         public delegate void DialogueIndexChanged(int newIndex);
         public event DialogueIndexChanged OnDialogueIndexChanged;
         public delegate void Destroyed(DialogueUI thisObject);
@@ -33,18 +29,6 @@ namespace UI.Dialogue
         {
             get => hotKeyText;
             private set => hotKeyText = value;
-        }
-
-        public RectTransform BackgroundTransform
-        {
-            get => backgroundTransform;
-            private set => backgroundTransform = value;
-        }
-
-        public RectTransform ForegroundTransform
-        {
-            get => foregroundTransform;
-            private set => foregroundTransform = value;
         }
 
         public List<string> DialogueList
@@ -70,18 +54,6 @@ namespace UI.Dialogue
                 dialogueIndex = value;
                 OnDialogueIndexChanged?.Invoke(dialogueIndex);
             }
-        }
-
-        public Vector2 BackgroundPadding
-        {
-            get => backgroundPadding;
-            private set => backgroundPadding = value;
-        }
-
-        public Vector2 ForegroundPadding
-        {
-            get => foregroundPadding;
-            private set => foregroundPadding = value;
         }
 
         public void Initialise(List<string> setDialogueList, int setCurrentIndex)

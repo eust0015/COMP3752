@@ -73,8 +73,6 @@ namespace UI.Shop
         {
             PauseGame();
             transform.SetAsFirstSibling();
-            FMODMusicSource musicSource = GetComponent<FMODMusicSource>();
-            musicSource.PlayMusic();
         }
 
         public void Display(List<Item> items)

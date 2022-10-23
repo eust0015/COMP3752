@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1600652721426574060
+--- !u!1001 &5517441029259952406
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,15 +55,31 @@ PrefabInstance:
     - target: {fileID: 6628265159285962851, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 721062884, guid: 509fe941730eca843b74eba1d4c52b44, type: 3}
+      objectReference: {fileID: -1645548485, guid: 509fe941730eca843b74eba1d4c52b44, type: 3}
     - target: {fileID: 6628265159285962854, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Name
-      value: NPC_08 Variant
+      value: NPC_10_Shinobee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: "<color=#F9ECB6>Shinobee</color>\nI am one with the wind!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[1]
+      value: "<color=#F9ECB6>Shinobee</color>\nYou can't see me bzzz\u2026\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[2]
+      value: "<color=#F9ECB6>Shinobee</color>\nI come from the hidden bee village.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 4f3ad1ca7220ce741b8503cab138f85a, type: 2}
+      objectReference: {fileID: 9100000, guid: 92f76a88759dffb44b36fd38c4bb232d, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}

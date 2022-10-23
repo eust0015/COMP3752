@@ -10,7 +10,7 @@ namespace UI.Dialogue
         [SerializeField] private DialogueUI dialoguePrefab;
         [SerializeField] private DialogueUI activeDialogue;
         [SerializeField] private bool isInRange;
-        [SerializeField][TextArea] private List<string> dialogueList;
+        [SerializeField][TextArea(1,5)] private List<string> dialogueList;
         [SerializeField] private int dialogueIndex;
         
         public DialogueUI DialoguePrefab

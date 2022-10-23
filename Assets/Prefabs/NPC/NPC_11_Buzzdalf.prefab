@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2776386934011065090
+--- !u!1001 &499835767344566420
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,15 +55,37 @@ PrefabInstance:
     - target: {fileID: 6628265159285962851, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1532559317, guid: 509fe941730eca843b74eba1d4c52b44, type: 3}
+      objectReference: {fileID: -2078110245, guid: 509fe941730eca843b74eba1d4c52b44, type: 3}
     - target: {fileID: 6628265159285962854, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Name
-      value: NPC_07 Variant
+      value: NPC_11_Buzzdalf
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: "<color=#F9ECB6>Buzzdalf</color>\nCome look at my shop.\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[1]
+      value: '<color=#F9ECB6>Buzzdalf</color>
+
+        I''m a wizard!
+
+        Wanna
+        take a look at my potions?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[2]
+      value: "<color=#F9ECB6>Buzzdalf</color>\nWhat sort of potions are you looking
+        for?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 18386909611831147ad08d87109174b8, type: 2}
+      objectReference: {fileID: 9100000, guid: 9a86949a9bb7d9049aa380b146262f06, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}

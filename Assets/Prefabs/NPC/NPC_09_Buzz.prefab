@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2241337283323484462
+--- !u!1001 &3200968158029248241
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,15 +55,53 @@ PrefabInstance:
     - target: {fileID: 6628265159285962851, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1046954435, guid: 509fe941730eca843b74eba1d4c52b44, type: 3}
+      objectReference: {fileID: -768256732, guid: 509fe941730eca843b74eba1d4c52b44, type: 3}
     - target: {fileID: 6628265159285962854, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Name
-      value: NPC_06 Variant
+      value: NPC_09_Buzz
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: "<color=#F9ECB6>Buzz</color>\nWelcome Traveller!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[1]
+      value: "<color=#F9ECB6>Buzz</color>\nWelcome to the shop!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+      propertyPath: dialogueList.Array.data[2]
+      value: "<color=#F9ECB6>Buzz</color>\nDiscount Discount haha, \njust kidding!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1b509138c3ac3124ba903dcea90fa1f4, type: 2}
+      objectReference: {fileID: 9100000, guid: cc6dc61bc50a22a42a1f2cf70652ae0a, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+--- !u!1 &8615469237004996247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6628265159285962854, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
+  m_PrefabInstance: {fileID: 3200968158029248241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8988118722602377067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8615469237004996247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d0ceadb8224eb8ab437a0b58791dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uICanvas: {fileID: 0}
+  shopPrefab: {fileID: 4142714027370951508, guid: fe080582f5159b741943319de85023fa, type: 3}
+  activeShop: {fileID: 0}
+  items: []
+  isInRange: 0

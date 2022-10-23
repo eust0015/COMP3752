@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UI.ItemInventory;
 using UI.Items;
 using UnityEngine;
 
@@ -14,9 +13,6 @@ namespace UI.Shop
         [SerializeField] private ShopUI activeShop;
         [SerializeField] private List<Item> items;
         [SerializeField] private bool isInRange;
-        [SerializeField] private HeartPotionUI heartPotionUITemplate;
-        [SerializeField] private FullHeartsPotionUI fullHeartsPotionUITemplate;
-        [SerializeField] private BubbleBarrierPotionUI bubbleBarrierPotionUITemplate;
 
         public GameObject UICanvas
         {
@@ -48,24 +44,6 @@ namespace UI.Shop
             private set => isInRange = value;
         }
 
-        public HeartPotionUI HeartPotionUITemplate
-        {
-            get => heartPotionUITemplate;
-            private set => heartPotionUITemplate = value;
-        }
-
-        public FullHeartsPotionUI FullHeartsPotionUITemplate
-        {
-            get => fullHeartsPotionUITemplate;
-            private set => fullHeartsPotionUITemplate = value;
-        }
-
-        public BubbleBarrierPotionUI BubbleBarrierPotionUITemplate
-        {
-            get => bubbleBarrierPotionUITemplate;
-            private set => bubbleBarrierPotionUITemplate = value;
-        }
-
         public void OnInteractKey()
         {
             Debug.Log("Registered");
@@ -86,13 +64,6 @@ namespace UI.Shop
         {
             if (ActiveShop != null)
                 return;
-
-            // Items = new List<Item>
-            // {
-            //     InventoryItemUIHeartPotionTemplate,
-            //     InventoryItemUIFullHeartsPotionTemplate,
-            //     InventoryItemUIBubbleBarrierPotionTemplate,
-            // };
 
             ActiveShop = Instantiate(ShopPrefab, UICanvas.transform);
             ActiveShop.Display(items);
