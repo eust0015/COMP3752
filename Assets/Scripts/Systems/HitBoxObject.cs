@@ -15,6 +15,12 @@ public class HitBoxObject : MonoBehaviour
     public float timer;
     public int damage;
     public bool showHitbox = false;
+    public float angle;
+
+    private void Start()
+    {
+        transform.RotateAround(owner.transform.position, Vector3.back, angle);
+    }
 
     private void Update()
     {

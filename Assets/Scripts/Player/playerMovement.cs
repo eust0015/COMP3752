@@ -32,14 +32,14 @@ public class playerMovement : MonoBehaviour
     public Vector2 momentum => new Vector2(xspeed, yspeed);
 
     private SpriteRenderer _s;
-    private AttackController _a;
+    private PlayerAttackController _a;
     private playerAnimation _anim;
     private Transform slash;
 
     void Start()
     {
         _s = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        _a = GetComponent<AttackController>();
+        _a = GetComponent<PlayerAttackController>();
         _anim = transform.GetChild(0).GetComponent<playerAnimation>();
         slash = transform.GetChild(1);
         dashTimer = dashCooldown;
@@ -229,7 +229,7 @@ public class playerMovement : MonoBehaviour
     {
         if (Input.GetButton(attackKey) && lastSpeed != Vector2.zero)
         {
-            Hitbox h;
+            /*Hitbox h;
             slash.localPosition = new Vector3(lastSpeed.x, lastSpeed.y, slash.localPosition.z);
 
             switch (lastSpeed.y)
@@ -267,9 +267,9 @@ public class playerMovement : MonoBehaviour
                 StartCoroutine(_anim.AttackAnim());
                 _a.RequestHitbox(h);
                 currentAttackCooldown = attackCooldown;
-            }
+            }*/
             
-            
+            _a.Attack(lastSpeed);
         }
     }
 

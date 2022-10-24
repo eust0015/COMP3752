@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private float baseAtk;
-    private float atkMultiplier;
-    private int atkModifier;
+    public float baseAtk = 1;
+    public float atkMultiplier = 1;
+    public int atkModifier = 0;
 
-    private float critChance;
-    private float critDamage;
+    public float critChance = 0;
+    public float critDamage = 1;
 
-    private float pollenMultiplier;
-    private float cooldownReduction;
+    public float pollenMultiplier = 1;
+    public float cooldownReduction = 0;
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +25,7 @@ public class Timer : MonoBehaviour
         displayTimer = this.GetComponent<TMP_Text>();
         timerCurrent = _timerStart;
 
+        _g.onRunStart += ResetTimer;
         _g.onTimerPause += PauseTimer;
         _g.onTimerPlay += PlayTimer;
 

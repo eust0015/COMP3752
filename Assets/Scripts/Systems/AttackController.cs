@@ -20,10 +20,13 @@ public class AttackController : MonoBehaviour
     [SerializeField] private GameObject hBox;
     [SerializeField] private GameObject projectile;
 
-    public void RequestHitbox(Hitbox _h, int id = -1)
+    public void RequestHitbox(Hitbox _h, int damage, int id = -1, float angle = 0)
     {
-        var box = Instantiate(hBox);
-        box.transform.position = new Vector3(_h.relativePos.x, _h.relativePos.y, 0) + transform.position;
+        GameObject box;
+        box = Instantiate(hBox);
+        
+        
+        box.transform.localPosition = new Vector3(_h.relativePos.x, _h.relativePos.y, 0) + transform.position;
         box.transform.localScale = new Vector3(_h.dimX, _h.dimY, 1);
 
         var hit = box.GetComponent<HitBoxObject>();
@@ -34,22 +37,13 @@ public class AttackController : MonoBehaviour
             hit._tag = tagToAttack;
         }
         
-        hit.timer = _h.activeFrames * 60;
-        hit.damage = _h.damage;
+        hit.timer = _h.activeFrames / 60;
+        hit.damage = damage;
         hit.owner = this;
         hit.showHitbox = showHitboxes;
+        hit.angle = angle;
     }
 
-    public void RequestMulti(List<Hitbox> _h, bool multihit = false)
-    {
-        foreach (Hitbox hit in _h)
-        {
-            
-        }
-
-        curAtkID++;
-    }
-    
     public void RequestProjectile(Projectile _p)
     {
         var proj = Instantiate(projectile);

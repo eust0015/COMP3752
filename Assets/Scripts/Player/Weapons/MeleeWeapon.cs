@@ -6,4 +6,5 @@ using UnityEngine;
 public class MeleeWeapon : Weapon
 {
     public List<Hitbox> Data = new List<Hitbox>();
+    public bool multihit;
 }
