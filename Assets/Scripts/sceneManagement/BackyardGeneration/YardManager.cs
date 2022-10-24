@@ -35,6 +35,8 @@ public class YardManager : MonoBehaviour
 
     void Awake()
     {
+        //GameManager.current.onTimerComplete += spawnBoss;
+
         currentRoom = 0;
         for (int i = 0; i < roomPrefabs.Count; i++)
         {
@@ -209,5 +211,10 @@ public class YardManager : MonoBehaviour
     private void linkRooms(int roomPlayerIsIn, int roomPlayerWillBeIn, string direction)
     {
         createdRooms[roomPlayerIsIn].GetComponent<Yard>().setRoom(direction, roomPlayerWillBeIn);
+    }
+
+    public void spawnBoss()
+    {
+        createdRooms[currentRoom].GetComponentInChildren<ExitSpawner>().closeAllDoors();
     }
 }
