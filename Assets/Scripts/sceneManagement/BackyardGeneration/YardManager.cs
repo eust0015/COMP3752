@@ -8,7 +8,7 @@ public class YardManager : MonoBehaviour
 {
     public List<GameObject> roomPrefabs;
     public List<GameObject> createdRooms = new List<GameObject>();
-    private int currentRoom = 0;
+    public int currentRoom = 0;
 
     //Yarny FMOD: Whatever you put in this block will show up as sound file browsing options under this script name in Unity
     //You can use these variables in scripts. You can change the actual mp3/sound file (in dropdown unity browser) anytime you like.

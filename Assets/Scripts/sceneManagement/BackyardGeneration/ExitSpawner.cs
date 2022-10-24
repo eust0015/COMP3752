@@ -54,4 +54,25 @@ public class ExitSpawner : MonoBehaviour
 
         }
     }
+
+    public void ensureExit()
+    {
+        bool noExits = true;
+        for (int i = 0; i < ExitsArray.Length; i++)
+        {
+            if(i != FindLastRoom() && ExitsArray[i].activeSelf)
+            {
+                noExits = false;
+            }
+        }
+        if(noExits)
+        {
+            int randomno = FindLastRoom();
+            while(randomno == FindLastRoom())
+            {
+                randomno = Random.Range(0, ExitsArray.Length-1);
+            }
+            ExitsArray[randomno].SetActive(true);
+        }
+    }
 }
