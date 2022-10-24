@@ -26,15 +26,15 @@ public class ExitSpawner : MonoBehaviour
         {
             if (spawnChance >= Random.Range(0, 100))
             {
-                ExitsArray[i].SetActive(true);
+                openDoor(i);
             }
         }
-        ExitsArray[FindLastRoom()].SetActive(true);
+        openDoor(FindLastRoom());
     }
     public void setLastRoom(string prevRoom)
     {
         lastRoom = prevRoom;
-        ExitsArray[FindLastRoom()].SetActive(true);
+        openDoor(FindLastRoom());
     }
 
     private int FindLastRoom()
@@ -72,7 +72,20 @@ public class ExitSpawner : MonoBehaviour
             {
                 randomno = Random.Range(0, ExitsArray.Length-1);
             }
-            ExitsArray[randomno].SetActive(true);
+            openDoor(randomno);
+        }
+    }
+
+    private void openDoor(int roomNo)
+    {
+        ExitsArray[roomNo].SetActive(true);
+    }
+
+    public void closeAllDoors()
+    {
+        for (int i = 0; i < ExitsArray.Length; i++)
+        {
+            ExitsArray[i].SetActive(false);
         }
     }
 }
