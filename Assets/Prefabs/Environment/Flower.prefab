@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5330116241628906853}
   - component: {fileID: 7547392919688365899}
+  - component: {fileID: 5285054992865345607}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Untagged
@@ -53,3 +54,17 @@ MonoBehaviour:
   - {fileID: 7918825401854875132, guid: d3449cd6d7315434d87ea9dd981936a5, type: 3}
   spawnChance: 100
   spawnRadius: 3
+--- !u!114 &5285054992865345607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125873337494211201}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e772664b7da85ae4c97cace1f2e4f31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTimer: 30
+  pollen: {fileID: 6917838929949873572, guid: 11da0f30b986034408b1134ad9b39b56, type: 3}

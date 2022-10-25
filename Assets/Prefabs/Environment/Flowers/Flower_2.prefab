@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6754624104317825848}
   - component: {fileID: 3037194589880280253}
+  - component: {fileID: 5152236300850379183}
   m_Layer: 0
   m_Name: Flower_2
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3037194589880280253
 SpriteRenderer:
@@ -84,3 +85,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5152236300850379183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656334570084983665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e772664b7da85ae4c97cace1f2e4f31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTimer: 30
+  pollen: {fileID: 6917838929949873572, guid: 11da0f30b986034408b1134ad9b39b56, type: 3}

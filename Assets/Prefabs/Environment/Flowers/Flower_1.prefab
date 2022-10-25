@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6348389058841566055}
   - component: {fileID: 7484271803074019473}
   - component: {fileID: 2498957199461750478}
+  - component: {fileID: 5440717708608263440}
   m_Layer: 0
   m_Name: Flower_1
   m_TagString: Untagged
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7095185250499433643}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -100,3 +101,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &5440717708608263440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095185250499433643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e772664b7da85ae4c97cace1f2e4f31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTimer: 30
+  pollen: {fileID: 6917838929949873572, guid: 11da0f30b986034408b1134ad9b39b56, type: 3}

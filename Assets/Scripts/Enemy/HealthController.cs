@@ -14,7 +14,10 @@ public class HealthController : MonoBehaviour
     public void Hit(int damage)
     {
         h.Health.DecreaseValue(damage);
-        if (h.Health.Value <= 0) StartCoroutine(Death());
+        if (h.Health.Value <= 0)
+        {
+            StartCoroutine(Death());
+        }
     }
 
     private IEnumerator HitAnimation()
