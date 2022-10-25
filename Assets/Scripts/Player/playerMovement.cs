@@ -19,8 +19,8 @@ public class playerMovement : MonoBehaviour
     public float acceleration = 30;
     public float dashCooldown = 5;
     public float dashSpeed = 10;
-    private float xspeed = 0;
-    private float yspeed = 0;
+    public float xspeed = 0;
+    public float yspeed = 0;
     private float dashTimer;
 
     [SerializeField]
@@ -268,11 +268,11 @@ public class playerMovement : MonoBehaviour
 
             if (currentAttackCooldown <= 0)
             {
-                StartCoroutine(_anim.AttackAnim());
+                
                 _a.RequestHitbox(h);
                 currentAttackCooldown = attackCooldown;
             }*/
-
+            
             _a.Attack(lastSpeed);
         }
     }
