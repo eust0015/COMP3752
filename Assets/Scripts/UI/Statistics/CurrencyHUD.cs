@@ -1,4 +1,5 @@
 ﻿using System;
+using Audio;
 using TMPro;
 using UnityEngine;
 
@@ -44,6 +45,7 @@ namespace UI.Statistics
                 return;
             
             Currency.OnValueIncreased += UpdateDisplay;
+            Currency.OnValueIncreased += PlayCollectPollen;
             Currency.OnMaxValueIncreased += UpdateDisplay;
             Currency.OnValueDecreased += UpdateDisplay;
             Currency.OnMaxValueDecreased += UpdateDisplay;
@@ -55,6 +57,7 @@ namespace UI.Statistics
                 return;
             
             Currency.OnValueIncreased -= UpdateDisplay;
+            Currency.OnValueIncreased -= PlayCollectPollen;
             Currency.OnMaxValueIncreased -= UpdateDisplay;
             Currency.OnValueDecreased -= UpdateDisplay;
             Currency.OnMaxValueDecreased -= UpdateDisplay;
@@ -63,6 +66,12 @@ namespace UI.Statistics
         public void UpdateDisplay()
         {
             text.text = Currency.Value.ToString();
+        }
+
+        public void PlayCollectPollen()
+        {
+            var audioSource = GetComponent<FMODAudioSource>();
+            audioSource.PlaySound();
         }
 
     }

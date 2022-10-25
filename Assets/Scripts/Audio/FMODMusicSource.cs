@@ -8,6 +8,7 @@ namespace Audio
 {
     public class FMODMusicSource : MonoBehaviour
     {
+        public static FMODMusicSource currentlyPlayingMusic;
         public FMOD.Studio.EventInstance instance;
         public FMODUnity.EventReference music; //music will be your music track & variables to control the music
         [SerializeField] private int playerHealth;
@@ -35,6 +36,8 @@ namespace Audio
 
         public void PlayMusic()
         {
+            currentlyPlayingMusic.instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            currentlyPlayingMusic = this;
             instance = FMODUnity.RuntimeManager.CreateInstance(music); // This also works (like tutorial, older style)
             instance.start();
             DetectPlayerHealth();

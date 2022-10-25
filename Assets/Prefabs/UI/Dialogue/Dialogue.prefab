@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 5519889390628207534}
   - component: {fileID: 8844585624324263477}
   - component: {fileID: 2564112932221649275}
+  - component: {fileID: 5969082665978353870}
+  - component: {fileID: 8127403472902048446}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -89,7 +91,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4823150599518669968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +169,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UI.Dialogue.DialogueUI, Assembly-CSharp
         m_MethodName: DisplayNextDialogue
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8127403472902048446}
+        m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -262,6 +276,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &5969082665978353870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123396523863428567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8127403472902048446}
+        m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8127403472902048446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123396523863428567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -731482727
+      Data2: 1131199176
+      Data3: 301770684
+      Data4: 307879227
+    Path: event:/NPC-02-words
 --- !u!1 &4860266236157332996
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 468904fd0fcfa8f4091d1b32a6d65bb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 938d5544a97d48d4eb4d53513c78e8aa, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -652,7 +712,7 @@ MonoBehaviour:
 
     test
 
-    test test test
+    test test testtttttttttttt
 
     test
 
@@ -665,8 +725,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4284572003
+  m_fontColor: {r: 0.38679248, g: 0.38131902, b: 0.38131902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

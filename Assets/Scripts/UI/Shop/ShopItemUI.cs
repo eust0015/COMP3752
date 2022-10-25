@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Audio;
 using TMPro;
 using UI.AbilityInventory;
 using UI.Effect;
@@ -26,6 +27,8 @@ namespace UI.Shop
         [SerializeField] private List<InventoryRelicUI> relicList;
         [SerializeField] private List<InventoryItemUI> itemList;
         [SerializeField] private List<EffectUI> effectList;
+        [SerializeField] private FMODAudioSource buySound;
+        [SerializeField] private FMODAudioSource insufficientFundsSound;
         
         public Item Item
         {
@@ -92,7 +95,19 @@ namespace UI.Shop
             get => effectList;
             set => effectList = value;
         }
-        
+
+        public FMODAudioSource BuySound
+        {
+            get => buySound;
+            private set => buySound = value;
+        }
+
+        public FMODAudioSource InsufficientFundsSound
+        {
+            get => insufficientFundsSound;
+            private set => insufficientFundsSound = value;
+        }
+
         public void Initialise(Item setItem, Transform setMouseOverContainer)
         {
             Item = setItem;
@@ -111,9 +126,10 @@ namespace UI.Shop
             if (Item.Price > currency.Value)
             {
                 DisplayInsufficientFundsMessage();
+                InsufficientFundsSound.PlaySound();
                 return;
             }
-            
+            BuySound.PlaySound();
             currency.DecreaseValue(Item.Price);
             
             foreach (var ability in AbilityList)

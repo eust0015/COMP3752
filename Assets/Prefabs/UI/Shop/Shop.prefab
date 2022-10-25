@@ -237,6 +237,10 @@ GameObject:
   m_Component:
   - component: {fileID: 271845186447860682}
   - component: {fileID: 271845186447860680}
+  - component: {fileID: 1007476813951412398}
+  - component: {fileID: 245517490005284562}
+  - component: {fileID: 4415785086387948943}
+  - component: {fileID: 205957090213574353}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -289,6 +293,100 @@ MonoBehaviour:
   itemDetailedContainer: {fileID: 271845186036639860}
   shopItemPrefab: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
   shopItemsList: []
+--- !u!114 &1007476813951412398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271845186447860683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 245517490005284562}
+        m_TargetAssemblyTypeName: Audio.FMODMusicSource, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &245517490005284562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271845186447860683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c458d7b19d498d8b01f4afeddea5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+    Guid:
+      Data1: 1483551335
+      Data2: 1199567450
+      Data3: 1778837666
+      Data4: -382821306
+    Path: event:/Shop_Music
+  playerHealth: 0
+  numberOfEnemies: 0
+--- !u!114 &4415785086387948943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271845186447860683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68a29d7eb71491abc4fb536ba9700ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 205957090213574353}
+        m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &205957090213574353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271845186447860683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -1449718874
+      Data2: 1283165912
+      Data3: -1232849740
+      Data4: 358506691
+    Path: event:/Bee-Music-Main
 --- !u!1 &271845186468696924
 GameObject:
   m_ObjectHideFlags: 0

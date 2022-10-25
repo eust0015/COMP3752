@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028902487532734082}
   - component: {fileID: 2028902487532734080}
+  - component: {fileID: 2730032540882508448}
   m_Layer: 5
   m_Name: Currency
   m_TagString: Untagged
@@ -219,6 +220,25 @@ MonoBehaviour:
     name: 
     value: 20
   text: {fileID: 2028902487886550663}
+--- !u!114 &2730032540882508448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028902487532734083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -1211058737
+      Data2: 1214777573
+      Data3: -2067992665
+      Data4: 87423891
+    Path: event:/Pollen-Collect-All-A
 --- !u!1 &2028902487570123773
 GameObject:
   m_ObjectHideFlags: 0

@@ -223,6 +223,9 @@ GameObject:
   - component: {fileID: 894222665}
   - component: {fileID: 8293476096803219058}
   - component: {fileID: 6276281058687017000}
+  - component: {fileID: 8397841231439003743}
+  - component: {fileID: 6363440546206919418}
+  - component: {fileID: 6464721659941108461}
   m_Layer: 5
   m_Name: ShopItem
   m_TagString: Untagged
@@ -339,6 +342,8 @@ MonoBehaviour:
   relicList: []
   itemList: []
   effectList: []
+  buySound: {fileID: 6363440546206919418}
+  insufficientFundsSound: {fileID: 6464721659941108461}
 --- !u!114 &6276281058687017000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +373,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8397841231439003743}
+          m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -384,6 +401,63 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8397841231439003743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283739599351480978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1940850856
+      Data2: 1179351508
+      Data3: -1957079123
+      Data4: 1852729903
+    Path: event:/Shop_Hover
+--- !u!114 &6363440546206919418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283739599351480978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1288777686
+      Data2: 1091292071
+      Data3: 1644820886
+      Data4: 1624846959
+    Path: event:/Shop_Buy
+--- !u!114 &6464721659941108461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283739599351480978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -2041991578
+      Data2: 1267976296
+      Data3: 409410195
+      Data4: 2104653855
+    Path: event:/Shop_Deny
 --- !u!1 &6868734038159249598
 GameObject:
   m_ObjectHideFlags: 0
