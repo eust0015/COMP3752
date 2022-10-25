@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UI.Statistics;
 using UnityEngine;
 
 public class PollenMovement : MonoBehaviour
@@ -9,7 +10,8 @@ public class PollenMovement : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("skyeeeeeet");
-            Destroy(gameObject);
+            Destroy(gameObject); var pollenHUD = FindObjectOfType<CurrencyHUD>();
+            pollenHUD.Currency.IncreaseValue(1);
         }
     }
 }
