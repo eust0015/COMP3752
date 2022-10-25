@@ -16,6 +16,8 @@ public class HitBoxObject : MonoBehaviour
     public int damage;
     public bool showHitbox = false;
     public float angle;
+    public float knockback;
+    public float momentum;
 
     private void Start()
     {
@@ -41,6 +43,10 @@ public class HitBoxObject : MonoBehaviour
         {
             var otherHealth = other.gameObject.GetComponent<EnemyHealth>();
             owner.RequestAttack(otherHealth.Health, damage);
+            var m = (new Vector2(other.transform.position.x - transform.position.x,
+                -(other.transform.position.y - transform.position.y))).normalized * knockback * 3;
+            Debug.Log(m);
+            other.attachedRigidbody.velocity += m;
         }
         else if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {

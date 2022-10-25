@@ -27,7 +27,7 @@ public class playerAnimation : MonoBehaviour
         _t = GetComponent<RectTransform>();
         _a = GetComponent<Animator>();
         _m = transform.parent.GetComponent<playerMovement>();
-        _s = transform.parent.GetChild(1).GetComponent<Animator>();
+        //_s = transform.parent.GetChild(1).GetComponent<Animator>();
         currentHeightVariance = heightVariance;
         
         StartCoroutine(HeightBob());
@@ -67,9 +67,9 @@ public class playerAnimation : MonoBehaviour
     public IEnumerator AttackAnim()
     {
         _a.Play("PlayerAttack");
-        _s.Play("Slash");
+        //_s.Play("Slash");
         yield return new WaitForSeconds(.375f);
-        _s.Play("Empty");
+        //_s.Play("Empty");
         yield return new WaitForSeconds(.625f);
         _a.Play("Player");
     }

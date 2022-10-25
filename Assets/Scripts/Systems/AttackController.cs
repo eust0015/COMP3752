@@ -23,7 +23,7 @@ public class AttackController : MonoBehaviour
     public void RequestHitbox(Hitbox _h, int damage, int id = -1, float angle = 0)
     {
         GameObject box;
-        box = Instantiate(hBox);
+        box = Instantiate(hBox, transform);
         
         
         box.transform.localPosition = new Vector3(_h.relativePos.x, _h.relativePos.y, 0) + transform.position;
@@ -42,13 +42,14 @@ public class AttackController : MonoBehaviour
         hit.owner = this;
         hit.showHitbox = showHitboxes;
         hit.angle = angle;
+        hit.knockback = _h.knockback;
     }
 
     public void RequestProjectile(Projectile _p)
     {
         var proj = Instantiate(projectile);
         proj.transform.position = transform.position;
-        proj.transform.eulerAngles = transform.eulerAngles;
+        proj.transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + _p.angle);
         ProjectileObject obj = projectile.GetComponent<ProjectileObject>();
         obj.speed = _p.speed;
         obj.damage = _p.damage;

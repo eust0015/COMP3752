@@ -18,22 +18,22 @@ MonoBehaviour:
   - dimX: 0.5
     dimY: 0.5
     relativePos: {x: 1.6, y: -0.4}
-    activeFrames: 120
+    activeFrames: 10
     damage: 0
-    knockback: 0
-    momentum: 0
+    knockback: 1
+    momentum: 1
   - dimX: 0.5
     dimY: 0.5
     relativePos: {x: 2, y: 0}
-    activeFrames: 120
+    activeFrames: 10
     damage: 0
-    knockback: 0
-    momentum: 0
+    knockback: 1
+    momentum: 1
   - dimX: 0.5
     dimY: 0.5
     relativePos: {x: 1.6, y: 0.4}
-    activeFrames: 120
+    activeFrames: 10
     damage: 0
-    knockback: 0
-    momentum: 0
+    knockback: 1
+    momentum: 1
   multihit: 0
