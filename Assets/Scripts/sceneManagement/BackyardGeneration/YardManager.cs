@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using FMODUnity; //Yarny FMOD: using
+using FMODUnity; //FMOD
 
 public class YardManager : MonoBehaviour
 {
@@ -14,10 +14,10 @@ public class YardManager : MonoBehaviour
     //You can use these variables in scripts. You can change the actual mp3/sound file (in dropdown unity browser) anytime you like.
     // The choices for the actual sound files to bind to these variables depends what you have setup in the FMOD music app itself.
     [SerializeField]
-    public FMODUnity.EventReference shootFMSound;
-    public FMODUnity.EventReference strikeFMSound;
-    public FMODUnity.EventReference gameOverFMSound;
-    public FMODUnity.EventReference royalSound;
+    // public FMODUnity.EventReference shootFMSound;
+    // public FMODUnity.EventReference strikeFMSound;
+    // public FMODUnity.EventReference gameOverFMSound;
+    // public FMODUnity.EventReference royalSound;
 
     //Yarny FMOD: Instances inc. Parameters. In START (Awake) the music gets linked to your instance.
     public FMOD.Studio.EventInstance instance;
@@ -25,13 +25,13 @@ public class YardManager : MonoBehaviour
 
     //Yarny FMOD: This is where you set the range of variables that will affect the music
 
-    [SerializeField]
-    [Range(0f, 6F)]
-    public float playerHealthPR;
+    // [SerializeField]
+    // [Range(0f, 6F)]
+    // public float playerHealthPR;
 
-    [SerializeField]
-    [Range(0f, 10F)]
-    public float currentNumberOfEnemies;
+    // [SerializeField]
+    // [Range(0f, 10F)]
+    // public float currentNumberOfEnemies;
 
     void Awake()
     {
@@ -51,8 +51,8 @@ public class YardManager : MonoBehaviour
         createdRooms.Add(Instantiate(roomPrefabs[0], new Vector3(0, 0, 0), Quaternion.identity));
 
         //Yarny FMOD: Set an instance of the music (the music event) and start it
-        playerHealthPR = 6.0f;
-        currentNumberOfEnemies = 0.0f;
+        //playerHealthPR = 6.0f;
+        //currentNumberOfEnemies = 0.0f;
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent); // This also works (like tutorial, older style)
         instance.start();
 
@@ -69,34 +69,34 @@ public class YardManager : MonoBehaviour
 
     public void LoadNewRoom(string roomLocation)
     {
-        var RndB = new System.Random();
-        var StrB = RndB.Next(1, 10);
+        // var RndB = new System.Random();
+        // var StrB = RndB.Next(1, 10);
         string previousRoom = "Below";
         switch (roomLocation)
         {
             case "Above":
                 previousRoom = "Below";
-                currentNumberOfEnemies = StrB; //Yarny FMOD: Variable changes depending on room
+                //currentNumberOfEnemies = StrB; //Yarny FMOD: Variable changes depending on room
                 break;
             case "Below":
                 previousRoom = "Above";
-                currentNumberOfEnemies = StrB;
+                //currentNumberOfEnemies = StrB;
                 break;
             case "Left":
                 previousRoom = "Right";
-                currentNumberOfEnemies = StrB;
+                //currentNumberOfEnemies = StrB;
                 break;
             case "Right":
                 previousRoom = "Left";
-                currentNumberOfEnemies = StrB;
+                //currentNumberOfEnemies = StrB;
                 break;
             default:
                 break;
         }
 
         //Yarny: FMOD - Apply those variable changes made above in room switch
-        instance.setParameterByName("playerHealthPR", playerHealthPR);
-        instance.setParameterByName("currentNumberOfEnemies", currentNumberOfEnemies);
+        //instance.setParameterByName("playerHealthPR", playerHealthPR);
+        //instance.setParameterByName("currentNumberOfEnemies", currentNumberOfEnemies);
 
         GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<playerMovement>().TeleportPlayer(roomLocation);
         //Enters this if statment if there is no room on the other side of the door
@@ -145,7 +145,7 @@ public class YardManager : MonoBehaviour
         {
             //Yarny: FMOD - Stop Main Music (It doubles up otherwise later) and play a royal one shot
             instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); //Player is dead, stop music
-            RuntimeManager.PlayOneShot(royalSound, gameObject.transform.position);
+            //RuntimeManager.PlayOneShot(royalSound, gameObject.transform.position);
             SceneManager.LoadScene("beeHive");
         }
         //Unloads the old room and loads the new room

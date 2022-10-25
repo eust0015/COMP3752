@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using FMODUnity; //FMOD
 
 public class playerMovement : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class playerMovement : MonoBehaviour
     private playerAnimation _anim;
     private Transform slash;
 
+    public FMODUnity.EventReference dash_sound;
+
     void Start()
     {
         _s = transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -51,7 +54,7 @@ public class playerMovement : MonoBehaviour
         //update the players dash cooldown
         DashCooldown();
         //checks if the player can dash. If they can, it checks if the player wants to dash
-        if(Input.GetButton(dashKey) & !isDahing)
+        if (Input.GetButton(dashKey) & !isDahing)
         {
             Dash();
         }
@@ -69,7 +72,7 @@ public class playerMovement : MonoBehaviour
         player.velocity = new Vector2(yspeed, player.velocity.y);
         player.velocity = new Vector2(xspeed, player.velocity.x);
     }
-    
+
     void MovementDirection()
     {
         //Checks if the player is moving up or down and checks if the player isn't at their max speed
@@ -208,12 +211,13 @@ public class playerMovement : MonoBehaviour
             isDahing = true;
             yspeed = -dashSpeed;
         }
+        RuntimeManager.PlayOneShot(dash_sound, gameObject.transform.position);
     }
 
     void DashCooldown()
     {
         //reduces the dashing timer as time passes
-        if(isDahing)
+        if (isDahing)
         {
             dashTimer -= Time.deltaTime;
         }
@@ -268,7 +272,7 @@ public class playerMovement : MonoBehaviour
                 _a.RequestHitbox(h);
                 currentAttackCooldown = attackCooldown;
             }*/
-            
+
             _a.Attack(lastSpeed);
         }
     }
@@ -278,16 +282,16 @@ public class playerMovement : MonoBehaviour
         switch (direction)
         {
             case "Above":
-                gameObject.transform.position = new Vector3(0, (gameObject.transform.position.y-2)*-1, -5);
+                gameObject.transform.position = new Vector3(0, (gameObject.transform.position.y - 2) * -1, -5);
                 break;
             case "Below":
-                gameObject.transform.position = new Vector3(0, (gameObject.transform.position.y+2)*-1, -5);
+                gameObject.transform.position = new Vector3(0, (gameObject.transform.position.y + 2) * -1, -5);
                 break;
             case "Left":
-                gameObject.transform.position = new Vector3((gameObject.transform.position.x+1)*-1, 0, -5);
+                gameObject.transform.position = new Vector3((gameObject.transform.position.x + 1) * -1, 0, -5);
                 break;
             case "Right":
-                gameObject.transform.position = new Vector3((gameObject.transform.position.x-1)*-1, 0, -5);
+                gameObject.transform.position = new Vector3((gameObject.transform.position.x - 1) * -1, 0, -5);
                 break;
             default:
                 break;

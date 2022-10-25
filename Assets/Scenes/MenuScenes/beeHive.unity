@@ -971,6 +971,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+--- !u!1 &1520386847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4261551437235369781, guid: 656c52fc3b493a748b469b478c5bb4c5, type: 3}
+  m_PrefabInstance: {fileID: 1383205791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520386848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520386847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 314607686
+      Data2: 1339750217
+      Data3: -1612164440
+      Data4: 1283999758
+    Path: event:/Hive_Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1630791736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8324223602821475601, guid: 7eb12c96bf83f60488b096ba433c8718, type: 3}

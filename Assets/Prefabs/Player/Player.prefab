@@ -58,6 +58,13 @@ MonoBehaviour:
   dashCooldown: 5
   dashSpeed: 17
   attackCooldown: 0.8
+  dash_sound:
+    Guid:
+      Data1: 729632069
+      Data2: 1144748003
+      Data3: -157088097
+      Data4: 1220989862
+    Path: event:/Player-Dash-All
 --- !u!50 &4786622988022897837
 Rigidbody2D:
   serializedVersion: 4
