@@ -735,6 +735,8 @@ MonoBehaviour:
   - {fileID: 7608067095711877318, guid: d80ad8b083baf0248b5210a400f419ff, type: 3}
   - {fileID: 7608067095711877318, guid: a505a6a577000b4458639db63ebd7c7f, type: 3}
   - {fileID: 7608067095711877318, guid: 6957f6f268801f14a8998b54ed7c2cbd, type: 3}
+  - {fileID: 7608067095711877318, guid: cc0d728701b22ac43b1e783ce77c841d, type: 3}
+  - {fileID: 7608067095711877318, guid: a0fc1993852f62342b448accded81504, type: 3}
   createdRooms: []
   currentRoom: 0
   fmodEvent:
