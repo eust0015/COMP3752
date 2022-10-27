@@ -49,20 +49,31 @@ public class AttackController : MonoBehaviour
     public event Action onHit;
     public event Action onKill;
     public event Action onHurt;
-    
-    public void RequestProjectile(Projectile _p)
+
+    public void RequestProjectile(Projectile _p, float angle = 0)
     {
+        Debug.Log("request");
         var proj = Instantiate(projectile);
         proj.transform.position = transform.position;
-        proj.transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + _p.angle);
+        if (CompareTag("Player"))
+        {
+            Debug.Log("player");
+            Debug.Log(angle);
+            proj.transform.RotateAround(transform.position, Vector3.back, angle + _p.angle + 90);
+        }
+        else
+        {
+            proj.transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + _p.angle);
+        }
+        
         ProjectileObject obj = projectile.GetComponent<ProjectileObject>();
         obj.speed = _p.speed;
         obj.damage = _p.damage;
         obj.timer = _p.duration;
         obj.pierce = _p.pierce;
         obj.pierceCount = _p.pierceCount;
-        proj.GetComponent<SpriteRenderer>().sprite = _p.sprite;
-        proj.transform.rotation = transform.rotation;
+        //proj.GetComponent<SpriteRenderer>().sprite = _p.sprite;
+        //proj.transform.rotation = transform.rotation;
         obj.owner = this;
 
         if (attackBasedOnTag)

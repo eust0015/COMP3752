@@ -203,6 +203,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2909609295068434685, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4493638578032223347, guid: fd404da66de80474d82b9b04a0c3a62f, type: 3}
     - target: {fileID: 4786622988022897810, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -260,9 +264,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 999747760e3cfd341b00241b9624469b, type: 2}
     - target: {fileID: 8849901329342014463, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: ranged
+      value: 
+      objectReference: {fileID: 11400000, guid: 9dd2bd769e6796543837ca2c9b16257a, type: 2}
+    - target: {fileID: 8849901329342014463, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: currentWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 999747760e3cfd341b00241b9624469b, type: 2}
+      objectReference: {fileID: 11400000, guid: 9dd2bd769e6796543837ca2c9b16257a, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}

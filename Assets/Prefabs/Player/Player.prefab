@@ -57,7 +57,8 @@ MonoBehaviour:
   acceleration: 20
   dashCooldown: 5
   dashSpeed: 17
-  attackCooldown: 0.8
+  xspeed: 0
+  yspeed: 0
   dash_sound:
     Guid:
       Data1: 729632069
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b47dcf314198f449847c65789171ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 0}
+  currentWeapon: {fileID: 11400000, guid: 999747760e3cfd341b00241b9624469b, type: 2}
   ranged: {fileID: 0}
   melee: {fileID: 0}
 --- !u!1 &4786622989138646327

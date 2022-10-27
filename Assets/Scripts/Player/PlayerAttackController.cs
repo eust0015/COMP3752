@@ -73,9 +73,9 @@ public class PlayerAttackController : MonoBehaviour
 
     private void ProjectileAttack(List<Projectile> proj)
     {
-        foreach (var _p in proj)
+        foreach (var _proj in proj)
         {
-            _a.RequestProjectile(_p);
+            _a.RequestProjectile(_proj, angle);
         }
     }
 
