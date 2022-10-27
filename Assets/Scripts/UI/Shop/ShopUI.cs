@@ -104,10 +104,12 @@ namespace UI.Shop
         private void PauseGame()
         {
             Time.timeScale = 0;
+            GameManager.current.OnOnTimerPause();
         }
         private void ResumeGame()
         {
             Time.timeScale = 1;
+            GameManager.current.OnOnTimerPlay();
         }
         
         public void Close()
