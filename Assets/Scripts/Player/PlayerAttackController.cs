@@ -52,7 +52,6 @@ public class PlayerAttackController : MonoBehaviour
     {
         if (currentCd <= 0)
         {
-            StartCoroutine(_p.AttackAnim());
             angle = (Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg) - 90;
             //angle = Mathf.Acos(dir.x) * Mathf.Rad2Deg;
             switch (currentWeapon.GetType().Name)
@@ -73,6 +72,7 @@ public class PlayerAttackController : MonoBehaviour
 
     private void ProjectileAttack(List<Projectile> proj)
     {
+        StartCoroutine(_p.RangedAnim());
         foreach (var _proj in proj)
         {
             float dmg = (_s.baseAtk + _s.atkModifier) * _s.atkMultiplier;
@@ -84,6 +84,7 @@ public class PlayerAttackController : MonoBehaviour
 
     private void MeleeAttack(List<Hitbox> data)
     {
+        StartCoroutine(_p.AttackAnim());
         if (!melee.multihit)
         {
             _id++;

@@ -66,11 +66,19 @@ public class playerAnimation : MonoBehaviour
 
     public IEnumerator AttackAnim()
     {
-        _a.Play("PlayerAttack");
+        _a.CrossFade("PlayerAttack", 0.1f);
         //_s.Play("Slash");
         yield return new WaitForSeconds(.375f);
         //_s.Play("Empty");
         yield return new WaitForSeconds(.625f);
         _a.Play("Player");
+    }
+
+    public IEnumerator RangedAnim()
+    {
+        _a.CrossFade("PlayerRangedAttack",0.2f);
+        yield return new WaitForSeconds(0.2f);
+        _a.Play("Player");
+        yield return null;
     }
 }
