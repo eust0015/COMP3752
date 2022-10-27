@@ -47,6 +47,11 @@ namespace UI.AbilityInventory
             protected set => activeMouseOver = value;
         }
 
+        public void OnEnable()
+        {
+            Initialise(Ability);
+        }
+
         public void Initialise(Ability setAbility)
         {
             Ability = setAbility;

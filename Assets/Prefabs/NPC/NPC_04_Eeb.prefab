@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,16 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Eeb</color>\nHave you tried flying backwards, \nor crazier
-        upsidedown?\r"
+      value: "<b>Eeb</b>\nHave you tried flying backwards, \nor crazier upsidedown?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Eeb</color>\nHehehe... Honey, mmmm!\r"
+      value: "<b>Eeb</b>\nHehehe... Honey, mmmm!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Eeb</color>\nHere comes the sun, \ndoo doo doodoo."
+      value: "<b>Eeb</b>\nHere comes the sun, \ndoo doo doodoo."
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

@@ -66,21 +66,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Buzzdalf</color>\nCome look at my shop.\r"
+      value: "<b>Buzzdalf</b>\nCome look at my shop.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: '<color=#F9ECB6>Buzzdalf</color>
+      value: '<b>Buzzdalf</b>
 
         I''m a wizard!
 
-        Wanna
-        take a look at my potions?'
+        Wanna take a look
+        at my potions?'
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Buzzdalf</color>\nWhat sort of potions are you looking
-        for?\r"
+      value: "<b>Buzzdalf</b>\nWhat sort of potions are you looking for?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

@@ -66,15 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Buzz</color>\nWelcome Traveller!\r"
+      value: "<b>Buzz</b>\nWelcome Traveller!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Buzz</color>\nWelcome to the shop!\r"
+      value: "<b>Buzz</b>\nWelcome to the shop!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Buzz</color>\nDiscount Discount haha, \njust kidding!\r"
+      value: "<b>Buzz</b>\nDiscount Discount haha, \njust kidding!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller
