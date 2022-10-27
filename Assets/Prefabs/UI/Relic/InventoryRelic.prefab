@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 395102696264653444}
   - component: {fileID: 1007405755228427123}
   - component: {fileID: 4150071801398203802}
+  - component: {fileID: 6927138034458033863}
   m_Layer: 5
   m_Name: InventoryRelic
   m_TagString: Untagged
@@ -166,6 +167,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 6927138034458033863}
+          m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -194,10 +207,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad3b48a68c14d02b00848df7102b2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relic:
+    type: 0
+    description: 
+    icon: {fileID: 0}
+    name: 
+    price: 0
+    quantity: 0
   icon: {fileID: 395102696387838011}
   mouseOverContainer: {fileID: 3677637426079272030}
   mouseOverPrefab: {fileID: 6834771272804491199, guid: 5036f77b87dc1f1428646953af9d173c, type: 3}
   activeMouseOver: {fileID: 0}
+--- !u!114 &6927138034458033863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395102696264653441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1940850856
+      Data2: 1179351508
+      Data3: -1957079123
+      Data4: 1852729903
+    Path: event:/Shop_Hover
 --- !u!1 &395102696387838009
 GameObject:
   m_ObjectHideFlags: 0

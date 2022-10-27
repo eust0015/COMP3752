@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 3018007188790028963}
   - component: {fileID: 2405683549145654100}
   - component: {fileID: 2405683549145654101}
+  - component: {fileID: 7678938278965143350}
   m_Layer: 5
   m_Name: InventoryAbility
   m_TagString: Untagged
@@ -202,6 +203,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7678938278965143350}
+          m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -230,10 +243,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6917749d752d484eb44f5943d3fda485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability:
+    type: 0
+    description: 
+    icon: {fileID: 0}
+    name: 
+    price: 0
+    quantity: 0
+    level: 0
   icon: {fileID: 3018007189005529116}
   mouseOverContainer: {fileID: 2274359053438418041}
   mouseOverPrefab: {fileID: 2588723394008030604, guid: 5ac90056a28b3fd47b365ec59264eb69, type: 3}
   activeMouseOver: {fileID: 0}
+--- !u!114 &7678938278965143350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3018007188790028966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1940850856
+      Data2: 1179351508
+      Data3: -1957079123
+      Data4: 1852729903
+    Path: event:/Shop_Hover
 --- !u!1 &3018007189005529118
 GameObject:
   m_ObjectHideFlags: 0

@@ -334,8 +334,9 @@ GameObject:
   - component: {fileID: 7286219320439202007}
   - component: {fileID: 3114837326740434172}
   - component: {fileID: 9158053837525876209}
+  - component: {fileID: 1773006508697692608}
   m_Layer: 5
-  m_Name: SpeachBubble
+  m_Name: SpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 938d5544a97d48d4eb4d53513c78e8aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a120417b046faf46ac52b2876a88932, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -426,6 +427,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!95 &1773006508697692608
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860266236157332996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d22850b60329bbc49b7d86f425bbd4dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5102456061527581780
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +484,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -2.5}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5102456061527581785
 CanvasRenderer:
@@ -493,7 +514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02aaafa2ffc1e5049b213c5ce61dcd60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 479a5a1b1cbe3ca429630fca9b45383b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
