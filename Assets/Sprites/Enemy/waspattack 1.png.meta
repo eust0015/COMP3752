@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a52821c1b0b5e741a0ef09c87535a4e
+guid: 3c54f627fa5c2a04c8dfa95aaa2e8500
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: waspattack_0
+      name: waspattack 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4346cfc15bfcd04ebebd1b47b18f998
-      internalID: 462918297
+      spriteID: c4bd74e59296bb24993a10d822993043
+      internalID: -498190998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_1
+      name: waspattack 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5424ac92bf3d4fb4482646046e079aa2
-      internalID: -403387816
+      spriteID: 7ade02786d43f9c43b22b31eef79dee3
+      internalID: 1995561164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_2
+      name: waspattack 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a0c862befd014c4fb8d0a1316fc2c0a
-      internalID: 1160530909
+      spriteID: 6fc6d540f343a9648ad9999f69753eb5
+      internalID: -407602377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_3
+      name: waspattack 1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72f5cad53315a241a52ecf8c2d46ad4
-      internalID: -1704909774
+      spriteID: b6ceb726fec92f843a89bc84f85df5ca
+      internalID: -739550136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_4
+      name: waspattack 1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20e611e5760c1fa4b9e6d4a682b3c0b3
-      internalID: 1007277426
+      spriteID: 316ced6d09aa67343af10df0ad079ed5
+      internalID: 1899829090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_5
+      name: waspattack 1_5
       rect:
         serializedVersion: 2
         x: 320
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feedd34709b9c1c4aa36fd65b6bee8b6
-      internalID: 888864114
+      spriteID: fdfc540b63697844ba8ec6bd7f1ec728
+      internalID: -223420683
       vertices: []
       indices: 
       edges: []
@@ -243,12 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      waspattack_0: 462918297
-      waspattack_1: -403387816
-      waspattack_5: 888864114
-      waspattack_3: -1704909774
-      waspattack_2: 1160530909
-      waspattack_4: 1007277426
+      waspattack 1_3: -739550136
+      waspattack 1_4: 1899829090
+      waspattack 1_0: -498190998
+      waspattack 1_1: 1995561164
+      waspattack 1_5: -223420683
+      waspattack 1_2: -407602377
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

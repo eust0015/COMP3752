@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 998253458489308113, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: _controllers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 998253458489308113, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: _controllers.Array.data[0]
+      value: 
+      objectReference: {fileID: 9100000, guid: 3a70ce5390a2843479b72b8494f84bb0, type: 2}
     - target: {fileID: 6447969448079136256, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -90,11 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448678764579, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448678764579, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_Color.g
-      value: 0.55099326
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448678764579, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_Color.r

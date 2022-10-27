@@ -36,6 +36,7 @@ public class ProjectileObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Ranged Hit " + other.name);
         if (basedOnTag)
         {
             if(!other.CompareTag(_tag)) return;
@@ -44,14 +45,13 @@ public class ProjectileObject : MonoBehaviour
         
         if (other.gameObject.GetComponent<EnemyHealth>() != null)
         {
+            Debug.Log("AttackEnemy");
             var otherHealth = other.gameObject.GetComponent<EnemyHealth>();
             Attack(otherHealth.Health, damage);
         }
         else if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
             var otherHealth = other.gameObject.GetComponent<PlayerHealth>().Health;
-            Debug.Log(other.gameObject.GetComponent<PlayerHealth>());
-            Debug.Log(otherHealth);
             Attack(otherHealth, damage);
         }  
     }

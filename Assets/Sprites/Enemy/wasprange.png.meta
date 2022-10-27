@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a52821c1b0b5e741a0ef09c87535a4e
+guid: 005754d31422a154294279e60040d088
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: waspattack_0
+      name: wasprange_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
+        y: 480
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4346cfc15bfcd04ebebd1b47b18f998
-      internalID: 462918297
+      spriteID: dede1bc9845a7f843b9cf3e38d93ad74
+      internalID: 2028202814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_1
+      name: wasprange_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 160
+        y: 480
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,83 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5424ac92bf3d4fb4482646046e079aa2
-      internalID: -403387816
+      spriteID: d2334ebdb6f78a845bd3483b76d6b9e4
+      internalID: 675593636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waspattack_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a0c862befd014c4fb8d0a1316fc2c0a
-      internalID: 1160530909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waspattack_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e72f5cad53315a241a52ecf8c2d46ad4
-      internalID: -1704909774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waspattack_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20e611e5760c1fa4b9e6d4a682b3c0b3
-      internalID: 1007277426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waspattack_5
+      name: wasprange_2
       rect:
         serializedVersion: 2
         x: 320
-        y: 0
-        width: 64
-        height: 64
+        y: 480
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +163,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feedd34709b9c1c4aa36fd65b6bee8b6
-      internalID: 888864114
+      spriteID: a0722e34e98ed7c459a14d308006da27
+      internalID: 1582781741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wasprange_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f6bdc71d857ff4aa55968bc304b023
+      internalID: 1720177124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wasprange_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba08cf76062c3034ba17f49eae2e276f
+      internalID: -270633758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wasprange_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c169fcdcdc398b84fac056aa8a62e600
+      internalID: 1490122930
       vertices: []
       indices: 
       edges: []
@@ -243,12 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      waspattack_0: 462918297
-      waspattack_1: -403387816
-      waspattack_5: 888864114
-      waspattack_3: -1704909774
-      waspattack_2: 1160530909
-      waspattack_4: 1007277426
+      wasprange_1: 675593636
+      wasprange_2: 1582781741
+      wasprange_0: 2028202814
+      wasprange_4: -270633758
+      wasprange_5: 1490122930
+      wasprange_3: 1720177124
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

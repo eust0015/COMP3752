@@ -75,7 +75,10 @@ public class PlayerAttackController : MonoBehaviour
     {
         foreach (var _proj in proj)
         {
-            _a.RequestProjectile(_proj, angle);
+            float dmg = (_s.baseAtk + _s.atkModifier) * _s.atkMultiplier;
+            int r = _rand.Next(99);
+            if (r < _s.critChance) dmg *= (1 + _s.critDamage);
+            _a.RequestProjectile(_proj, Mathf.FloorToInt(dmg),angle);
         }
     }
 
