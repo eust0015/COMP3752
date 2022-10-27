@@ -42,17 +42,24 @@ public class HitBoxObject : MonoBehaviour
         if (other.gameObject.GetComponent<EnemyHealth>() != null)
         {
             var otherHealth = other.gameObject.GetComponent<EnemyHealth>();
+            if (owner.CompareTag("Player"))
+            {
+                owner.Hit();
+                if (otherHealth.Health.Value - damage <= 0)
+                {
+                    owner.Kill();
+                }
+            }
             owner.RequestAttack(otherHealth.Health, damage);
             var m = (new Vector2(other.transform.position.x - transform.position.x,
                 -(other.transform.position.y - transform.position.y))).normalized * knockback * 3;
-            Debug.Log(m);
             other.attachedRigidbody.velocity += m;
+            
+            
         }
         else if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
             var otherHealth = other.gameObject.GetComponent<PlayerHealth>().Health;
-            Debug.Log(other.gameObject.GetComponent<PlayerHealth>());
-            Debug.Log(otherHealth);
             owner.RequestAttack(otherHealth, damage);
         }
     }

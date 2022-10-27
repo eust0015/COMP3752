@@ -9,8 +9,8 @@ public class PlayerItem : MonoBehaviour
     public string itemName;
     public Sprite itemImage;
 
-    private PlayerStats _stats;
-    private PlayerHealth _health;
+    protected PlayerStats _stats;
+    protected PlayerHealth _health;
 
     private void Awake()
     {

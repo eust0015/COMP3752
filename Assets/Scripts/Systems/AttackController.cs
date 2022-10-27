@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UI.Statistics;
@@ -23,7 +24,7 @@ public class AttackController : MonoBehaviour
     public void RequestHitbox(Hitbox _h, int damage, int id = -1, float angle = 0)
     {
         GameObject box;
-        box = Instantiate(hBox, transform);
+        box = Instantiate(hBox);
         
         
         box.transform.localPosition = new Vector3(_h.relativePos.x, _h.relativePos.y, 0) + transform.position;
@@ -45,6 +46,10 @@ public class AttackController : MonoBehaviour
         hit.knockback = _h.knockback;
     }
 
+    public event Action onHit;
+    public event Action onKill;
+    public event Action onHurt;
+    
     public void RequestProjectile(Projectile _p)
     {
         var proj = Instantiate(projectile);
@@ -70,5 +75,20 @@ public class AttackController : MonoBehaviour
     public void RequestAttack(Health h, int damage)
     {
         h.DecreaseValue(damage);
+        if(CompareTag("Player")) onHurt?.Invoke();
     }
+
+    public void Kill()
+    {
+        Debug.Log("kill");
+        onKill?.Invoke();
+    }
+
+    public void Hit()
+    {
+        Debug.Log("hit");
+        onHit?.Invoke();
+    }
+
+    
 }

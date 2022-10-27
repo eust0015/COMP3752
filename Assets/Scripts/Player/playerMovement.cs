@@ -22,10 +22,7 @@ public class playerMovement : MonoBehaviour
     public float xspeed = 0;
     public float yspeed = 0;
     private float dashTimer;
-
-    [SerializeField]
-    private float attackCooldown = 2f;
-    private float currentAttackCooldown = 0f;
+    
     private Vector2 lastSpeed;
 
     private bool isDahing = false;
@@ -62,7 +59,6 @@ public class playerMovement : MonoBehaviour
         MovementDirection();
         //moves the player in that direction
         Movement();
-        currentAttackCooldown -= Time.deltaTime;
         Attack();
     }
 

@@ -5,29 +5,34 @@ using UnityEngine;
 
 public class PassiveItem : PlayerItem
 {
+    private AttackController _a;
     private void Awake()
     {
         StartCoroutine(Effect());
         StatModifiers();
+        _a = GetComponent<AttackController>();
+        _a.onHit += OnHit;
+        _a.onHurt += OnHurt;
+        _a.onKill += OnKill;
     }
 
-    public IEnumerator Effect()
+    private IEnumerator Effect()
     {
         yield return null;
     }
 
-    public void OnHit()
+    private void OnHit()
     {
-        
+        Debug.Log("hit");
     }
 
-    public void OnHurt()
+    private void OnHurt()
     {
-        
+        Debug.Log("hurt");
     }
 
-    public void OnKill()
+    private void OnKill()
     {
-        
+        Debug.Log("Kill");
     }
 }

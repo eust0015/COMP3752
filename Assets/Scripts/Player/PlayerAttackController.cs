@@ -6,6 +6,7 @@ using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = System.Random;
 
 public class PlayerAttackController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerAttackController : MonoBehaviour
     private playerAnimation _p;
     private Rigidbody2D _rb2d;
     private playerMovement _pm;
+    private Random _rand;
     private int _id = 0;
 
     private float angle = 0;
@@ -33,6 +35,7 @@ public class PlayerAttackController : MonoBehaviour
         _p = transform.GetChild(0).GetComponent<playerAnimation>();
         _pm = GetComponent<playerMovement>();
         _rb2d = GetComponent<Rigidbody2D>();
+        _rand = new Random();
     }
 
     private void Update()
@@ -83,7 +86,10 @@ public class PlayerAttackController : MonoBehaviour
             _id++;
             foreach (Hitbox _h in data)
             {
-                _a.RequestHitbox(_h, Mathf.FloorToInt((_s.baseAtk + _s.atkModifier) * _s.atkMultiplier),_id, angle);
+                float dmg = (_s.baseAtk + _s.atkModifier) * _s.atkMultiplier;
+                int r = _rand.Next(99);
+                if (r < _s.critChance) dmg *= (1 + _s.critDamage);
+                _a.RequestHitbox(_h, Mathf.FloorToInt(dmg),_id, angle);
                 var _m = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad),
                     Mathf.Sin(angle * Mathf.Deg2Rad)).normalized * _h.momentum;
                 Debug.Log(_m);
