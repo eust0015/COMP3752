@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,15 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Bert</color>\nYou like fighting?\r"
+      value: "<b>Bert</b>\nYou like fighting?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Bert</color>\nHere take this, \nbee-careful out there!\r"
+      value: "<b>Bert</b>\nHere take this, \nbee-careful out there!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Bert</color>\nYou look like you need a weapon.\r"
+      value: "<b>Bert</b>\nYou look like you need a weapon.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

@@ -263,10 +263,7 @@ MonoBehaviour:
   activeDialogue: {fileID: 0}
   isInRange: 0
   dialogueList:
-  - "<color=#F9ECB6>Barry</color>\nCollecting pollen is kinda like \ncollecting money,
-    weird hey?\r"
-  - "<color=#F9ECB6>Barry</color>\nDodging is very helpful, \nespecially if it's
-    in the morning!\r"
-  - "<color=#F9ECB6>Barry</color>\nShops and events are important, \nremember that
-    yeah?\r"
+  - "<b>Barry</b>\nCollecting pollen is kinda like \ncollecting money, weird hey?\r"
+  - "<b>Barry</b>\nDodging is very helpful, \nespecially if it's in the morning!\r"
+  - "<b>Barry</b>\nShops and events are important, \nremember that yeah?\r"
   dialogueIndex: 0

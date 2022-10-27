@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,16 +66,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Eddie</color>\nMoney u can take it\u2026\r"
+      value: "<b>Eddie</b>\nMoney u can take it\u2026\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Eddie</color>\nTake my money and leave me alone!\r"
+      value: "<b>Eddie</b>\nTake my money and leave me alone!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Eddie</color>\nI'll give you my pollen, \nI just like
-        talking to other bees.\r"
+      value: "<b>Eddie</b>\nI'll give you my pollen, \nI just like talking to other
+        bees.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

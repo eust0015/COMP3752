@@ -66,18 +66,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Kero</color>\nHowdy, do I have a choice for you?\r"
+      value: "<b>Kero</b>\nHowdy, do I have a choice for you?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Kero</color>\nDo you know the power of the frog?\r"
+      value: "<b>Kero</b>\nDo you know the power of the frog?\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: '<color=#F9ECB6>Kero</color>
+      value: '<b>Kero</b>
 
-        Lemme, show you the power of the
-        frog!'
+        Lemme, show you the power of the frog!'
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

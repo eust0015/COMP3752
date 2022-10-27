@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,19 +66,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: '<color=#F9ECB6>Jolli</color>
+      value: '<b>Jolli</b>
 
-        Should start my own fried pollen
-        store.'
+        Should start my own fried pollen store.'
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Jolli</color>\nI hope you visit my new store, \nmight
-        name it Jollibee.\r"
+      value: "<b>Jolli</b>\nI hope you visit my new store, \nmight name it Jollibee.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Jolli</color>\nJolly jolly, jollibee jolly.\r"
+      value: "<b>Jolli</b>\nJolly jolly, jollibee jolly.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

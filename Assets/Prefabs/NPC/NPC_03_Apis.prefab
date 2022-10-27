@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962850, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,18 +66,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[0]
-      value: "<color=#F9ECB6>Apis</color>\nBee-careful on what option you choose,
-        \nmight have a irreversible effect.\r"
+      value: "<b>Apis</b>\nBee-careful on what option you choose, \nmight have a
+        irreversible effect.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[1]
-      value: "<color=#F9ECB6>Apis</color>\nRelics wow, aren't those the items \nthat
-        make you strong permantantly. \r"
+      value: "<b>Apis</b>\nRelics wow, aren't those the items \nthat make you strong
+        permantantly. \r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962856, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: dialogueList.Array.data[2]
-      value: "<color=#F9ECB6>Apis</color>\nShopping is fun, however items \nare gone
-        once you use it.\r"
+      value: "<b>Apis</b>\nShopping is fun, however items \nare gone once you use
+        it.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 6628265159285962857, guid: 7af5605e939569c46aa0f80595ad55d1, type: 3}
       propertyPath: m_Controller

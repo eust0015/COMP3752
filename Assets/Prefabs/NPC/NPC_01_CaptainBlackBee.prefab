@@ -263,9 +263,9 @@ MonoBehaviour:
   activeDialogue: {fileID: 0}
   isInRange: 0
   dialogueList:
-  - "<color=#F9ECB6>Captain BlackBee</color>\nTHE ONE BEE, THE ONE BEE IS REAL!\r"
-  - '<color=#F9ECB6>Captain BlackBee</color>
+  - "<b>Captain BlackBee</b>\nTHE ONE BEE, THE ONE BEE IS REAL!\r"
+  - '<b>Captain BlackBee</b>
 
     Can we get much higher?'
-  - "<color=#F9ECB6>Captain BlackBee</color>\nSo high!\r"
+  - "<b>Captain BlackBee</b>\nSo high!\r"
   dialogueIndex: 0
