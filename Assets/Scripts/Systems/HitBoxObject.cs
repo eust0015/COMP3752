@@ -59,6 +59,13 @@ public class HitBoxObject : MonoBehaviour
         }
         else if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
+            // Bubble Barrier
+            var bubbleBarrier = other.gameObject.GetComponentInChildren<PlayerBubbleBarrier>();
+            if (bubbleBarrier != null)
+            {
+                bubbleBarrier.PopBubble();
+                return;
+            }
             var otherHealth = other.gameObject.GetComponent<PlayerHealth>().Health;
             owner.RequestAttack(otherHealth, damage);
         }

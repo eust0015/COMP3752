@@ -73,9 +73,7 @@ namespace UI.Event
         public void Initialise(EventOption setOption)
         {
             Option = setOption;
-            //UpdateTitle();
             UpdateDescription();
-            //UpdateSprite();
         }
 
         public void Choose()
@@ -101,7 +99,7 @@ namespace UI.Event
                 Instantiate(effect);
             }
             EventUI theEvent = FindObjectOfType<EventUI>();
-            theEvent.Close();
+            theEvent.Close(true);
         }
         
         public void UpdateTitle() => Title.text = Option.Title;

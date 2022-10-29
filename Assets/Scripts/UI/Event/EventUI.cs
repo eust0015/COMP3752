@@ -15,6 +15,7 @@ namespace UI.Event
         [SerializeField] private Transform optionContainer;
         [SerializeField] private EventOptionUI optionPrefab;
         [SerializeField] private List<EventOptionUI> eventOptionsList;
+        [SerializeField] private bool optionWasChosen;
 
         public delegate void Destroyed(EventUI thisObject);
         public event Destroyed OnDestroyed;
@@ -59,7 +60,13 @@ namespace UI.Event
             }
             private set => eventOptionsList = value;
         }
-        
+
+        public bool OptionWasChosen
+        {
+            get => optionWasChosen;
+            private set => optionWasChosen = value;
+        }
+
         private void OnEnable()
         {
             PauseGame();
@@ -103,8 +110,9 @@ namespace UI.Event
             GameManager.current.OnOnTimerPlay();
         }
         
-        public void Close()
-        { 
+        public void Close(bool setOptionWasChosen)
+        {
+            OptionWasChosen = setOptionWasChosen;
             Clear();
             ResumeGame();
             Destroy(gameObject);

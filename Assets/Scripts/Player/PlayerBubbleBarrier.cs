@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using Audio;
 using UnityEngine;
 
 namespace Player
 {
     public class PlayerBubbleBarrier : MonoBehaviour
     {
-        public void OnEnable() => StartCoroutine(HideCoroutine());
-
-        private IEnumerator HideCoroutine()
-        {
-            yield return new WaitForSecondsRealtime(20);
-            Hide();
+        [SerializeField] public FMODAudioSource popSound;
+        public void PopBubble()
+        { 
+            popSound.PlaySound();
+            Destroy(gameObject);
         }
-
-        public void Hide() => Destroy(gameObject);
     }
 }

@@ -46,8 +46,11 @@ namespace UI.Event
 
         public void OnEventClosed(EventUI closedEvent)
         {
+            bool optionWasChosen = closedEvent.OptionWasChosen;
             ActiveEvent.OnDestroyed -= OnEventClosed;
             ActiveEvent = null;
+            if (optionWasChosen)
+                Destroy(gameObject);
         }
         
         public void Display()

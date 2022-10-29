@@ -122,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.description
-      value: 10% chance for enemies to drop a heart upon death.
+      value: 10% chance to fill one heart after killing an enemy.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
