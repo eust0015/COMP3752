@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 825287590018053358, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 135ae402b71e430409d9dead8e4ca05b, type: 3}
+      objectReference: {fileID: 1673817778, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: item.icon
       value: 
-      objectReference: {fileID: 21300000, guid: 135ae402b71e430409d9dead8e4ca05b, type: 3}
+      objectReference: {fileID: 1673817778, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: item.name
       value: Critter

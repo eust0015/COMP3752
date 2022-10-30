@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 395102696387838011, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1668192429, guid: dd3cf935343807d47b73430a5addd922, type: 3}
+      objectReference: {fileID: 549344133, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.icon
       value: 
@@ -132,19 +132,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 395102696264653441, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
   m_PrefabInstance: {fileID: 419803547204509633}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7015135667897536045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47532802735179072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230180a4cb3547dcbe09cf64cd741dd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthAmount: 2
 --- !u!114 &4658261762718825699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +159,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7015135667897536045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47532802735179072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230180a4cb3547dcbe09cf64cd741dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthAmount: 2

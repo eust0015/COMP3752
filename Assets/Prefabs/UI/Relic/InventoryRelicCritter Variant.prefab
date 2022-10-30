@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 395102696387838011, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 135ae402b71e430409d9dead8e4ca05b, type: 3}
+      objectReference: {fileID: 1673817778, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.icon
       value: 

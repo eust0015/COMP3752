@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5461464825181577789, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: m_text
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6283739599351480978, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: m_Name
@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: item.price
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
       propertyPath: item.quantity
