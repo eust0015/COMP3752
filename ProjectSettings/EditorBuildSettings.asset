@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/MenuScenes/OpeningCutscene.unity
+    guid: 926631b4e4f7f35478762be29fa80017
+  - enabled: 1
     path: Assets/Scenes/MenuScenes/beeHive.unity
     guid: 0fe0db53a27c8254c8d9f2970d5169bf
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/BackyardGenerator/StaringBackyard.unity
     guid: 949572475e3309041b2d9d5b2888786a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
