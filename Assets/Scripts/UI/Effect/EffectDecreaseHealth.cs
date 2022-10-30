@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UI.Effect
 {
-    public class EffectIncreaseMaxHealth : EffectUI
+    public class EffectDecreaseHealth : EffectUI
     {
         [SerializeField] private int healthAmount;
 
@@ -15,8 +15,8 @@ namespace UI.Effect
 
         public override void DoEffect()
         {
-            PlayerHealth health = FindObjectOfType<PlayerHealth>();
-            health.Health.IncreaseMaxValue(HealthAmount);
+            PlayerHealth health = Object.FindObjectOfType<PlayerHealth>();
+            health.Health.DecreaseValue(HealthAmount);
         }
     }
 }

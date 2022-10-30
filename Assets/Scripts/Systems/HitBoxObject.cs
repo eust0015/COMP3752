@@ -64,23 +64,22 @@ public class HitBoxObject : MonoBehaviour
                 heartStealChance += heartStealer.HeartStealChance;
                 if (heartStealChance >= rnd.Next(0, 101))
                 {
-                    var otherTransform = other.transform;
-                    heartStealer.DisplayHeartSteal(otherTransform.position, otherTransform.rotation);
+                    heartStealer.DisplayHeartSteal(other.transform.position);
                     var playerHealth = owner.gameObject.GetComponent<PlayerHealth>().Health;
                     if (playerHealth != null)
-                        playerHealth.IncreaseValue(1);
+                        playerHealth.IncreaseValue(heartStealer.HeartStealAmount);
                 }
                     
             }
             // --------------
 
             // Adrenaline
-            var adrenaline = owner.gameObject.GetComponent<PlayerCritter>();
+            var adrenaline = owner.gameObject.GetComponent<PlayerAdrenaline>();
             if (adrenaline != null)
             {
                 var playerHealth = owner.gameObject.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
-                    if (playerHealth.Health.Value < 3)
+                    if (playerHealth.Health.Value < adrenaline.AmountHealthShouldBeBelow)
                         critChance += adrenaline.CritChance;
             }
             // --------------
@@ -92,8 +91,7 @@ public class HitBoxObject : MonoBehaviour
                 critChance += critter.CritChance;
                 if (critChance >= rnd.Next(0, 101))
                 {
-                    var otherTransform = other.transform;
-                    critter.DisplayCrit(otherTransform.position, otherTransform.rotation);
+                    critter.DisplayCrit(other.transform.position);
                     atkMultiplier += 1;
                 }
             }

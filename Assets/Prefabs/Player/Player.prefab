@@ -16,6 +16,10 @@ GameObject:
   - component: {fileID: 2909609295068434685}
   - component: {fileID: 1846061466708576720}
   - component: {fileID: 8849901329342014463}
+  - component: {fileID: 1727416966113349662}
+  - component: {fileID: 6246822381174097808}
+  - component: {fileID: 5383341417489978524}
+  - component: {fileID: 3413748241021110865}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -182,6 +186,63 @@ MonoBehaviour:
   currentWeapon: {fileID: 11400000, guid: 999747760e3cfd341b00241b9624469b, type: 2}
   ranged: {fileID: 0}
   melee: {fileID: 0}
+--- !u!114 &1727416966113349662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786622988022897810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce208c0d83145ada63e078813da908f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critChance: 0
+  amountHealthShouldBeBelow: 3
+--- !u!114 &6246822381174097808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786622988022897810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b5cd572f544d2cb1e244485290e4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critChance: 0
+  critPrefab: {fileID: 5786170881953040696, guid: 1baad0875ea2c794ab28ac58e08222a1, type: 3}
+--- !u!114 &5383341417489978524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786622988022897810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f876b69934aa4765a77629e01cf2d3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartStealChance: 0
+  heartStealAmount: 2
+  heartStealPrefab: {fileID: 4463199282786363955, guid: c8c41f3e30b47a94a9bc76add598fbc7, type: 3}
+--- !u!114 &3413748241021110865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786622988022897810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cea58bf641c4ee5965a020b0fe48586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critChance: 0
+  thoroughForagePrefab: {fileID: 798477819062421940, guid: 1938b96391ecdf046a5fc43a6a24c45c, type: 3}
 --- !u!1 &4786622989138646327
 GameObject:
   m_ObjectHideFlags: 0

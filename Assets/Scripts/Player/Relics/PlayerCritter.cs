@@ -10,7 +10,7 @@ namespace Player.Relics
         public int CritChance
         {
             get => critChance;
-            private set => critChance = value;
+            set => critChance = value;
         }
 
         public Crit CritPrefab
@@ -19,9 +19,9 @@ namespace Player.Relics
             private set => critPrefab = value;
         }
 
-        public void DisplayCrit(Vector3 position, Quaternion rotation)
+        public void DisplayCrit(Vector3 position)
         {
-            Instantiate(CritPrefab, position, rotation);
+            Instantiate(CritPrefab, position, Quaternion.identity);
         }
         
     }

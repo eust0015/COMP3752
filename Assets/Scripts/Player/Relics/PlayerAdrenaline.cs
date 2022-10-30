@@ -5,13 +5,18 @@ namespace Player.Relics
     public class PlayerAdrenaline : MonoBehaviour
     {
         [SerializeField] private int critChance;
+        [SerializeField] private int amountHealthShouldBeBelow;
 
         public int CritChance
         {
             get => critChance;
-            private set => critChance = value;
+            set => critChance = value;
         }
-        
-        
+
+        public int AmountHealthShouldBeBelow
+        {
+            get => amountHealthShouldBeBelow;
+            set => amountHealthShouldBeBelow = value;
+        }
     }
 }

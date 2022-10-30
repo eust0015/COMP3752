@@ -10,7 +10,7 @@ namespace Player.Relics
         public int CritChance
         {
             get => critChance;
-            private set => critChance = value;
+            set => critChance = value;
         }
 
         public ThoroughForage ThoroughForagePrefab
@@ -19,9 +19,9 @@ namespace Player.Relics
             private set => thoroughForagePrefab = value;
         }
 
-        public void DisplayThoroughForage(Vector3 position, Quaternion rotation)
+        public void DisplayThoroughForage(Vector3 position)
         {
-            Instantiate(ThoroughForagePrefab, position, rotation);
+            Instantiate(ThoroughForagePrefab, position, Quaternion.identity);
         }
     }
 }

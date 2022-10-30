@@ -103,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.icon
       value: 
-      objectReference: {fileID: 21300000, guid: 135ae402b71e430409d9dead8e4ca05b, type: 3}
+      objectReference: {fileID: 1673817778, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.name
       value: Critter
@@ -127,3 +127,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+--- !u!1 &7190517016185977062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395102696264653441, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+  m_PrefabInstance: {fileID: 7400107902323516007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3747139872307984166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190517016185977062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9204071149678532435}
+        m_TargetAssemblyTypeName: UI.Effect.EffectIncreaseCritChance, Assembly-CSharp
+        m_MethodName: DoEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9204071149678532435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190517016185977062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00c6c9c79f64bbb8a304e94d260c4ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critChance: 10

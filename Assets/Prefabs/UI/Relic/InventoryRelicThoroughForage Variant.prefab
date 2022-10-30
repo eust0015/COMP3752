@@ -103,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.icon
       value: 
-      objectReference: {fileID: 21300000, guid: 030d27cd00b3bb647a25d8ff1af718db, type: 3}
+      objectReference: {fileID: 675883617, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.name
       value: Thorough Forage
@@ -127,3 +127,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+--- !u!1 &8266839971869249477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395102696264653441, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
+  m_PrefabInstance: {fileID: 8629487223775106372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4909598406341354721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266839971869249477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6565491964510895648}
+        m_TargetAssemblyTypeName: UI.Effect.EffectIncreasePollenCritChance, Assembly-CSharp
+        m_MethodName: DoEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6565491964510895648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266839971869249477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24f2ccb4f7f45eda16ca558d8fa19a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  critChance: 25

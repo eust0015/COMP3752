@@ -103,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.icon
       value: 
-      objectReference: {fileID: 1668192429, guid: dd3cf935343807d47b73430a5addd922, type: 3}
+      objectReference: {fileID: 549344133, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 4150071801398203802, guid: 697b3a8a1ee0cfa4f9257bfe811e4671, type: 3}
       propertyPath: relic.name
       value: Max Heart Capacity
