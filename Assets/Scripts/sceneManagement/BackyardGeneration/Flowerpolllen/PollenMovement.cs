@@ -9,7 +9,6 @@ public class PollenMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("skyeeeeeet");
             Destroy(gameObject); var pollenHUD = FindObjectOfType<CurrencyHUD>();
             pollenHUD.Currency.IncreaseValue(1);
         }

@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7404886100893447270
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 825287590018053358, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 496513350, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521463665466231101, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461464825181577789, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_text
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283739599351480978, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: m_Name
+      value: ShopItemAdrenalineRelic Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: item.icon
+      value: 
+      objectReference: {fileID: 496513350, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: item.name
+      value: Adrenaline
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: item.type
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: item.price
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: item.quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: item.description
+      value: Deal double damage when only 1 heart is filled.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: relicList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293476096803219058, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}
+      propertyPath: relicList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1387497884114788326, guid: 31b2dd79cef038346ad175b620336e1e, type: 3}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: b11d9da36dcf72342b872ff777e55f3b, type: 3}

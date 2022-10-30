@@ -74,7 +74,7 @@ public class playerMovement : MonoBehaviour
     void MovementDirection()
     {
         //Checks if the player is moving up or down and checks if the player isn't at their max speed
-        if (Input.GetButton(upKey) & Mathf.Abs(xspeed) <= maxSpeed  || Input.GetButton(downKey) & Mathf.Abs(yspeed) <= maxSpeed)
+        if ((Input.GetButton(upKey) || Input.GetButton(downKey)) & Mathf.Abs(yspeed) <= maxSpeed)
         {
             //slows the player down, if they are holding up and down at the same time
             if (Input.GetButton(upKey) & Input.GetButton(downKey))
@@ -129,8 +129,8 @@ public class playerMovement : MonoBehaviour
         }
 
         //Checks if the player is moving left or right and checks if the player isn't at their max speed
-        if (Input.GetButton(leftKey) & Mathf.Abs(xspeed) <= maxSpeed || Input.GetButton(rightKey) & Mathf.Abs(xspeed) <= maxSpeed)
-        {
+        if((Input.GetButton(leftKey) || Input.GetButton(rightKey)) & Mathf.Abs(xspeed) <= maxSpeed)
+            {
             //slows the player down, if they are holding left and right at the same time
             if (Input.GetButton(leftKey) & Input.GetButton(rightKey))
             {

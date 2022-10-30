@@ -73,6 +73,7 @@ public class PlayerAttackController : MonoBehaviour
     private void ProjectileAttack(List<Projectile> proj)
     {
         StartCoroutine(_p.RangedAnim());
+        GetComponent<Audio.FMODAudioSource>().PlaySound();
         foreach (var _proj in proj)
         {
             float dmg = (_s.baseAtk + _s.atkModifier) * _s.atkMultiplier;

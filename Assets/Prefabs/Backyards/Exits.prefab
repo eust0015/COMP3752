@@ -158,7 +158,7 @@ Transform:
   - {fileID: 8833304297728831187}
   - {fileID: 4507991810593040610}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &65625607682047610
 MonoBehaviour:
@@ -172,8 +172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea8d5ce22830094791df134f08bee04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 70
+  spawnChance: 30
   lastRoom: Below
+  door50: {fileID: 1469751356, guid: 537a1df8a44691a4a85cbec65d1028b6, type: 3}
+  door0: {fileID: -187897026, guid: 537a1df8a44691a4a85cbec65d1028b6, type: 3}
+  door100: {fileID: -2005057555, guid: 537a1df8a44691a4a85cbec65d1028b6, type: 3}
 --- !u!1 &7549530947704065358
 GameObject:
   m_ObjectHideFlags: 0

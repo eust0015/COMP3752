@@ -1,15 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExitSpawner : MonoBehaviour
 {
     private GameObject Exit;
     private GameObject[] ExitsArray;
     public int spawnChance = 100;
+    private float doorTimer = 3f;
     public string lastRoom = "Below";
+    public Sprite door50;
+    public Sprite door0;
+    public Sprite door100;
+
+
+    UnityEvent m_DoorController = new UnityEvent();
     void Awake()
     {
+        m_DoorController.AddListener(closeAllDoors);
         Exit = gameObject;
         ExitsArray = new GameObject[4];
         for (int i = 0; i < ExitsArray.Length; i++)
@@ -58,9 +67,14 @@ public class ExitSpawner : MonoBehaviour
     public void ensureExit()
     {
         bool noExits = true;
+        int count = 0;
         for (int i = 0; i < ExitsArray.Length; i++)
         {
-            if(i != FindLastRoom() && ExitsArray[i].activeSelf)
+            if(ExitsArray[i].activeSelf)
+            {
+                count++;
+            }
+            if (count >= 2)
             {
                 noExits = false;
             }
@@ -78,13 +92,42 @@ public class ExitSpawner : MonoBehaviour
 
     private void openDoor(int roomNo)
     {
+        float x = doorTimer;
         ExitsArray[roomNo].SetActive(true);
+        while(x >= 0)
+        {
+            x -= Time.deltaTime;
+            if(x <= 0)
+            {
+                ExitsArray[roomNo].GetComponent<SpriteRenderer>().sprite = door100;
+            }
+            else if(x <= doorTimer/2)
+            {
+                ExitsArray[roomNo].GetComponent<SpriteRenderer>().sprite = door50;
+
+            }
+        }
+
     }
 
     public void closeAllDoors()
     {
         for (int i = 0; i < ExitsArray.Length; i++)
         {
+            float x = doorTimer;
+            while (x >= 0)
+            {
+                x -= Time.deltaTime;
+                if (x <= 0)
+                {
+                    ExitsArray[i].GetComponent<SpriteRenderer>().sprite = door0;
+                }
+                else if (x <= doorTimer / 2)
+                {
+                    ExitsArray[i].GetComponent<SpriteRenderer>().sprite = door50;
+
+                }
+            }
             ExitsArray[i].SetActive(false);
         }
     }

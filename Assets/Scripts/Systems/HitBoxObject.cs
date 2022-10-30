@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Enemy;
 using Player;
+using Player.Relics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = System.Random;
 
 
 public class HitBoxObject : MonoBehaviour
@@ -41,16 +43,72 @@ public class HitBoxObject : MonoBehaviour
         
         if (other.gameObject.GetComponent<EnemyHealth>() != null)
         {
+            Random rnd = new Random();
+            int atkMultiplier = 1;
+            int critChance = 0;
+            int heartStealChance = 0;
+            
+            // PlayerStats
+            var playerStats = owner.gameObject.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                critChance = (int)Math.Round(playerStats.critChance);
+                atkMultiplier = (int)Math.Round(playerStats.atkMultiplier);
+            }
+            // --------------
+            
+            // Heart Stealer
+            var heartStealer = owner.gameObject.GetComponent<PlayerHeartStealer>();
+            if (heartStealer != null)
+            {
+                heartStealChance += heartStealer.HeartStealChance;
+                if (heartStealChance >= rnd.Next(0, 101))
+                {
+                    var otherTransform = other.transform;
+                    heartStealer.DisplayHeartSteal(otherTransform.position, otherTransform.rotation);
+                    var playerHealth = owner.gameObject.GetComponent<PlayerHealth>().Health;
+                    if (playerHealth != null)
+                        playerHealth.IncreaseValue(1);
+                }
+                    
+            }
+            // --------------
+
+            // Adrenaline
+            var adrenaline = owner.gameObject.GetComponent<PlayerCritter>();
+            if (adrenaline != null)
+            {
+                var playerHealth = owner.gameObject.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                    if (playerHealth.Health.Value < 3)
+                        critChance += adrenaline.CritChance;
+            }
+            // --------------
+
+            // Critter
+            var critter = owner.gameObject.GetComponent<PlayerCritter>();
+            if (critter != null)
+            {
+                critChance += critter.CritChance;
+                if (critChance >= rnd.Next(0, 101))
+                {
+                    var otherTransform = other.transform;
+                    critter.DisplayCrit(otherTransform.position, otherTransform.rotation);
+                    atkMultiplier += 1;
+                }
+            }
+            // --------------
+
             var otherHealth = other.gameObject.GetComponent<EnemyHealth>();
             if (owner.CompareTag("Player"))
             {
                 owner.Hit();
-                if (otherHealth.Health.Value - damage <= 0)
+                if (otherHealth.Health.Value - damage * atkMultiplier <= 0)
                 {
                     owner.Kill();
                 }
             }
-            owner.RequestAttack(otherHealth.Health, damage);
+            owner.RequestAttack(otherHealth.Health, damage * atkMultiplier);
             var m = (new Vector2(other.transform.position.x - transform.position.x,
                 -(other.transform.position.y - transform.position.y))).normalized * knockback * 3;
             other.attachedRigidbody.velocity += m;
@@ -59,6 +117,15 @@ public class HitBoxObject : MonoBehaviour
         }
         else if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
+            // Bubble Barrier
+            var bubbleBarrier = other.gameObject.GetComponentInChildren<PlayerBubbleBarrier>();
+            if (bubbleBarrier != null)
+            {
+                bubbleBarrier.PopBubble();
+                return;
+            }
+            // --------------
+            
             var otherHealth = other.gameObject.GetComponent<PlayerHealth>().Health;
             owner.RequestAttack(otherHealth, damage);
         }
