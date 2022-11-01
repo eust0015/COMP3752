@@ -159,7 +159,7 @@ MonoBehaviour:
   abilityContainer: {fileID: 2028902487570123772}
   inventoryAbilityPrefab: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
   inventoryAbilitiesList:
-  - {fileID: 0}
+  - {fileID: 462342072131596558}
   - {fileID: 164853805921534683}
 --- !u!1 &2028902487532734083
 GameObject:
@@ -1891,6 +1891,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d1dfc8fc14cffd74a86796be6110d343, type: 3}
+--- !u!114 &462342072131596558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7766894618615046622, guid: d1dfc8fc14cffd74a86796be6110d343, type: 3}
+  m_PrefabInstance: {fileID: 7900189142354383056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6917749d752d484eb44f5943d3fda485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1074733408529905918 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7154289599186282542, guid: d1dfc8fc14cffd74a86796be6110d343, type: 3}

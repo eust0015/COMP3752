@@ -35,7 +35,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8308929103106983510, guid: 7a423e005b45f6a45bf96ed8df85d253, type: 3}
       propertyPath: m_Name
-      value: PollenEvent
+      value: PollenEvent Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8308929103106983511, guid: 7a423e005b45f6a45bf96ed8df85d253, type: 3}
       propertyPath: m_Pivot.x
@@ -186,6 +186,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.49019608
       objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -314,6 +322,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.49019608
       objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -429,6 +445,14 @@ PrefabInstance:
     - target: {fileID: 4309170757102871182, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Color.a
       value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Pivot.x

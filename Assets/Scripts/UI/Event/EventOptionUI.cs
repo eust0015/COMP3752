@@ -14,57 +14,57 @@ namespace UI.Event
     [Serializable]
     public class EventOptionUI : MonoBehaviour
     {
-        [SerializeField] private EventOption option;
-        [SerializeField] private TMP_Text title;
-        [SerializeField] private TMP_Text description;
-        [SerializeField] private Image icon;
-        [SerializeField] private List<InventoryAbilityUI> abilityList;
-        [SerializeField] private List<InventoryRelicUI> relicList;
-        [SerializeField] private List<InventoryItemUI> itemList;
-        [SerializeField] private List<EffectUI> effectList;
-        [SerializeField] private Transform mouseOverContainer;
-        [SerializeField] private List<Transform> activeMouseOverList;
+        [SerializeField] protected EventOption option;
+        [SerializeField] protected TMP_Text title;
+        [SerializeField] protected TMP_Text description;
+        [SerializeField] protected Image icon;
+        [SerializeField] protected List<InventoryAbilityUI> abilityList;
+        [SerializeField] protected List<InventoryRelicUI> relicList;
+        [SerializeField] protected List<InventoryItemUI> itemList;
+        [SerializeField] protected List<EffectUI> effectList;
+        [SerializeField] protected Transform mouseOverContainer;
+        [SerializeField] protected List<Transform> activeMouseOverList;
         
         public EventOption Option
         {
             get => option;
-            private set => option = value;
+            protected set => option = value;
         }
         
         public TMP_Text Title
         {
             get => title;
-            private set => title = value;
+            protected set => title = value;
         }
 
         public TMP_Text Description
         {
             get => description;
-            private set => description = value;
+            protected set => description = value;
         }
 
         public Image Icon
         {
             get => icon;
-            private set => icon = value;
+            protected set => icon = value;
         }
 
         public List<InventoryAbilityUI> AbilityList
         {
             get => abilityList;
-            private set => abilityList = value;
+            protected set => abilityList = value;
         }
 
         public List<InventoryRelicUI> RelicList
         {
             get => relicList;
-            private set => relicList = value;
+            protected set => relicList = value;
         }
 
         public List<InventoryItemUI> ItemList
         {
             get => itemList;
-            private set => itemList = value;
+            protected set => itemList = value;
         }
 
         public List<EffectUI> EffectList
@@ -76,13 +76,13 @@ namespace UI.Event
         public Transform MouseOverContainer
         {
             get => mouseOverContainer;
-            private set => mouseOverContainer = value;
+            protected set => mouseOverContainer = value;
         }
 
         public List<Transform> ActiveMouseOverList
         {
             get => activeMouseOverList;
-            private set => activeMouseOverList = value;
+            protected set => activeMouseOverList = value;
         }
 
         public void Initialise(EventOption setOption)
@@ -91,7 +91,7 @@ namespace UI.Event
             UpdateDescription();
         }
 
-        public void Choose()
+        public virtual void Choose()
         {
             Option.Choose();
             foreach (var ability in AbilityList)
@@ -118,7 +118,7 @@ namespace UI.Event
         }
         
         public void UpdateTitle() => Title.text = Option.Title;
-        public void UpdateDescription() => Description.text = Option.Description;
+        public virtual void UpdateDescription() => Description.text = Option.Description;
         public void UpdateSprite() => Icon.sprite = Option.Icon;
         
         public void ShowDetailedDescription()

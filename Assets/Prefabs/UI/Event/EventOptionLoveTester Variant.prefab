@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8723115569496025476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992855405962235113}
+  m_Layer: 5
+  m_Name: MessageContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &992855405962235113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723115569496025476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7945599814720770756}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 188}
+  m_SizeDelta: {x: 850, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &3056076529860748802
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 433521480869134185, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Name
+      value: EventOptionLoveTester Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309170757102871182, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -750
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 830
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850315150751366322, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 349023312865934964}
+    - target: {fileID: 5850315150751366322, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Choose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5850315150751366322, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI.Event.LoveTesterEventOptionUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_text
+      value: Love Tester. 10% chance to receive 1 Heart Stealer relic and 90% chance
+        to lose 1 heart. Additional 10% chance to win each attempt.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 810
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468306477507972777, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 349023312865934964}
+    - target: {fileID: 7468306477507972777, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 349023312865934964}
+    - target: {fileID: 7468306477507972777, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ShowDetailedDescription
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468306477507972777, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideDetailedDescription
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 992855405962235113}
+  m_SourcePrefab: {fileID: 100100000, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+--- !u!1 &3201338145315920235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 433521480869134185, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+  m_PrefabInstance: {fileID: 3056076529860748802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &349023312865934964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3201338145315920235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70857bba48b44c4cb39eb8d1902ceaf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  option:
+    description: Love Tester. 10% chance to receive 1 Heart Stealer relic and 90%
+      chance to lose 1 heart. Additional 10% chance to win each attempt.
+    icon: {fileID: 0}
+    title: 
+  title: {fileID: 0}
+  description: {fileID: 8684444017687670353}
+  icon: {fileID: 0}
+  abilityList: []
+  relicList:
+  - {fileID: 2936694885813579330, guid: a08c0156b68a40948a79b076343c0494, type: 3}
+  itemList: []
+  effectList: []
+  mouseOverContainer: {fileID: 7697463449527709326}
+  activeMouseOverList: []
+  chanceToWin: 10
+  loseHealthAmount: 2
+  messageContainer: {fileID: 992855405962235113}
+  insufficientPaymentMessagePrefab: {fileID: 3234885634713203165, guid: 3c82b21db650a4a439c8ad0a80126c26, type: 3}
+  loseMessagePrefab: {fileID: 6383316416803077834, guid: 75de3afba30a854418f7c05083261b0f, type: 3}
+  winSound: {fileID: 2817417078778458416}
+--- !u!114 &2817417078778458416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3201338145315920235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1661154819
+      Data2: 1254272077
+      Data3: -1218321264
+      Data4: 1822009796
+    Path: event:/PollenSpend4
+--- !u!224 &7697463449527709326 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+  m_PrefabInstance: {fileID: 3056076529860748802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7945599814720770756 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+  m_PrefabInstance: {fileID: 3056076529860748802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8684444017687670353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+  m_PrefabInstance: {fileID: 3056076529860748802}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
