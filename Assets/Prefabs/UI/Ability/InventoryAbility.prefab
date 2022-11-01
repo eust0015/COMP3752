@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.71111107, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -251,6 +251,7 @@ MonoBehaviour:
     price: 0
     quantity: 0
     level: 0
+    hotKey: 
   icon: {fileID: 3018007189005529116}
   mouseOverContainer: {fileID: 2274359053438418041}
   mouseOverPrefab: {fileID: 2588723394008030604, guid: 5ac90056a28b3fd47b365ec59264eb69, type: 3}

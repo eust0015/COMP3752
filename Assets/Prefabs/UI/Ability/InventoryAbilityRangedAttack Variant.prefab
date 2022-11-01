@@ -25,6 +25,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
+      propertyPath: ability.hotKey
+      value: SPACE BAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.quantity
       value: 1
       objectReference: {fileID: 0}
@@ -132,6 +136,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3018007188790028966, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
   m_PrefabInstance: {fileID: 5380457883091763851}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6071106835870557112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154289599186282541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bc1b6bd22f4a2a8a6fe65dfc1e7aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability:
+    type: 0
+    description: 
+    icon: {fileID: 0}
+    name: 
+    price: 0
+    quantity: 0
+    level: 0
+    hotKey: 
 --- !u!114 &7164358573476646724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,23 +184,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6071106835870557112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154289599186282541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92bc1b6bd22f4a2a8a6fe65dfc1e7aab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ability:
-    type: 0
-    description: 
-    icon: {fileID: 0}
-    name: 
-    price: 0
-    quantity: 0
-    level: 0

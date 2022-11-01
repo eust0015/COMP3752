@@ -25,6 +25,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
+      propertyPath: ability.hotKey
+      value: LEFT SHIFT
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.quantity
       value: 1
       objectReference: {fileID: 0}

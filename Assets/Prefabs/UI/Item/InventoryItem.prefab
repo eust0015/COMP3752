@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 73730645508273064}
   - component: {fileID: 686051674080475736}
   - component: {fileID: 1663814797164719515}
+  - component: {fileID: 935452825096600772}
   m_Layer: 5
   m_Name: InventoryItem
   m_TagString: Untagged
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.71111107, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -301,6 +302,18 @@ MonoBehaviour:
       - m_Target: {fileID: 73730645508273064}
         m_TargetAssemblyTypeName: UI.InventoryItemUI, Assembly-CSharp
         m_MethodName: Use
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 935452825096600772}
+        m_TargetAssemblyTypeName: UI.Effect.EffectShowActivationOnPlayer, Assembly-CSharp
+        m_MethodName: DoEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -410,6 +423,19 @@ MonoBehaviour:
       Data3: -1957079123
       Data4: 1852729903
     Path: event:/Shop_Hover
+--- !u!114 &935452825096600772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73730645508273066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c696e131128485c8ef4f3796875e42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activatePrefab: {fileID: 0}
 --- !u!1 &73730645562288402
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ namespace Player.Relics
     {
         [SerializeField] private int heartStealChance;
         [SerializeField] private int heartStealAmount;
-        [SerializeField] private HeartSteal heartStealPrefab;
+        [SerializeField] private GameObject heartStealPrefab;
+        [SerializeField] private Vector3 positionOffset;
 
         public int HeartStealChance
         {
@@ -20,15 +21,21 @@ namespace Player.Relics
             set => heartStealAmount = value;
         }
 
-        public HeartSteal HeartStealPrefab
+        public GameObject HeartStealPrefab
         {
             get => heartStealPrefab;
             private set => heartStealPrefab = value;
         }
-        
+
+        public Vector3 PositionOffset
+        {
+            get => positionOffset;
+            set => positionOffset = value;
+        }
+
         public void DisplayHeartSteal(Vector3 position)
         {
-            Instantiate(HeartStealPrefab, position, Quaternion.identity);
+            Instantiate(HeartStealPrefab, position + PositionOffset, Quaternion.identity);
         }
     }
 }

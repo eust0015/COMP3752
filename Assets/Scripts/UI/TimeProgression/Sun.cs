@@ -9,6 +9,7 @@ namespace UI.TimeProgression
     {
         private GameManager _g;
         [SerializeField] private Animator sunAnimator;
+        [SerializeField] private int minutesInADay;
         private static readonly int Night = Animator.StringToHash("night");
         private static readonly int Moving = Animator.StringToHash("moving");
 
@@ -18,17 +19,14 @@ namespace UI.TimeProgression
             private set => sunAnimator = value;
         }
 
-        // private void Update()
-        // {
-        //     if(Input.GetKeyDown(KeyCode.N))
-        //         SunAnimator.SetBool(Night, true);
-        //     else if(Input.GetKeyDown(KeyCode.D))
-        //         SunAnimator.SetBool(Night, false);
-        //     else if(Input.GetKeyDown(KeyCode.M))
-        //         SunAnimator.SetBool(Moving, true);
-        //     else if(Input.GetKeyDown(KeyCode.S))
-        //         SunAnimator.SetBool(Moving, false);
-        // }
+        public int MinutesInADay
+        {
+            get => minutesInADay;
+            set => minutesInADay = value;
+        }
+
+        private int SecondsInADay => minutesInADay * 60;
+        private float AnimationSpeed => 1.0f / minutesInADay;
 
         private void Start()
         {
@@ -37,6 +35,7 @@ namespace UI.TimeProgression
             _g.onTimerPlay += OnTimerPlay;
             _g.onTimerPause += OnTimerPause;
             //_g.onTimerComplete += OnTimerComplete;
+            SunAnimator.speed = AnimationSpeed;
             OnRunStart();
         }
 
@@ -49,8 +48,14 @@ namespace UI.TimeProgression
 
         IEnumerator DayCoroutine()
         {
-            yield return new WaitForSeconds(180);
+            yield return new WaitForSeconds(SecondsInADay);
             OnTimerComplete();
+        }
+        
+        IEnumerator NightCoroutine()
+        {
+            yield return new WaitForSeconds(SecondsInADay);
+            OnNightComplete();
         }
         
         private void OnTimerPlay()
@@ -66,9 +71,17 @@ namespace UI.TimeProgression
         private void OnTimerComplete()
         {
             SunAnimator.SetBool(Night, true);
-            SunAnimator.SetBool(Moving, false);
+            //SunAnimator.SetBool(Moving, false);
+            StartCoroutine(NightCoroutine());
         }
 
+        private void OnNightComplete()
+        {
+            SunAnimator.SetBool(Night, false);
+            //SunAnimator.SetBool(Moving, false);
+            StartCoroutine(DayCoroutine());
+        }
+        
         private void OnDestroy()
         {
             _g.onRunStart -= OnRunStart;

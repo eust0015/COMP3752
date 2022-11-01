@@ -8,6 +8,7 @@ namespace UI.TimeProgression
     {
         private GameManager _g;
         [SerializeField] private Animator cloudAnimator;
+        [SerializeField] private int minutesInADay;
         private static readonly int Night = Animator.StringToHash("night");
 
         public Animator CloudAnimator
@@ -15,6 +16,14 @@ namespace UI.TimeProgression
             get => cloudAnimator;
             private set => cloudAnimator = value;
         }
+
+        public int MinutesInADay
+        {
+            get => minutesInADay;
+            set => minutesInADay = value;
+        }
+        
+        private int SecondsInADay => minutesInADay * 60;
 
         private void Start()
         {
@@ -32,16 +41,28 @@ namespace UI.TimeProgression
 
         IEnumerator DayCoroutine()
         {
-            yield return new WaitForSeconds(180);
+            yield return new WaitForSeconds(SecondsInADay);
             OnTimerComplete();
-            OnTimerComplete();
+        }
+        
+        IEnumerator NightCoroutine()
+        {
+            yield return new WaitForSeconds(SecondsInADay);
+            OnNightComplete();
         }
         
         private void OnTimerComplete()
         {
             CloudAnimator.SetBool(Night, true);
+            StartCoroutine(NightCoroutine());
         }
 
+        private void OnNightComplete()
+        {
+            CloudAnimator.SetBool(Night, false);
+            StartCoroutine(DayCoroutine());
+        }
+        
         private void OnDestroy()
         {
             _g.onRunStart -= OnRunStart;

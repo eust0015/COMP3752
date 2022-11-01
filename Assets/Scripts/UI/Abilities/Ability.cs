@@ -7,6 +7,7 @@ namespace UI.Abilities
     public class Ability : Item
     {
         [SerializeField] protected int level;
+        [SerializeField] protected string hotKey;
         
         public delegate void LevelChanged();
         public event LevelChanged OnLevelChanged;
@@ -19,6 +20,12 @@ namespace UI.Abilities
                 level = value;
                 OnLevelChanged?.Invoke();
             } 
+        }
+
+        public virtual string HotKey
+        {
+            get => hotKey;
+            set => hotKey = value;
         }
 
         public override void Buy()

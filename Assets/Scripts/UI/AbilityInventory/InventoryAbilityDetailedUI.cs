@@ -12,6 +12,7 @@ namespace UI.AbilityInventory
         [SerializeField] private Ability ability;
         [SerializeField] private TMP_Text abilityName;
         [SerializeField] private TMP_Text description;
+        [SerializeField] private TMP_Text hotKey;
         [SerializeField] private Image icon;
 
         public delegate void Destroyed(InventoryAbilityDetailedUI thisObject);
@@ -34,6 +35,12 @@ namespace UI.AbilityInventory
             private set => description = value;
         }
 
+        public TMP_Text HotKey
+        {
+            get => hotKey;
+            set => hotKey = value;
+        }
+
         public Image Icon
         {
             get => icon;
@@ -45,6 +52,7 @@ namespace UI.AbilityInventory
             Ability = setAbility;
             UpdateName();
             UpdateDescription();
+            UpdateHotKey();
             UpdateSprite();
             SubscribeToEvents();
         }
@@ -61,9 +69,10 @@ namespace UI.AbilityInventory
                 return;
         }
         
-        public void UpdateName() => abilityName.text = Ability.Name;
-        public void UpdateDescription() => description.text = Ability.Description;
-        public void UpdateSprite() => icon.sprite = Ability.Icon;
+        public void UpdateName() => AbilityName.text = Ability.Name;
+        public void UpdateDescription() => Description.text = Ability.Description;
+        public void UpdateHotKey() => HotKey.text = Ability.HotKey;
+        public void UpdateSprite() => Icon.sprite = Ability.Icon;
 
         private void OnDestroy()
         {

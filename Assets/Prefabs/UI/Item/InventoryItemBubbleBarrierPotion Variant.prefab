@@ -130,14 +130,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4353976423220122297}
+    - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 4021594503835540929}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
@@ -145,21 +153,45 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: AddToPlayer
+      value: DoEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DoEffect
       objectReference: {fileID: 0}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UI.Effect.EffectShowActivationOnPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UI.Effect.EffectAddBubbleBarrierToPlayer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 73730645508273071, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 73730645562288400, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e3bc931190605834cb778d8fabf8b9ef, type: 3}
+    - target: {fileID: 935452825096600772, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: activatePrefab
+      value: 
+      objectReference: {fileID: 4742859378304939976, guid: 4866423810cb4c84d8ea24264f98c247, type: 3}
+    - target: {fileID: 935452825096600772, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+      propertyPath: offsetFromPlayer.y
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
@@ -181,3 +213,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleBarrierPrefab: {fileID: 624616089894357748, guid: 3f1b698b7dcc5b949b382a024a01fd74, type: 3}
+--- !u!114 &4353976423220122297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 935452825096600772, guid: 2dc52436211ceb54eaddaa84d9ff582d, type: 3}
+  m_PrefabInstance: {fileID: 3501279460700892797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572193156275772887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c696e131128485c8ef4f3796875e42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

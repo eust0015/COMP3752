@@ -213,7 +213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   critChance: 0
-  critPrefab: {fileID: 5786170881953040696, guid: 1baad0875ea2c794ab28ac58e08222a1, type: 3}
+  critPrefab: {fileID: 676594175205543951, guid: a1a302875f8515647bbc9a602f47e633, type: 3}
+  positionOffset: {x: 0, y: 1, z: 0}
 --- !u!114 &5383341417489978524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartStealChance: 0
   heartStealAmount: 2
-  heartStealPrefab: {fileID: 4463199282786363955, guid: c8c41f3e30b47a94a9bc76add598fbc7, type: 3}
+  heartStealPrefab: {fileID: 6510717880498446611, guid: 179221afd65f54148a3d1c510b4c6c5b, type: 3}
+  positionOffset: {x: 0, y: 1, z: 0}
 --- !u!114 &3413748241021110865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   critChance: 0
-  thoroughForagePrefab: {fileID: 798477819062421940, guid: 1938b96391ecdf046a5fc43a6a24c45c, type: 3}
+  thoroughForagePrefab: {fileID: 6116139463899038360, guid: 27ccf4856dbbcf64da06923f6cfaca00, type: 3}
+  positionOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &4786622989138646327
 GameObject:
   m_ObjectHideFlags: 0
