@@ -131,7 +131,7 @@ namespace UI.Event
         
         public override void UpdateDescription()
         {
-            Description.text = "Ring Toss. Exchange 2 pollen for a " + 
+            Description.text = "<b>Ring Toss.</b>\nExchange 2 pollen for a " + 
                                ChanceToWin +
                                "% chance to win a Critter relic. Additional 10% chance to win each attempt.";
         }

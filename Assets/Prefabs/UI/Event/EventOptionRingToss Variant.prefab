@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 76
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,8 +162,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_text
-      value: Ring Toss. Exchange 2 pollen for a 10% chance to win a Critter relic.
-        Additional 10% chance to win each attempt.
+      value: 'Ring Toss.
+
+        Exchange 2 pollen for a 10% chance to win a Critter
+        relic. Additional 10% chance to win each attempt.'
       objectReference: {fileID: 0}
     - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -171,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 56
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 7468306477507972777, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -214,10 +216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   option:
-    description: Ring Toss. Exchange 2 pollen for a 10% chance to win a Critter relic.
-      Additional 10% chance to win each attempt.
+    description: Exchange 2 pollen for a 10% chance to win a Critter relic. Additional
+      10% chance to win each attempt.
     icon: {fileID: 0}
-    title: 
+    title: Ring Toss.
+    postDescription: You throw the ring, it glides through the air until it finds
+      itself spinning around the target pole.
+    postTitle: You won a Critter relic.
   title: {fileID: 0}
   description: {fileID: 6799082817838862256}
   icon: {fileID: 0}
