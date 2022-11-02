@@ -145,7 +145,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -760223499330069473}
         m_TargetAssemblyTypeName: UI.Event.EventDisplay, Assembly-CSharp
-        m_MethodName: Display
+        m_MethodName: OnInteractKey
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

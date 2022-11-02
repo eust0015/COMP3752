@@ -9,6 +9,8 @@ namespace UI.Event
         [SerializeField][TextArea] protected string description;
         [SerializeField] protected Sprite icon;
         [SerializeField] protected string title;
+        [SerializeField][TextArea] protected string postDescription;
+        [SerializeField] protected string postTitle;
 
         public virtual string Description
         {
@@ -26,6 +28,18 @@ namespace UI.Event
         {
             get => title;
             set => title = value;
+        }
+
+        public string PostDescription
+        {
+            get => postDescription;
+            set => postDescription = value;
+        }
+
+        public string PostTitle
+        {
+            get => postTitle;
+            set => postTitle = value;
         }
 
         public virtual void Choose()

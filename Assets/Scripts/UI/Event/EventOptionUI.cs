@@ -85,6 +85,11 @@ namespace UI.Event
             protected set => activeMouseOverList = value;
         }
 
+        public void Start()
+        {
+            UpdateDescription();
+        }
+
         public void Initialise(EventOption setOption)
         {
             Option = setOption;
@@ -118,7 +123,7 @@ namespace UI.Event
         }
         
         public void UpdateTitle() => Title.text = Option.Title;
-        public virtual void UpdateDescription() => Description.text = Option.Description;
+        public virtual void UpdateDescription() => Description.text = "<b>" + Option.Title + "</b>\n" + Option.Description;
         public void UpdateSprite() => Icon.sprite = Option.Icon;
         
         public void ShowDetailedDescription()

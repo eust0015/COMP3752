@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5505671464913291516
+--- !u!1001 &645297216558279834
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 433521480869134185, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Name
-      value: EventOptionTwoMaxHeartCapacity Variant
+      value: EventReceiveTwentyPollenAndTwoDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309170757102871182, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_Color.a
+      value: 0.49019608
       objectReference: {fileID: 0}
     - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 104
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106,66 +110,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_text
-      value: 'Boiling Beaker.
+      value: 'Through the roses.
 
-        Receive 2 Max Heart Capacity relics and empty
-        all hearts except for 2.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
-      propertyPath: m_fontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
+        Receive 20 pollen and lose 1 heart.'
       objectReference: {fileID: 0}
     - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: option.title
-      value: Boiling Beaker.
+      value: Through the roses.
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: option.postTitle
-      value: Received 2 Max Heart Capacity relics, but all your hearts were emptied
-        except for 2.
+      value: Received 20 pollen, but 1 heart was emptied.
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: option.description
-      value: Receive 2 Max Heart Capacity relics and empty all hearts except for
-        2.
-      objectReference: {fileID: 0}
-    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
-      propertyPath: relicList.Array.size
-      value: 2
+      value: Receive 20 pollen and empty 1 heart.
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: effectList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: option.postDescription
-      value: You drink the contents of the boiling beaker. The formula burns your
-        insides, and you question costs of extended life.
+      value: You tentatively make your way through the rose bushes brimming with
+        pollen, but the foliage is so thick, a prick from a thorn is inevitable.
       objectReference: {fileID: 0}
-    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
-      propertyPath: relicList.Array.data[0]
-      value: 
-      objectReference: {fileID: 4344695228903869019, guid: 3665a3299a0499d41ba2352ad3a05283, type: 3}
-    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
-      propertyPath: relicList.Array.data[1]
-      value: 
-      objectReference: {fileID: 4344695228903869019, guid: 3665a3299a0499d41ba2352ad3a05283, type: 3}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: effectList.Array.data[0]
       value: 
-      objectReference: {fileID: 6930568976709004925, guid: 6270715cb34084a408730b9bdd624292, type: 3}
+      objectReference: {fileID: 5779819801141856116, guid: 31052c2fb22fb5042b76ac4013583328, type: 3}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: effectList.Array.data[1]
+      value: 
+      objectReference: {fileID: 2347090876007654864, guid: 268accea31bd0d94ebfe44c22265ebb5, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}

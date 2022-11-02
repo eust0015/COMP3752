@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventOptionFillAllEmptyHearts Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664532193490815116, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -46,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 38
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 4912632824547603654, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,7 +106,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_text
-      value: Fill all empty hearts.
+      value: 'Bubbling Beaker
+
+        Fill all empty hearts.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: option.title
+      value: Bubbling Beaker.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: option.postTitle
+      value: All empty hearts were filled.
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: option.description
@@ -107,6 +129,11 @@ PrefabInstance:
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: effectList.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: option.postDescription
+      value: You drink the contents of the bubbling beaker and to your surprise,
+        you find it quite refreshing.
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: effectList.Array.data[0]
