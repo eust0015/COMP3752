@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3190334474134976102}
   - component: {fileID: 6118934227016223897}
   - component: {fileID: 712836681449201589}
+  - component: {fileID: 4013219299537196664}
+  - component: {fileID: -1910498885392266778}
   m_Layer: 0
   m_Name: Pollen
   m_TagString: Untagged
@@ -163,3 +165,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4cc56ab5fff0a4eabfb4a27c118807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4013219299537196664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917838929949873572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -1910498885392266778}
+        m_TargetAssemblyTypeName: Audio.FMODAudioSource, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-1910498885392266778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917838929949873572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 805703342
+      Data2: 1166153090
+      Data3: 1187234719
+      Data4: -920170065
+    Path: event:/PollenSpend5

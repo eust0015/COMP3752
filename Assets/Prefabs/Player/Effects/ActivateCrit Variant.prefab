@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ActivateCrit Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Path
+      value: event:/EnemyBigHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data1
+      value: -701164659
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data2
+      value: 1193082471
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data3
+      value: -2073872716
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data4
+      value: 1178361874
+      objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910603, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_Sprite
       value: 

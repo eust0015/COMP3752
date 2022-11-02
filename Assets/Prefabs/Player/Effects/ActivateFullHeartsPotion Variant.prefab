@@ -12,13 +12,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: ActivateFullHeartsPotion Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Path
+      value: event:/HeartAllFill
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data1
+      value: -479178722
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data2
+      value: 1246047684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data3
+      value: 1968654238
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data4
+      value: -1872558914
+      objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910603, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 137778606, guid: 8ee7c565f76da2242af31dabd974bf0f, type: 3}
     - target: {fileID: 7033816931681910604, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910604, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_LocalScale.x

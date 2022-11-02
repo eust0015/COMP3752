@@ -10,7 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7033816931681910454, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_Name
-      value: ActivateThoroughForage
+      value: ActivateThoroughForage Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Path
+      value: event:/PollenGainSlot1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data1
+      value: 1652207133
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data2
+      value: 1146374517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data3
+      value: -1131114336
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data4
+      value: -1532222870
       objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910603, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_Sprite
@@ -18,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 675883617, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 7033816931681910604, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910604, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_LocalScale.x
