@@ -5,18 +5,18 @@ using UnityEngine;
 public class ShopEventSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject shopPrefab;
-    public GameObject eventPrefab;
+    public GameObject[] shopPrefab;
+    public GameObject[] eventPrefab;
     public float spawnChance = 30;
     void Start()
     {
         if (spawnChance >= Random.Range(0, 100))
         {
-            Instantiate(eventPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -1), Quaternion.identity, transform);
+            Instantiate(eventPrefab[Random.Range(0, eventPrefab.Length-1)], new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -1), Quaternion.identity, transform);
         }
         else if (spawnChance >= Random.Range(0, 100))
         {
-            Instantiate(shopPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -1), Quaternion.identity, transform);
+            Instantiate(shopPrefab[Random.Range(0, eventPrefab.Length-1)], new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -1), Quaternion.identity, transform);
         }
     }
 }

@@ -77,7 +77,7 @@ public class playerAnimation : MonoBehaviour
     public IEnumerator RangedAnim()
     {
         _a.CrossFade("PlayerRangedAttack", 0.2f);
-        print("ye");
+        //print("ye");
         yield return new WaitForSeconds(0.4f);
         _a.Play("Player");
         yield return null;

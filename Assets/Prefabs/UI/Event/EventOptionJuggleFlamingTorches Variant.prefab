@@ -114,8 +114,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975162607827945555, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_text
-      value: Juggle flaming torches. Receive 1 Adrenaline relic and empty all hearts
-        except for 1.
+      value: 'Juggle flaming torches.
+
+        Receive 1 Adrenaline relic and empty
+        all hearts except 1.'
       objectReference: {fileID: 0}
     - target: {fileID: 6738513622319336625, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -126,13 +128,26 @@ PrefabInstance:
       value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: option.title
+      value: Juggle flaming torches.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: option.postTitle
+      value: Received 1 Adrenaline relic.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: option.description
-      value: Juggle flaming torches. Receive 1 Adrenaline relic and empty all hearts
-        except for 1.
+      value: Receive 1 Adrenaline relic and empty all hearts except 1.
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: relicList.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
+      propertyPath: option.postDescription
+      value: "You show your courage by juggling the flaming torches. You are filled
+        with adrenaline and don\u2019t feel the heat of the flames, but after the
+        adrenaline subsides, you notice the burns."
       objectReference: {fileID: 0}
     - target: {fileID: 9085819616254044607, guid: d3b62f182e233c14696bcb700a1e804f, type: 3}
       propertyPath: relicList.Array.data[0]

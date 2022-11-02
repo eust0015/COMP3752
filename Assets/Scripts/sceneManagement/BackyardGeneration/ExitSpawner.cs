@@ -9,41 +9,30 @@ public class ExitSpawner : MonoBehaviour
     private GameObject[] ExitsArray;
     public int spawnChance = 100;
     private float doorTimer = 3f;
-    public string lastRoom = "Below";
+    public string lastRoom = "Above";
     public Sprite door50;
     public Sprite door0;
     public Sprite door100;
-
-
-    UnityEvent m_DoorController = new UnityEvent();
     void Awake()
     {
-        m_DoorController.AddListener(closeAllDoors);
         Exit = gameObject;
         ExitsArray = new GameObject[4];
         for (int i = 0; i < ExitsArray.Length; i++)
         {
             ExitsArray[i] = Exit.transform.GetChild(i).gameObject;
-        }
-
-        for (int i = 0; i < ExitsArray.Length; i++)
-        {
             ExitsArray[i].SetActive(false);
-        }
-
-        for (int i = 0; i < ExitsArray.Length; i++)
-        {
             if (spawnChance >= Random.Range(0, 100))
             {
-                openDoor(i);
+                OpenDoor(i);
             }
         }
-        openDoor(FindLastRoom());
+        EnsureExit();
+        OpenDoor(FindLastRoom());
     }
-    public void setLastRoom(string prevRoom)
+    public void SetLastRoom(string prevRoom)
     {
         lastRoom = prevRoom;
-        openDoor(FindLastRoom());
+        OpenDoor(FindLastRoom());
     }
 
     private int FindLastRoom()
@@ -64,7 +53,7 @@ public class ExitSpawner : MonoBehaviour
         }
     }
 
-    public void ensureExit()
+    public void EnsureExit()
     {
         bool noExits = true;
         int count = 0;
@@ -86,11 +75,11 @@ public class ExitSpawner : MonoBehaviour
             {
                 randomno = Random.Range(0, ExitsArray.Length-1);
             }
-            openDoor(randomno);
+            OpenDoor(randomno);
         }
     }
 
-    private void openDoor(int roomNo)
+    private void OpenDoor(int roomNo)
     {
         float x = doorTimer;
         ExitsArray[roomNo].SetActive(true);

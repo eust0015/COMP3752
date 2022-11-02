@@ -6,14 +6,13 @@ using Player;
 using Systems;
 using UI.Statistics;
 using Unity.VisualScripting;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    private int baseAtk;
+    /*private int baseAtk;
     private int currentAtk;
-    private int curAtkID = 0;
+    private int curAtkID = 0;*/
 
     [SerializeField] public bool attackBasedOnTag;
     [SerializeField] public string tagToAttack;
@@ -55,7 +54,7 @@ public class AttackController : MonoBehaviour
 
     public void RequestProjectile(Projectile _p, int damage = 1, float angle = 0)
     {
-        Debug.Log("request");
+        //Debug.Log("request");
         var proj = Instantiate(projectile);
         ProjectileObject obj = projectile.GetComponent<ProjectileObject>();
         obj.owner = this;

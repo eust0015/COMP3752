@@ -113,8 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound:
     Guid:
-      Data1: 1940850856
-      Data2: 1179351508
-      Data3: -1957079123
-      Data4: 1852729903
-    Path: event:/Shop_Hover
+      Data1: 974480216
+      Data2: 1294372840
+      Data3: -1042127440
+      Data4: 1326582670
+    Path: event:/Bubble_Pop1

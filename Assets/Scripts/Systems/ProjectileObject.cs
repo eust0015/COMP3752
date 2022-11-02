@@ -38,7 +38,7 @@ namespace Systems
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Ranged Hit " + other.name);
+            //Debug.Log("Ranged Hit " + other.name);
             if (basedOnTag)
             {
                 if(!other.CompareTag(_tag)) return;

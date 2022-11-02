@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Player;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace UI.Statistics
@@ -105,6 +106,10 @@ namespace UI.Statistics
             itemUI.OnDestroyed -= RemoveItemFromList;
             HeartList.Remove(itemUI);
         }
-        
+
+        private void OnDestroy()
+        {
+            
+        }
     }
 }

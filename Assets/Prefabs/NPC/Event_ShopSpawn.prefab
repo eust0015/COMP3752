@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cb1808df1a4394da22e4ef04ae7567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopPrefab: {fileID: 8615469237004996247, guid: dd85b8b5e9ed3294391ea0a14dd5b771, type: 3}
-  eventPrefab: {fileID: 6434203426213947067, guid: 2ac7bdf9fa39ed5419fc7953e5c6295a, type: 3}
+  shopPrefab:
+  - {fileID: 6706864730982443250, guid: 1c3566068614bc84fa13396186e41a56, type: 3}
+  - {fileID: 8615469237004996247, guid: dd85b8b5e9ed3294391ea0a14dd5b771, type: 3}
+  eventPrefab:
+  - {fileID: 4964796827850481992, guid: ba2f66577fc604b4d886f44738d80128, type: 3}
+  - {fileID: 6434203426213947067, guid: 2ac7bdf9fa39ed5419fc7953e5c6295a, type: 3}
+  - {fileID: 9042068340672400228, guid: ff05af85e50e873439624809f7b80c52, type: 3}
   spawnChance: 40

@@ -12,13 +12,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: ActivateHeartSteal Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Path
+      value: event:/HeartOneFill2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data1
+      value: -2100528113
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data2
+      value: 1144841442
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data3
+      value: -1303725931
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033816931681910601, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
+      propertyPath: sound.Guid.Data4
+      value: 354013834
+      objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910603, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 519810045, guid: 23f768312b110fa43bdb3ee4ebff74b6, type: 3}
     - target: {fileID: 7033816931681910604, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7033816931681910604, guid: 262e37b2fd72542478adc95219ec98b3, type: 3}
       propertyPath: m_LocalScale.x

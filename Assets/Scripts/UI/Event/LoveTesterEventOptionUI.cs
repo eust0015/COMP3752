@@ -126,7 +126,7 @@ namespace UI.Event
         
         public override void UpdateDescription()
         {
-            Description.text = "Love Tester. " + 
+            Description.text = "<b>Love Tester.</b>\n" + 
                                ChanceToWin +
                                "% chance to receive 1 Heart Stealer relic and " + 
                                (100 - ChanceToWin) + 
