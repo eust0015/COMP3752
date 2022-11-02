@@ -203,6 +203,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1292391107, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 157664798}
     - target: {fileID: 4786622988022897810, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -254,6 +258,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+--- !u!1 &157664797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4786622988022897810, guid: 0dbe204cabfa1ba45b56d5bfa00773bb, type: 3}
+  m_PrefabInstance: {fileID: 157664796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &157664798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157664797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1238414706
+      Data2: 1254210829
+      Data3: 1683452083
+      Data4: 2142874499
+    Path: event:/PlayerDeath
 --- !u!1001 &365566345
 PrefabInstance:
   m_ObjectHideFlags: 0
