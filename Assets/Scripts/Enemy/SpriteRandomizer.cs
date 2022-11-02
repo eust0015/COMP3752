@@ -1,14 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using Random = System.Random;
 
 public class SpriteRandomizer : MonoBehaviour
 {
     [SerializeField]
-    private List<AnimatorController> _controllers;
+    private List<RuntimeAnimatorController> _controllers;
 
     private Animator _a;
     private void Awake()
