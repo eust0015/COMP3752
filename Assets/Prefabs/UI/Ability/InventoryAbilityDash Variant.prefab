@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.icon
       value: 
-      objectReference: {fileID: 21300000, guid: db254b224aa791a4cb87ecaa1919d8fe, type: 3}
+      objectReference: {fileID: 92353028, guid: b30b2ae967ed9674abcfb19076016554, type: 3}
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.name
       value: Dash
@@ -35,6 +35,18 @@ PrefabInstance:
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.description
       value: Increases movement speed for a duration.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018007188790028962, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
+      propertyPath: m_Color.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018007188790028962, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
+      propertyPath: m_Color.g
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018007188790028962, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
+      propertyPath: m_Color.r
+      value: 0.31764707
       objectReference: {fileID: 0}
     - target: {fileID: 3018007188790028965, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: m_Pivot.x
@@ -127,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 3018007189005529116, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: db254b224aa791a4cb87ecaa1919d8fe, type: 3}
+      objectReference: {fileID: 92353028, guid: b30b2ae967ed9674abcfb19076016554, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}

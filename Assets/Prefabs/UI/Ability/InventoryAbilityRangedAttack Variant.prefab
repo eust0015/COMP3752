@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.icon
       value: 
-      objectReference: {fileID: 21300000, guid: ce1131656889d934fa231b25367cf40e, type: 3}
+      objectReference: {fileID: -2006211136, guid: b30b2ae967ed9674abcfb19076016554, type: 3}
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.name
       value: Ranged Attack
@@ -127,60 +127,7 @@ PrefabInstance:
     - target: {fileID: 3018007189005529116, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ce1131656889d934fa231b25367cf40e, type: 3}
+      objectReference: {fileID: -2006211136, guid: b30b2ae967ed9674abcfb19076016554, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
---- !u!1 &7154289599186282541 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3018007188790028966, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
-  m_PrefabInstance: {fileID: 5380457883091763851}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6071106835870557112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154289599186282541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92bc1b6bd22f4a2a8a6fe65dfc1e7aab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ability:
-    type: 0
-    description: 
-    icon: {fileID: 0}
-    name: 
-    price: 0
-    quantity: 0
-    level: 0
-    hotKey: 
---- !u!114 &7164358573476646724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154289599186282541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6071106835870557112}
-        m_TargetAssemblyTypeName: UI.Effect.EffectAddRangedAttackToPlayer, Assembly-CSharp
-        m_MethodName: AddToPlayer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
