@@ -166,7 +166,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 0
+      Value: 1
       HasValue: 1
     Logging:
       Value: 0
@@ -293,17 +293,17 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: Assets/AudioBank/Desktop
+  sourceBankPath: Assets/AudioBank
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 0
-  BankLoadType: 1
+  AutomaticEventLoading: 1
+  BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
   TargetAssetPath: FMODBanks
-  TargetBankFolder: /Desktop
+  TargetBankFolder: 
   EventLinkage: 0
   LoggingLevel: 2
   SpeakerModeSettings: []
@@ -318,9 +318,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks: []
-  BanksToLoad:
-  - Master
-  - Master.strings
+  BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
