@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: _controllers.Array.data[0]
       value: 
       objectReference: {fileID: 9100000, guid: 3a70ce5390a2843479b72b8494f84bb0, type: 2}
+    - target: {fileID: 6061171272221919084, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: health.value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6061171272221919084, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: health.maxValue
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6447969448079136256, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -112,17 +120,6 @@ PrefabInstance:
     - {fileID: 6447969448079136260, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
---- !u!114 &7473883667249739895 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6061171272221919084, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
-  m_PrefabInstance: {fileID: 3721392419406921499}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700804329082497306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4660dc3423824c5c910e7eb9ae68a842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7700804329082497306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6447969448079136257, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
@@ -158,39 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c4526273e0646498a76cf878a7212f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6439540599028966039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700804329082497306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102a85880024f414b8ad705b2a95926c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 7473883667249739895}
-  damageSound: {fileID: 1054313294185488643}
---- !u!114 &1054313294185488643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700804329082497306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound:
-    Guid:
-      Data1: -2100967482
-      Data2: 1176195262
-      Data3: 2031309958
-      Data4: -500755482
-    Path: event:/Enemy-Hit-All
 --- !u!1 &7700804329548353338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6447969448678764577, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}

@@ -490,6 +490,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77984493041901271, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
+      propertyPath: _timerStart
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 777157172749880107, guid: 61897178e75ec0549b4fd8d69b4350ae, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -698,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc5194cdb1032c41b58a2b04cf3fc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 8599728825757984082, guid: 6e2ec900d7ca04b449c2be32e401bc65, type: 3}
+  boss: {fileID: 6225825266687588277, guid: a0045fca39a32f94caa96a36375a4f01, type: 3}
 --- !u!4 &1706466073
 Transform:
   m_ObjectHideFlags: 0

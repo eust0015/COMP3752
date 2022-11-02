@@ -58,7 +58,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     protected virtual IEnumerator OnHit()
     {
-        
         yield return null;
     }
 

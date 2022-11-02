@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1876198942802491250}
   - component: {fileID: 6301786682390323749}
   - component: {fileID: 6061171272221919084}
+  - component: {fileID: 2541007170159052659}
+  - component: {fileID: 6494329109431834900}
   m_Layer: 0
   m_Name: EnemyPos
   m_TagString: Untagged
@@ -145,6 +147,39 @@ MonoBehaviour:
     maxValue: 10
     name: 
     value: 10
+--- !u!114 &2541007170159052659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447969448079136257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -2100967482
+      Data2: 1176195262
+      Data3: 2031309958
+      Data4: -500755482
+    Path: event:/Enemy-Hit-All
+--- !u!114 &6494329109431834900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447969448079136257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102a85880024f414b8ad705b2a95926c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 6061171272221919084}
+  damageSound: {fileID: 2541007170159052659}
 --- !u!1 &6447969448539175022
 GameObject:
   m_ObjectHideFlags: 0

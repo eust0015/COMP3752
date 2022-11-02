@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6965671737502457740
+--- !u!1001 &1089124631223144411
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,13 +8,25 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 736820544716593808, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dabdec87e99a91e4aa2b95fa334f9193, type: 2}
     - target: {fileID: 6061171272221919084, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: health.value
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6061171272221919084, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: health.maxValue
-      value: 5
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301786682390323749, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447969448079136258, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: speed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539174928, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_RootOrder
@@ -22,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539174928, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.0952348
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539174928, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.321558
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539174928, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62,29 +74,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6447969448539175022, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
       propertyPath: m_Name
-      value: MeleeEnemy Variant
+      value: BossEnemy Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 6447969448539175022, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6447969448678764579, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1909112850, guid: a9419729060a9eb4a85738555744251b, type: 3}
+    m_RemovedComponents:
+    - {fileID: 6447969448079136260, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
+    - {fileID: 998253458489308113, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
---- !u!1 &4166044638909286797 stripped
+--- !u!1 &6225825267038493146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6447969448079136257, guid: 2900136b8f819d04caf89f64ab2d204e, type: 3}
-  m_PrefabInstance: {fileID: 6965671737502457740}
+  m_PrefabInstance: {fileID: 1089124631223144411}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8604021361863620754
+--- !u!114 &4943269478612867535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4166044638909286797}
+  m_GameObject: {fileID: 6225825267038493146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c4526273e0646498a76cf878a7212f, type: 3}
+  m_Script: {fileID: 11500000, guid: 349f45bd38733d946b4e02a9b1bb47e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDistance: 5
+  flower: {fileID: 8599728825757984082, guid: 6e2ec900d7ca04b449c2be32e401bc65, type: 3}
+  _anim: {fileID: 0}
+  _p:
+    speed: 6
+    sprite: {fileID: -398581400, guid: 7bdcb28e84b55654e912223c3fa366f8, type: 3}
+    damage: 1
+    pierce: 0
+    pierceCount: 0
+    duration: 20
+    angle: 0
+  attackDelay: 1

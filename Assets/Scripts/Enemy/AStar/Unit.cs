@@ -97,8 +97,9 @@ public class Unit : MonoBehaviour
             {
                 //Debug.Log("los");
                 var theta = getAngleFromVectors(target.position);
-                transform.eulerAngles += new Vector3(0, 0, theta - 90);
-                transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);
+                float z = Mathf.Lerp(transform.localEulerAngles.z, transform.localEulerAngles.z + (theta - 90), turnSpeed * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, 0, z);
+                transform.Translate(Vector2.up * Time.deltaTime * speed, Space.Self);
                 yield return null;
                 continue;
             }

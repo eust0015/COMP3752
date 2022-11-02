@@ -65,7 +65,8 @@ public class AttackController : MonoBehaviour
         }
         else
         {
-            proj.transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + _p.angle);
+            //proj.transform.RotateAround(transform.position, Vector3.back, transform.eulerAngles.z + angle + _p.angle);
+            proj.transform.localEulerAngles = new Vector3(0, 0, transform.eulerAngles.z + angle + _p.angle);
         }
         obj.speed = _p.speed;
         obj.damage = damage;

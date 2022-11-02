@@ -3,6 +3,7 @@ using Enemy;
 using Player;
 using Player.Relics;
 using UI.Statistics;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = System.Random;
 
@@ -33,12 +34,13 @@ namespace Systems
             var _t = transform;
             rb2d.velocity = _t.up * speed;
             timer -= Time.deltaTime;
-            if (timer <= 0 || owner == null) Destroy(gameObject);
+            if (timer <= 0 || owner == null || !owner.enabled) Destroy(gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             //Debug.Log("Ranged Hit " + other.name);
+            if (other == null || owner == null) return;
             if (basedOnTag)
             {
                 if(!other.CompareTag(_tag)) return;
