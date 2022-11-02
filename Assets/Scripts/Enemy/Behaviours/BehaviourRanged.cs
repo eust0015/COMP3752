@@ -39,7 +39,7 @@ public class BehaviourRanged : EnemyBehaviour
         {
             if (!tracking && !los)
             {
-                print("tracking");
+                //print("tracking");
                 tracking = true;
                 u.StartPath();
                 moveTime = minimumMovementTime;
@@ -49,7 +49,7 @@ public class BehaviourRanged : EnemyBehaviour
 
             if (los && moveTime < 0)
             {
-                print("not tracking");
+                //print("not tracking");
                 u.StopPath();
                 if (curDelay <= 0) StartCoroutine(Attack());
                 tracking = false;

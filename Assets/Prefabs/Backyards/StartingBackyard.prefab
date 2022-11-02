@@ -220,6 +220,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 7608067095711877317}
     m_Modifications:
+    - target: {fileID: 65625607682047610, guid: 988f3dac508441a419f24da5a838cedb, type: 3}
+      propertyPath: lastRoom
+      value: Above
+      objectReference: {fileID: 0}
     - target: {fileID: 741575263402838996, guid: 988f3dac508441a419f24da5a838cedb, type: 3}
       propertyPath: m_Size.x
       value: 1.1

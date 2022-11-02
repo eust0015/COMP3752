@@ -43,7 +43,7 @@ public class sceneChanger : MonoBehaviour
                 Mathf.Lerp(screenCover.color.a, 1, fadeSpeed * Time.deltaTime));
             yield return null;
         }
-        Debug.Log("finished in");
+        //Debug.Log("finished in");
         SceneManager.LoadScene(scene);
         yield return new WaitForSeconds(1f);
         StartCoroutine(FadeIn());

@@ -112,7 +112,6 @@ public class YardManager : MonoBehaviour
                 createdRooms[createdRooms.Count - 1].GetComponent<Yard>().setRoom(previousRoom, currentRoom);
                 createdRooms[createdRooms.Count - 1].GetComponent<Yard>().setCoords("x", createdRooms[currentRoom].GetComponent<Yard>().getCoords("x"));
                 createdRooms[createdRooms.Count - 1].GetComponent<Yard>().setCoords("y", createdRooms[currentRoom].GetComponent<Yard>().getCoords("y"));
-                createdRooms[createdRooms.Count - 1].GetComponentInChildren<ExitSpawner>().setLastRoom(previousRoom);
                 //writes the coordinates of the new room onto the new room
                 switch (roomLocation)
                 {
@@ -137,7 +136,7 @@ public class YardManager : MonoBehaviour
                 createdRooms[createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation)].SetActive(true);
                 createdRooms[currentRoom].SetActive(false);
                 currentRoom = createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation);
-                createdRooms[currentRoom].GetComponentInChildren<ExitSpawner>().setLastRoom(previousRoom);
+                createdRooms[currentRoom].GetComponentInChildren<ExitSpawner>().SetLastRoom(previousRoom);
             }
         }
         //Statement below loads the beehive when entered
