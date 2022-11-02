@@ -57,7 +57,7 @@ public class Unit : MonoBehaviour
         if (pathSuccessful && waypoints.Length > 0)
         {
             path = new Path(waypoints, transform.position, turnDst);
-            Debug.Log(gameObject.activeSelf);
+            //Debug.Log(gameObject.activeSelf);
             StopCoroutine("FollowPath");
             StartCoroutine("FollowPath");
         }
@@ -95,7 +95,7 @@ public class Unit : MonoBehaviour
         {
             if (lineOfSight)
             {
-                Debug.Log("los");
+                //Debug.Log("los");
                 var theta = getAngleFromVectors(target.position);
                 transform.eulerAngles += new Vector3(0, 0, theta - 90);
                 transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);

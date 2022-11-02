@@ -9,7 +9,7 @@ public class ExitSpawner : MonoBehaviour
     private GameObject[] ExitsArray;
     public int spawnChance = 100;
     private float doorTimer = 3f;
-    public string lastRoom = "Below";
+    public string lastRoom = "Above";
     public Sprite door50;
     public Sprite door0;
     public Sprite door100;

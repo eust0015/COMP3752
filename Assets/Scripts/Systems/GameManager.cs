@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
 
     public virtual void ItemObtained(PlayerItem it)
     {
-        Debug.Log("Invoked -> Item Obtained - " + it.itemName);
+        //Debug.Log("Invoked -> Item Obtained - " + it.itemName);
         onItemObtained?.Invoke(it);
     }
 

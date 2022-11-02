@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPCSpawn : MonoBehaviour
 {
-    private GameObject spawnLocation;
-    public GameObject npcPrefab;
+    private GameObject[] spawnLocation;
+    public GameObject[] npcPrefab;
     public float spawnChance;
     public string locationName = "NPCSpawn";
     void Start()
@@ -15,10 +15,14 @@ public class NPCSpawn : MonoBehaviour
         void NPCSpawnChance()
     {
         //generates a number to decide if the npc will spawn. If it does, it gets a list of all avaliable spawn logations and chooses a random one
-        if(Random.Range(0f,100f) >= 100 - spawnChance)
+
+        spawnLocation = GameObject.FindGameObjectsWithTag(locationName);
+        for (int i = 0; i < spawnLocation.Length; i++)
         {
-            spawnLocation = GameObject.FindGameObjectsWithTag(locationName)[Random.Range(0, GameObject.FindGameObjectsWithTag(locationName).Length)];
-            Instantiate(npcPrefab, new Vector3(spawnLocation.transform.position.x, spawnLocation.transform.position.y, -1), Quaternion.identity, transform);
+            if (Random.Range(0f, 100f) >= 100 - spawnChance)
+            {
+                Instantiate(npcPrefab[Random.Range(0, npcPrefab.Length - 1)], new Vector3(spawnLocation[i].transform.position.x, spawnLocation[i].transform.position.y, -1), Quaternion.identity, transform);
+            }
         }
     }
 }

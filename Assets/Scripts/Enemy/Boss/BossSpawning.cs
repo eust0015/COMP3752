@@ -9,7 +9,7 @@ public class BossSpawning : MonoBehaviour
 
     void Start()
     {
-        //GameManager.current.onTimerComplete += SpawnBoss;
+        GameManager.current.onTimerComplete += SpawnBoss;
     }
 
     void Update()
@@ -28,6 +28,6 @@ public class BossSpawning : MonoBehaviour
 
     private void OnDestroy()
     {
-       // GameManager.current.onTimerComplete -= SpawnBoss;
+       GameManager.current.onTimerComplete -= SpawnBoss;
     }
 }

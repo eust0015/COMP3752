@@ -34,7 +34,7 @@ public class HitBoxObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit " + other.name);
+        //Debug.Log("Hit " + other.name);
         if (basedOnTag)
         {
             if(!other.CompareTag(_tag)) return;

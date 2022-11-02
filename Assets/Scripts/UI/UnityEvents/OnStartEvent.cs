@@ -13,7 +13,7 @@ namespace UI.UnityEvents
             set => startEvent = value;
         }
 
-        private void Start()
+        private void Awake()
         {
             StartEvent.Invoke();
         }

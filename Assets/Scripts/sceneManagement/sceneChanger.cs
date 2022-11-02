@@ -31,7 +31,7 @@ public class sceneChanger : MonoBehaviour
     
     public void FadeToBlack(string scene)
     {
-        Debug.Log("fade");
+        //Debug.Log("fade");
         StartCoroutine(FadeOut(scene));
     }
 
