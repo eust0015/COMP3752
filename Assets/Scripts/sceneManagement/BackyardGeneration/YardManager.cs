@@ -13,15 +13,15 @@ public class YardManager : MonoBehaviour
     //Yarny FMOD: Whatever you put in this block will show up as sound file browsing options under this script name in Unity
     //You can use these variables in scripts. You can change the actual mp3/sound file (in dropdown unity browser) anytime you like.
     // The choices for the actual sound files to bind to these variables depends what you have setup in the FMOD music app itself.
-    [SerializeField]
+    //[SerializeField]
     // public FMODUnity.EventReference shootFMSound;
     // public FMODUnity.EventReference strikeFMSound;
     // public FMODUnity.EventReference gameOverFMSound;
     // public FMODUnity.EventReference royalSound;
 
     //Yarny FMOD: Instances inc. Parameters. In START (Awake) the music gets linked to your instance.
-    public FMOD.Studio.EventInstance instance;
-    public FMODUnity.EventReference fmodEvent; //music will be your music track & variables to control the music
+    //public FMOD.Studio.EventInstance instance;
+    //public FMODUnity.EventReference fmodEvent; //music will be your music track & variables to control the music
 
     //Yarny FMOD: This is where you set the range of variables that will affect the music
 
@@ -53,8 +53,8 @@ public class YardManager : MonoBehaviour
         //Yarny FMOD: Set an instance of the music (the music event) and start it
         //playerHealthPR = 6.0f;
         //currentNumberOfEnemies = 0.0f;
-        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent); // This also works (like tutorial, older style)
-        instance.start();
+        //instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent); // This also works (like tutorial, older style)
+        //instance.start();
 
 
         //Yarny FMOD: Examples of how to set variables
@@ -143,7 +143,7 @@ public class YardManager : MonoBehaviour
         else if (createdRooms[currentRoom].GetComponent<Yard>().getRoom(roomLocation) == -2)
         {
             //Yarny: FMOD - Stop Main Music (It doubles up otherwise later) and play a royal one shot
-            instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); //Player is dead, stop music
+            //instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); //Player is dead, stop music
             //RuntimeManager.PlayOneShot(royalSound, gameObject.transform.position);
             SceneManager.LoadScene("beeHive");
         }

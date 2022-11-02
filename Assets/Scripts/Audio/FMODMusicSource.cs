@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Enemy;
 using FMODUnity;
 using Player;
@@ -71,7 +72,8 @@ namespace Audio
         public void DetectPlayerHealth()
         {
             var health = FindObjectOfType<PlayerHealth>();
-            PlayerHealth = health.Health.Value;
+            if (health != null)
+                PlayerHealth = health.Health.Value;
         }
         
         public void DetectNumberOfEnemies()
@@ -79,7 +81,10 @@ namespace Audio
             var list = FindObjectsOfType<EnemyHealth>().ToList();
             NumberOfEnemies = list.Count;
         }
-        
 
+        public void OnDestroy()
+        {
+            StopMusic();
+        }
     }
 }
