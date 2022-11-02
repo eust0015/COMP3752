@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.icon
       value: 
-      objectReference: {fileID: 21300000, guid: 346e959a34a8d094599858c5b0a3ac6d, type: 3}
+      objectReference: {fileID: 1642936713, guid: b30b2ae967ed9674abcfb19076016554, type: 3}
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.name
       value: Melee Attack
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405683549145654101, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: ability.description
-      value: Damage nearby enemies and objects.
+      value: Damages nearby enemies and objects.
       objectReference: {fileID: 0}
     - target: {fileID: 3018007188790028965, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: m_Pivot.x
@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 3018007189005529116, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 346e959a34a8d094599858c5b0a3ac6d, type: 3}
+      objectReference: {fileID: -2006211136, guid: b30b2ae967ed9674abcfb19076016554, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3173cefbed15d0c4c94f498b5f337228, type: 3}
