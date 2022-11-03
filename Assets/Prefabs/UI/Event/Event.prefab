@@ -1495,7 +1495,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1488390483735712181}
         m_TargetAssemblyTypeName: UI.Event.EventUI, Assembly-CSharp
         m_MethodName: Close
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

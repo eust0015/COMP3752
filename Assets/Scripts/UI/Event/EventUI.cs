@@ -110,14 +110,20 @@ namespace UI.Event
             GameManager.current.OnOnTimerPlay();
         }
         
-        public void Close(bool setOptionWasChosen)
+        public void Close()
         {
-            OptionWasChosen = setOptionWasChosen;
             Clear();
             ResumeGame();
             Destroy(gameObject);
         }
 
+        public void StartPostEventSequence(string postEventText)
+        {
+            OptionWasChosen = true;
+            Clear();
+            Description.SetText(postEventText);
+        }
+        
         private void OnDestroy()
         {
             OnDestroyed?.Invoke(this);

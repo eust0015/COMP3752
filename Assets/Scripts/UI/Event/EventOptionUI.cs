@@ -119,7 +119,7 @@ namespace UI.Event
                 Instantiate(effect);
             }
             EventUI theEvent = FindObjectOfType<EventUI>();
-            theEvent.Close(true);
+            theEvent.StartPostEventSequence(Option.PostDescription + "\n<b>" + Option.PostTitle + "<b>");
         }
         
         public void UpdateTitle() => Title.text = Option.Title;
