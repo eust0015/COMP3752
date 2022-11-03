@@ -919,6 +919,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5393880867038991537, guid: 656c52fc3b493a748b469b478c5bb4c5, type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 1520386847}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 656c52fc3b493a748b469b478c5bb4c5, type: 3}
