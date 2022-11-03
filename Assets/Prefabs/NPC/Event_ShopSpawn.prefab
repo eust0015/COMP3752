@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7393451515490199248
 MonoBehaviour:
@@ -47,6 +47,7 @@ MonoBehaviour:
   shopPrefab:
   - {fileID: 6706864730982443250, guid: 1c3566068614bc84fa13396186e41a56, type: 3}
   - {fileID: 8615469237004996247, guid: dd85b8b5e9ed3294391ea0a14dd5b771, type: 3}
+  - {fileID: 913409958045542238, guid: 3940f41118c1ef3429b06cbe013d8f23, type: 3}
   eventPrefab:
   - {fileID: 4964796827850481992, guid: ba2f66577fc604b4d886f44738d80128, type: 3}
   - {fileID: 6434203426213947067, guid: 2ac7bdf9fa39ed5419fc7953e5c6295a, type: 3}

@@ -383,15 +383,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPrefab:
-  - {fileID: 5572392598514794744, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
   - {fileID: 4935087666265531143, guid: 50340d0debe999e448f5edf7c7fe9626, type: 3}
+  - {fileID: 5572392598514794744, guid: a460ef7a818b61946a35a19c892fab0a, type: 3}
   - {fileID: 5209862593020588495, guid: fa1eb71793eba3841a84a80b834a1bfe, type: 3}
   - {fileID: 170937874802483284, guid: 58f65874c64035041b9578305e25f2f8, type: 3}
   - {fileID: 1929579868759517273, guid: 2f442121688c4cc43a71941dc9cd5325, type: 3}
   - {fileID: 5605571001123525258, guid: 7c6928677de2fd741aec1998aaf9492e, type: 3}
   - {fileID: 1688207098852342128, guid: 38e6dd293efbb264c9b52468a5e02cec, type: 3}
   - {fileID: 3607881141904609861, guid: fb943f63b104890489f906cae246497a, type: 3}
-  - {fileID: 913409958045542238, guid: 3940f41118c1ef3429b06cbe013d8f23, type: 3}
   - {fileID: 9048692138050567874, guid: 3a1d934853036ea428132aaae8e02580, type: 3}
   - {fileID: 7171161637157138898, guid: b1adf7c211951c4469e8480d709bb72e, type: 3}
   spawnChance: 50
