@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 namespace UI.TimeProgression
@@ -27,16 +26,19 @@ namespace UI.TimeProgression
 
         private void Start()
         {
+            var timer = FindObjectOfType<Timer>();
+            if (timer != null)
+                MinutesInADay = timer._timerStart / 60;
             _g = GameManager.current;
             _g.onRunStart += OnRunStart;
-            //_g.onTimerComplete += OnTimerComplete;
+            _g.onTimerComplete += OnTimerComplete;
             OnRunStart();
         }
 
         private void OnRunStart()
         {
             CloudAnimator.SetBool(Night, false);
-            StartCoroutine(DayCoroutine());
+            //StartCoroutine(DayCoroutine());
         }
 
         IEnumerator DayCoroutine()

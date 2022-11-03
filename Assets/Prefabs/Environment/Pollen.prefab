@@ -206,8 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound:
     Guid:
-      Data1: 805703342
-      Data2: 1166153090
-      Data3: 1187234719
-      Data4: -920170065
-    Path: event:/PollenSpend5
+      Data1: -1211058737
+      Data2: 1214777573
+      Data3: -2067992665
+      Data4: 87423891
+    Path: event:/Pollen-Collect-All-A

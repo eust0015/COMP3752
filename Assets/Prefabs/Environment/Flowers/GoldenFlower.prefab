@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7675474583250657849}
   - component: {fileID: 9162149606060083315}
   - component: {fileID: 5962606733934264730}
+  - component: {fileID: 936229086708116099}
+  - component: {fileID: 2183177926431295471}
   m_Layer: 0
   m_Name: GoldenFlower
   m_TagString: Untagged
@@ -136,3 +138,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: FinishedGame
+--- !u!114 &936229086708116099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8599728825757984082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf347ac93704a56b0b00d482765b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2183177926431295471}
+        m_TargetAssemblyTypeName: Audio.FMODMusicSource, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2183177926431295471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8599728825757984082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c458d7b19d498d8b01f4afeddea5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+    Guid:
+      Data1: 128029182
+      Data2: 1221529609
+      Data3: 33063577
+      Data4: 1411501871
+    Path: event:/Intro_Scene_Sun_80
+  playerHealth: 0
+  numberOfEnemies: 0

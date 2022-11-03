@@ -12,8 +12,8 @@ public class Timer : MonoBehaviour
     private GameManager _g;
     
     //Timer Start Value in seconds
-    [SerializeField] private int _timerStart = 100;
-    public float timerCurrent = 100;
+    [SerializeField] public int _timerStart = 300;
+    public float timerCurrent = 300;
     private TMP_Text displayTimer;
     private bool pause;
     

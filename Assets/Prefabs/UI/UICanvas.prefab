@@ -234,11 +234,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound:
     Guid:
-      Data1: -1211058737
-      Data2: 1214777573
-      Data3: -2067992665
-      Data4: 87423891
-    Path: event:/Pollen-Collect-All-A
+      Data1: 805703342
+      Data2: 1166153090
+      Data3: 1187234719
+      Data4: -920170065
+    Path: event:/PollenSpend5
 --- !u!1 &2028902487570123773
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -970}
+  m_AnchoredPosition: {x: 0, y: -85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7854074146440661439
@@ -1049,8 +1049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e91875c2e01f9439e7960826c20ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timerStart: 100
-  timerCurrent: 0
+  _timerStart: 300
+  timerCurrent: 300
 --- !u!1 &4843311026379558793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1492,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 4471533057096018020, guid: 3a9abe1aa49237248a1d01d88cc69438, type: 3}
+      propertyPath: startDaySound
+      value: 
+      objectReference: {fileID: 1314534357343531570}
+    - target: {fileID: 4471533057096018020, guid: 3a9abe1aa49237248a1d01d88cc69438, type: 3}
+      propertyPath: startNightSound
+      value: 
+      objectReference: {fileID: 1890276109722669222}
     - target: {fileID: 7584412469449078712, guid: 3a9abe1aa49237248a1d01d88cc69438, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1579,6 +1587,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9abe1aa49237248a1d01d88cc69438, type: 3}
+--- !u!1 &3630180964228652282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2273508317820894608, guid: 3a9abe1aa49237248a1d01d88cc69438, type: 3}
+  m_PrefabInstance: {fileID: 3309549372167414122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1314534357343531570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630180964228652282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 626112471
+      Data2: 1130962605
+      Data3: -2066652243
+      Data4: 521751084
+    Path: event:/RoosterMorning
+--- !u!114 &1890276109722669222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630180964228652282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098ec35669504be5838602fd4fc36eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1242386550
+      Data2: 1112011360
+      Data3: 375803324
+      Data4: 1917009301
+    Path: event:/WolfNight2
 --- !u!224 &4948575738965645010 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7584412469449078712, guid: 3a9abe1aa49237248a1d01d88cc69438, type: 3}
